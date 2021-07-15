@@ -1,0 +1,38 @@
+.header-container {
+    margin: auto;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 3fr 7fr 1fr 1fr;
+    grid-template-areas: 
+        "brand tagline cart search";
+}
+
+.skytop-brand{
+    height: 4.3rem;
+    width: auto;
+    border-right: 1px solid rgb(0,0,0,0.2);
+    padding-right: 2rem;
+    grid-area: brand;
+}
+.tagline{
+    margin-right: auto;
+    grid-area: tagline;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 1.5rem;
+    font-weight: 400;
+}
+.header-icon{
+    height: 2rem;
+    width: auto;
+    margin-top: 0.5rem;
+}
+
+.cart{
+    grid-area: cart;
+}
+.search{
+    grid-area: search;
+}
+
+
