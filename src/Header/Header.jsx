@@ -10,7 +10,6 @@ function Header (){
                 <img className="cart header-icon" src="https://utcoleca.sirv.com/shopping-cart.png" />
                 <img className="search header-icon" src="https://utcoleca.sirv.com/search.png" width="512" />
             </div>
-            <h1>Header</h1>
         </div>
     )
 }
