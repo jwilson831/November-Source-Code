@@ -1,0 +1,37 @@
+.category{
+    text-align: left!important;
+    background-color: rgb(38,136,165);
+    border-radius: 5px;
+    color: white;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.card-body{
+    padding-bottom: 0.5rem;
+}
+.cat-text{
+    font-size: 13px;
+    padding: 3px;
+}
+
+.card-title{
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.excerpt{
+    text-align: left;
+    font-family: 'PT Serif', serif;
+    color: rgb(108,108,107);
+}
+.byline{
+    text-align: left;
+    font-family: 'PT Serif', serif;
+    color: rgb(108,108,107);
+    margin-top: 1rem;
+    font-size: 10px;
+}

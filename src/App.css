@@ -10,11 +10,12 @@
 }
 .main-grid{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
     grid-row: auto;
     grid-template-areas: 
         "section side-menu";
   border: 1px solid black;
+  margin-top: 2rem;
 }
 
 .section{

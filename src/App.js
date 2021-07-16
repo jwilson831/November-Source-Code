@@ -23,7 +23,7 @@ function App() {
     fetchArticles();
   },[])
 
-  // console.log(articles);
+  
   return (
     <div className="App">
       <div className="main-container">

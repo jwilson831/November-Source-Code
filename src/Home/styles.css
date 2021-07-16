@@ -1,11 +1,12 @@
-/* .home-grid{
+.home-grid{
     height: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     grid-row: auto;
     grid-template-areas: 
         "feature subfeature"
-        "recent recent";;
+        "recent recent";
+    
 
 
-} */
+}

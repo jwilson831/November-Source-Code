@@ -11,8 +11,6 @@ function Feature (props){
     const [title,setTitle] = useState("");
     const [image,setImage] = useState("");
     const [loading,setLoading] = useState(false);
-
-    console.log(props);
     
     useEffect(() => {
         if(props.data){
@@ -22,7 +20,6 @@ function Feature (props){
             const image = props.data._embedded["wp:featuredmedia"][0].source_url;
             const excerpt = props.data.excerpt.rendered.replace(/(<([^>]+)>)/gi, "");
             
-            console.log();
             setAuthor(author);
             setDate(moment(date).format("MMMM Do, YYYY"));
             setCategory(category);
@@ -39,14 +36,13 @@ function Feature (props){
                 <div class="card">
                 <img class="card-img-top" src={image} alt="Card image cap"></img>
                 <div class="card-body">
-                    <div className="category"><p>{category}</p></div>
+                    <div className="category"><p className="cat-text">{category}</p></div>
                     <h5 class="card-title">{title}</h5>
                     <div className="excerpt">
                         {excerpt}
                     </div>
                     <div className="byline">
-                        <p>By {author}</p>
-                        <p>{date}</p>
+                        <p className="m-0">By {author} / {date}</p>
                     </div>
                 </div>
             </div>
