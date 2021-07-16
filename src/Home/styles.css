@@ -1,0 +1,11 @@
+/* .home-grid{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row: auto;
+    grid-template-areas: 
+        "feature subfeature"
+        "recent recent";;
+
+
+} */
