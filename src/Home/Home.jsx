@@ -3,7 +3,6 @@ import './styles.css';
 import Feature from './components/Feature/Feature';
 import Recents from './components/Recents/Recents';
 import SubFeatures from './components/SubFeatures/SubFeatures';
-import SideMenu from '../SideMenu/SideMenu';
 
 function Home (props){
     const [articles,setArticles] = useState([]);
@@ -17,8 +16,8 @@ function Home (props){
     return(
         <div className="home-grid">
             <div className="feature"><Feature data={articles[0]}/></div>
-            <div className="subfeature"><SubFeatures articles={articles}/></div>
-            <div className="recent"><Recents/></div>
+            <div className="subfeature"><SubFeatures articles={articles.slice(1,4)}/></div>
+            <div className="recent"><Recents articles={articles}/></div>
         </div>
     )
 }

@@ -6,10 +6,10 @@ function SubFeatures (props){
 
     const renderArticles = (articles) => {    
         return articles.map( article => 
-            <div className="card">
+            <div className="card sub-feature-card">
                 <div className="card-body">
                     <div className="category"><p className="cat-text">{article.acf.category}</p></div>
-                    <h5 className="">{article.title.rendered}</h5>
+                    <h5 className="" dangerouslySetInnerHTML={{ __html: article.title.rendered }}></h5>
                     <div className="byline">
                         <p className="m-0">By {article.acf.author} / {moment(article.date).format("MMMM Do, YYYY")}</p>
                     </div>

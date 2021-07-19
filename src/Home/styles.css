@@ -6,7 +6,15 @@
     grid-template-areas: 
         "feature subfeature"
         "recent recent";
-    
-
-
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
+
+.feature{
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+}
+
+.subfeature{
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+}
+

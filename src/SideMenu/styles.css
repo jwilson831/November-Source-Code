@@ -1,0 +1,45 @@
+.side-menu-container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    grid-template-areas: 
+        "conferences"
+        "poll"
+        "news";
+}
+.conference-container{
+    grid-area: conferences;
+    margin-bottom: 3rem;
+}
+.poll-container{
+    grid-area: poll;
+    margin-bottom: 3rem;
+
+}
+.news-container{
+    grid-area: news;
+    margin-bottom: 3rem;
+
+}
+
+#side-conference-title{
+    font-size: 23px;
+}
+
+.conference-banner{
+    height: 17rem;
+    width: 16rem;
+}
+
+.poll-title{
+    background-color: rgba(241, 200, 16, 0.884) !important;
+}
+
+select{
+    width: 100% !important;
+
+}
+.question{
+    font-weight: 600;
+}
