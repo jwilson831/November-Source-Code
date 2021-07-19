@@ -14,12 +14,13 @@
     grid-row: auto;
     grid-template-areas: 
         "section side-menu";
-  border: 1px solid black;
   margin-top: 2rem;
+
 }
 
 .section{
   grid-area: section;
+  border-right: 1px solid rgb(0,0,0,0.2);
 }
 .side-menu{
   grid-area: side-menu;

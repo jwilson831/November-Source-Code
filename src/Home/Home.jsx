@@ -17,7 +17,7 @@ function Home (props){
     return(
         <div className="home-grid">
             <div className="feature"><Feature data={articles[0]}/></div>
-            <div className="subfeature"><SubFeatures/></div>
+            <div className="subfeature"><SubFeatures articles={articles}/></div>
             <div className="recent"><Recents/></div>
         </div>
     )

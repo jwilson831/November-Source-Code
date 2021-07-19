@@ -30,22 +30,23 @@ function Feature (props){
             setLoading(true);
         }
     },[props])
+    console.log(props)
     return(
         <div className="feature-container">
             {loading ? 
                 <div class="card">
-                <img class="card-img-top" src={image} alt="Card image cap"></img>
-                <div class="card-body">
-                    <div className="category"><p className="cat-text">{category}</p></div>
-                    <h5 class="card-title">{title}</h5>
-                    <div className="excerpt">
-                        {excerpt}
-                    </div>
-                    <div className="byline">
-                        <p className="m-0">By {author} / {date}</p>
+                    <img class="card-img-top" src={image} alt="Card image cap"></img>
+                    <div class="card-body">
+                        <div className="category"><p className="cat-text">{category}</p></div>
+                        <h5 class="card-title">{title}</h5>
+                        <div className="excerpt">
+                            {excerpt}
+                        </div>
+                        <div className="byline">
+                            <p className="m-0">By {author} / {date}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
                 : <p>Loading...</p>
             }
         </div>

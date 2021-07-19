@@ -30,8 +30,8 @@
 }
 .byline{
     text-align: left;
-    font-family: 'PT Serif', serif;
+    font-weight: 500;
     color: rgb(108,108,107);
-    margin-top: 1rem;
-    font-size: 10px;
+    margin-top: 2rem;
+    font-size: 12px;
 }
