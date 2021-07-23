@@ -1,20 +1,27 @@
 .home-grid{
     height: 100%;
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-row: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
-        "feature subfeature"
-        "recent recent";
+        "feature feature subfeature"
+        "recent recent recent";
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
 .feature{
     border-bottom: 1px solid rgb(0,0,0,0.2);
+    grid-area: feature;
 }
 
 .subfeature{
     border-bottom: 1px solid rgb(0,0,0,0.2);
+    grid-area: subfeature;
+}
+
+.recent{
+    margin-top: 2.5rem;
+    grid-area: recent;
 }
 

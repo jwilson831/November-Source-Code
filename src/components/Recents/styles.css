@@ -1,0 +1,8 @@
+.recent-container{
+    grid-area: recent;
+}
+
+.recent-img{
+    height: 20rem;
+    /* padding-righ t: 10%; */
+}
