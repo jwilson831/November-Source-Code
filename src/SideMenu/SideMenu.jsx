@@ -1,12 +1,12 @@
 import React from 'react';
-import ConferenceContainer from './components/ConferenceContainer';
+import SideContainer from './components/SideContainer';
 import NewsFeed from './components/NewsFeed';
 import Poll from './components/Poll';
 
-function SideMenu (){
+function SideMenu (props){
     return(
         <div className="side-menu-container">
-            <ConferenceContainer />
+            <SideContainer conferences={props.conferences}/>
             <Poll />
             <NewsFeed />
         </div>
