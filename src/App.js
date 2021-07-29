@@ -20,6 +20,7 @@ function App() {
   const [articles, setArticles] = useState(null);
   const [conferences, setConferences] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("Home");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,6 +43,10 @@ function App() {
   const filterByCategory = (data, category) => {
     return data.filter((item) => item.acf.category === category )
   }
+  const changeActiveCategory = (category) => {
+    setActiveCategory(category);
+    console.log(activeCategory);
+  }
 
   
   return (
@@ -49,7 +54,7 @@ function App() {
       {loaded ? 
         <div className="main-container">
           <Header/>
-          <Nav />
+          <Nav changeActiveCategory={changeActiveCategory}/>
           <div className="main-grid">
             <Switch>
               <div className="section">
@@ -60,14 +65,14 @@ function App() {
                 <Route exact path="/cyber"><Section articles={filterByCategory(articles,"Cyber Resilience")}/></Route>
                 <Route exact path="/capital-markets"><Section articles={filterByCategory(articles,"Capital Markets")}/></Route>
                 <Route exact path="/global-affairs"><Section articles={filterByCategory(articles,"Global Affairs")}/></Route>
-
                 <Route exact path="/articles/:id" component={Article}></Route>
+                {/* <Route exact path="/conferences/:id" component={Conference}></Route> */}
 
               </div>
             </Switch>
 
             <div className="side-menu">
-              <SideMenu conferences={conferences}/>
+              <SideMenu  conferences={filterByCategory(conferences,activeCategory)}/>
             </div>
           </div>
         </div>

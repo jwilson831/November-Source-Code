@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles.css';
 import {Markup} from 'interweave';
+import {Link} from 'react-router-dom'
 
 function SideConference(props){
     console.log(props)

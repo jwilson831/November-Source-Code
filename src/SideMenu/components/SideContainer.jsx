@@ -6,6 +6,7 @@ function SideContainer(props){
     const renderConferences = (conferences) => {
         return conferences.map(conference => 
             <SideConference 
+                
                 title={conference.title.rendered}
                 tagline={conference.acf.tagline}
                 imgUrl={conference._embedded ? conference._embedded["wp:featuredmedia"][0].source_url : null}

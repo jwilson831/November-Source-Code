@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
-import Feature from '../components/Feature/Feature';
-import Recents from '../components/Recents/Recents';
+import Feature from '../PageComponents/Feature/Feature';
+import Recents from '../PageComponents/Recents/Recents';
 
 function Section (props){
 
