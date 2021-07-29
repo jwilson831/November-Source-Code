@@ -43,3 +43,28 @@ select{
 .question{
     font-weight: 600;
 }
+
+.side-img{
+    height: 15rem;
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+}
+.side-data{
+    font-weight: 600;
+    font-size: 17px;
+}
+#side-date{
+    margin-bottom: 2rem;
+}
+.side-conf-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.conf-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
+    color: white;
+
+}

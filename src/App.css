@@ -25,3 +25,8 @@
 .side-menu{
   grid-area: side-menu;
 }
+
+.section-title{
+  font-size: 23px;
+  font-weight:800;
+}

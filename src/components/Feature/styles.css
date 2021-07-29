@@ -14,6 +14,7 @@
 }
 .card-body{
     padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
 }
 .cat-text{
     font-size: 13px;
@@ -35,7 +36,6 @@
     text-align: left;
     font-weight: 500;
     color: rgb(108,108,107);
-    margin-top: 2rem;
     font-size: 12px;
 }
 .feature-container{

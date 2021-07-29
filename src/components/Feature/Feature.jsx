@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import {Markup} from "interweave";
 
 import './styles.css';
 import {Link} from 'react-router-dom';
@@ -12,7 +13,7 @@ function Feature (props){
                 <div className="card-body">
                     {window.location.pathname === "/" ? <div className="category"><p className="cat-text">{data.acf.category} </p></div> : ""}
                     <Link to={`articles/${data.id}`}>
-                        <h5 className="card-title" dangerouslySetInnerHTML={{ __html: data.title.rendered }}></h5>
+                        <h5 className="card-title"><Markup content={data.title.rendered}></Markup></h5>
                     </Link>
                     {/* <div className="excerpt">
                         {data.excerpt.rendered.replace(/(<([^>]+)>)/gi, "")}

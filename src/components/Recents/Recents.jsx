@@ -2,12 +2,14 @@ import React from 'react';
 import './styles.css';
 import moment from 'moment';
 import {Link} from 'react-router-dom';
+import {Markup} from "interweave";
+
 
 
 function Recents (props){
     const renderArticles = (articles) => {    
         return articles.map( article => 
-            <div className="card mb-3">
+            <div className="card mb-5">
                 <div className="row no-gutters">
                     <div className="col-md-6 text-left">
                         <img className="card-img-top recent-img" src={article._embedded["wp:featuredmedia"][0].source_url} alt="Card image cap"></img>
@@ -16,7 +18,7 @@ function Recents (props){
                         <div className="card-body">
                             {window.location.pathname === "/" ? <div className="category"><p className="cat-text">{article.acf.category} </p></div> : ""}
                             <Link to={`articles/${article.id}`}>
-                        <h5 className="card-title" dangerouslySetInnerHTML={{ __html: article.title.rendered }}></h5>
+                        <h5 className="card-title"><Markup content={article.title.rendered}></Markup></h5>
                     </Link>
                             <div className="byline">
                             <p className="m-0">By {article.acf.author} / {moment(article.date).format("MMMM Do, YYYY")}</p>
@@ -30,7 +32,8 @@ function Recents (props){
     }
 
     return(
-        <div className="recent-container">
+        <div className="recent-container text-left">
+            <p className="section-title">Recent Articles</p>
             {props.articles ? renderArticles(props.articles) : "Loading..."}
         </div>
     )

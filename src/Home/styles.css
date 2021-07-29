@@ -1,5 +1,4 @@
 .home-grid{
-    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -13,6 +12,7 @@
 .feature{
     border-bottom: 1px solid rgb(0,0,0,0.2);
     grid-area: feature;
+    padding-bottom: 3.5rem;
 }
 
 .subfeature{
@@ -21,7 +21,7 @@
 }
 
 .recent{
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     grid-area: recent;
 }
 

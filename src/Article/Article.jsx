@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import {Markup} from "interweave";
 
 function Article(props){
     const [data, setData] = useState(null);
@@ -10,7 +11,7 @@ function Article(props){
         const fetchData = async () => {
         
         try{
-            const {data} = await axios(`https://skytop-strategies.com/wp-json/wp/v2/articles/${params.id}`)
+            const {data} = await axios(`https://skytop-strategies.com/wp-json/wp/v2/articles/${params.id}?_embed=wp:featuredmedia&per_page=100`)
 
             setData(data);
         }catch (error){
@@ -24,13 +25,14 @@ function Article(props){
     
     console.log(data);
     return(
-        <div className="article-container" >
+        <div className="article-container p-5" >
             {loaded ?
             <div>
-
-                <h1 dangerouslySetInnerHTML={{ __html: data.title.rendered }}></h1>
-                {/* <img className="card-img-top recent-img" src={data._embedded["wp:featuredmedia"][0].source_url} alt="Card image cap"></img> */}
-                <div className="text-left" dangerouslySetInnerHTML={{ __html: data.content.rendered }}></div>
+                <h1><Markup content={data.title.rendered}></Markup></h1>
+                <img className="card-img-top" src={data._embedded["wp:featuredmedia"][0].source_url} alt="Card image cap"></img>
+                <div className="article-text text-left">
+                    <p><Markup content={data.content.rendered}></Markup></p>
+                </div>
             </div>
 
             : "loading..."}

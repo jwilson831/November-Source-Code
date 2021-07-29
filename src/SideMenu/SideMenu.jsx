@@ -5,8 +5,8 @@ import Poll from './components/Poll';
 
 function SideMenu (props){
     return(
-        <div className="side-menu-container">
-            <SideContainer conferences={props.conferences}/>
+        <div className="side-menu-container text-left">
+            <SideContainer conferences={props.conferences.slice(0,4)}/>
             <Poll />
             <NewsFeed />
         </div>
