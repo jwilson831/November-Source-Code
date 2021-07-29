@@ -3,10 +3,13 @@ import './styles.css';
 import {Link} from 'react-router-dom';
 
 
-function Header (){
+function Header (props){
+    const clickHandler = () => {
+        props.changeActiveCategory("Home");
+    }
     return(
         <div>
-            <div className="header-container">
+            <div className="header-container" onClick={() => clickHandler()}>
                 <Link to="/">
                     <img className="skytop-brand" src="https://utcoleca.sirv.com/skytop%20logo%20FINAL.png" alt="" />
                 </Link>

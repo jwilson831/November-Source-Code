@@ -20,7 +20,7 @@ function App() {
   const [articles, setArticles] = useState(null);
   const [conferences, setConferences] = useState(null);
   const [loaded, setLoaded] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("Home");
+  const [activeCategory, setActiveCategory] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,7 +41,11 @@ function App() {
   console.log(articles,conferences)
 
   const filterByCategory = (data, category) => {
-    return data.filter((item) => item.acf.category === category )
+    if(category === "Home"){
+      return data
+    }else{
+      return data.filter((item) => item.acf.category === category )
+    }
   }
   const changeActiveCategory = (category) => {
     setActiveCategory(category);
@@ -53,7 +57,7 @@ function App() {
     <div className="App">
       {loaded ? 
         <div className="main-container">
-          <Header/>
+          <Header changeActiveCategory={changeActiveCategory}/>
           <Nav changeActiveCategory={changeActiveCategory}/>
           <div className="main-grid">
             <Switch>
@@ -61,7 +65,7 @@ function App() {
                 <Route exact path="/"><Home articles={articles}/></Route>
                 <Route exact path="/activism"><Section articles={filterByCategory(articles,"Activism")}/></Route>
                 <Route exact path="/investment"><Section articles={filterByCategory(articles,"Investment Management")}/></Route>
-                <Route exact path="/CSR"><Section articles={filterByCategory(articles,"CSR & Sustainability")}/></Route>
+                <Route exact path="/CSR"><Section articles={filterByCategory(articles,"CSR and Sustainability")}/></Route>
                 <Route exact path="/cyber"><Section articles={filterByCategory(articles,"Cyber Resilience")}/></Route>
                 <Route exact path="/capital-markets"><Section articles={filterByCategory(articles,"Capital Markets")}/></Route>
                 <Route exact path="/global-affairs"><Section articles={filterByCategory(articles,"Global Affairs")}/></Route>
