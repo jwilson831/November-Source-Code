@@ -1,0 +1,32 @@
+.conf-img{
+    width: 100% !important;
+    height: 30rem;
+    padding: 1rem;
+}
+.conf-title{
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.conf-text{
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+.conf-tagline{
+    font-size: 20px;
+}
+
+.conf-date-locale{
+   margin-bottom: 5rem;
+}
+
+.register-button{
+    width: 30%;
+}
+
+.countdown{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    
+}

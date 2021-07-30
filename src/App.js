@@ -1,11 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import './App.css';
 import Home from './Home/Home';
 import Section from './Section/Section';
 import Header from './Header/Header';
 import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
-import SideMenu from './SideMenu/SideMenu'
+import SideMenu from './SideMenu/SideMenu';
+import Conference from './Conference/Conference';
 import axios from 'axios';
 import {
   BrowserRouter as Router,
@@ -20,7 +21,7 @@ function App() {
   const [articles, setArticles] = useState(null);
   const [conferences, setConferences] = useState(null);
   const [loaded, setLoaded] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("");
+  const [activeCategory, setActiveCategory] = useState("Home");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,19 +38,17 @@ function App() {
     }
     fetchData();
   },[])
-  
-  console.log(articles,conferences)
+
 
   const filterByCategory = (data, category) => {
     if(category === "Home"){
-      return data
+      return data;
     }else{
       return data.filter((item) => item.acf.category === category )
     }
   }
   const changeActiveCategory = (category) => {
     setActiveCategory(category);
-    console.log(activeCategory);
   }
 
   
@@ -70,8 +69,7 @@ function App() {
                 <Route exact path="/capital-markets"><Section articles={filterByCategory(articles,"Capital Markets")}/></Route>
                 <Route exact path="/global-affairs"><Section articles={filterByCategory(articles,"Global Affairs")}/></Route>
                 <Route exact path="/articles/:id" component={Article}></Route>
-                {/* <Route exact path="/conferences/:id" component={Conference}></Route> */}
-
+                <Route exact path="/conferences/:id" component={Conference}/>
               </div>
             </Switch>
 

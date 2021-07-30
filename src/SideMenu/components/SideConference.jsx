@@ -4,13 +4,14 @@ import {Markup} from 'interweave';
 import {Link} from 'react-router-dom'
 
 function SideConference(props){
-    console.log(props)
     return(
         <div className="side-conference card">
             <img className="card-img side-img" src={props.imgUrl}></img>
             <div className="conf-info card-img-overlay">
                 <div className="side-data-container text-left">
-                    <p className="side-conf-title"><Markup content={props.title}></Markup></p>
+                    <Link to={`/conferences/${props.id}`}>
+                        <p className="side-conf-title"><Markup content={props.title}></Markup></p>
+                    </Link>
                     <p className="side-conf-tagline">{props.tagline}</p>
                 </div>
                 <div className="side-data-container text-right">
