@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import Home from './Home/Home';
 import Section from './Section/Section';
@@ -22,6 +22,7 @@ function App() {
   const [conferences, setConferences] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Home");
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,7 +40,6 @@ function App() {
     fetchData();
   },[])
 
-
   const filterByCategory = (data, category) => {
     if(category === "Home"){
       return data;
@@ -52,6 +52,7 @@ function App() {
   }
 
   
+
   return (
     <div className="App">
       {loaded ? 
@@ -68,6 +69,7 @@ function App() {
                 <Route exact path="/cyber"><Section articles={filterByCategory(articles,"Cyber Resilience")}/></Route>
                 <Route exact path="/capital-markets"><Section articles={filterByCategory(articles,"Capital Markets")}/></Route>
                 <Route exact path="/global-affairs"><Section articles={filterByCategory(articles,"Global Affairs")}/></Route>
+                
                 <Route exact path="/articles/:id" component={Article}></Route>
                 <Route exact path="/conferences/:id" component={Conference}/>
               </div>

@@ -12,23 +12,20 @@ function Conference(props){
 
     useEffect(() => {
         const { match: { params } } = props;
-        console.log(params);
 
         const fetchData = async () => {
-        
-        try{
-            const {data} = await axios(`https://skytop-strategies.com/wp-json/wp/v2/conferences/${params.id}?_embed=wp:featuredmedia&per_page=100`)
+            try{
+                const {data} = await axios(`https://skytop-strategies.com/wp-json/wp/v2/conferences/${params.id}?_embed=wp:featuredmedia&per_page=100`)
+                setData(data);
+            }catch (error){
+                console.log(error);
+            }
+            setLoaded(true);
+        }
 
-            setData(data);
-        }catch (error){
-            console.log(error);
-        }
-        setLoaded(true);
-        }
         fetchData();
   },[props])
 
-    console.log(data)
     return(
         <div className="" >
             {loaded ?
@@ -59,10 +56,7 @@ function Conference(props){
                     </div>
                 </div>
                     <div className="mt-5 pr-5 pl-5 text-left">
-                        <Markup content={data.content.rendered}>
-
-                        </Markup>
-
+                        <Markup content={data.content.rendered}></Markup>
                     </div>
             </div>
 
