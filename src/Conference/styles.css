@@ -16,7 +16,6 @@
 }
 .conf-content{
     overflow-y: scroll;
-    /* overflow-anchor: none ; */
     height: 550px;
 }
 
