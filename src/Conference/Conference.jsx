@@ -4,6 +4,8 @@ import {Markup} from 'interweave';
 import Countdown from '../util/Countdown/Countdown';
 import GoogleMapReact from 'google-map-react';
 import { useParams } from 'react-router';
+import { scroller } from "react-scroll";
+import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll';
 
 function Conference(props){
     const [data, setData] = useState(null);
@@ -16,7 +18,15 @@ function Conference(props){
         }
         setData(selectCurrentConference(props.conferences));
         setLoaded(true);
-  },[])
+    },[])
+
+    const scrollToSection = (className) => {
+        document.querySelector(`.${className}`).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+        
+    };
 
     return(
         <div className="" >
@@ -38,16 +48,16 @@ function Conference(props){
                         </div>
 
                     </div>
-                    <div className="nav">
-                        <div className="nav-item"> <a href="/">ABOUT</a></div>
-                        <div className="nav-item"> <a href="/1">AGENDA</a></div>
-                        <div className="nav-item"> <a href="/3">SPEAKERS</a></div>
-                        <div className="nav-item"> <a href="/4">DELEGATES</a></div>
-                        <div className="nav-item"> <a href="/2">SPONSORS</a></div>
+                    <div className="nav conf-nav">
+                        <div className="nav-item"> <a onClick={() => scrollToSection("about")}>ABOUT</a></div>
+                        <div className="nav-item"> <a onClick={() => scrollToSection("agenda")}>AGENDA</a></div>
+                        <div className="nav-item"> <a onClick={() => scrollToSection("speakers")}>SPEAKERS</a></div>
+                        <div className="nav-item"> <a onClick={() => scrollToSection("delegates")}>DELEGATES</a></div>
+                        <div className="nav-item"> <a onClick={() => scrollToSection("sponsors")}>SPONSORS</a></div>
 
                     </div>
                 </div>
-                    <div className="mt-5 pr-5 pl-5 text-left">
+                    <div className="mt-3 pt-5 pr-5 pl-5 text-left conf-content">
                         <Markup content={data.content.rendered}></Markup>
                     </div>
             </div>

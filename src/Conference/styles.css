@@ -7,6 +7,18 @@
     font-size: 27px;
     font-weight: 600;
 }
+.conf-nav{
+    z-index: 5;
+}
+.nav-item:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.conf-content{
+    overflow-y: scroll;
+    /* overflow-anchor: none ; */
+    height: 550px;
+}
 
 .conf-text{
     margin-top: 3rem;
