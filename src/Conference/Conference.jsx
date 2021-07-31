@@ -12,7 +12,7 @@ function Conference(props){
 
     useEffect(() => {        
         const selectCurrentConference = (conferences) => {
-            return (conferences.filter(conf => conf.id === parseInt(id))[0])
+            return (conferences.find(conf => conf.id === parseInt(id)))
         }
         setData(selectCurrentConference(props.conferences));
         setLoaded(true);

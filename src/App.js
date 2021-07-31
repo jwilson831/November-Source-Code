@@ -70,7 +70,6 @@ function App() {
                 <Route exact path="/capital-markets"><Section articles={filterByCategory(articles,"Capital Markets")}/></Route>
                 <Route exact path="/global-affairs"><Section articles={filterByCategory(articles,"Global Affairs")}/></Route>
                 
-        
                 <Route exact path="/articles/:id"><Article articles={articles}/></Route>
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
 
