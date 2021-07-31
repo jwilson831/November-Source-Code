@@ -76,7 +76,12 @@ function App() {
             </Switch>
 
             <div className="side-menu">
-              <SideMenu  conferences={filterByCategory(conferences,activeCategory)}/>
+              <Switch>
+                <Route path={"/conferences"}><h1>conference side menu</h1></Route>
+                <Route path={"*"}>
+                  <SideMenu  conferences={filterByCategory(conferences,activeCategory)}/>
+                </Route>
+              </Switch>
             </div>
           </div>
         </div>
