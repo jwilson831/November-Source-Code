@@ -1,30 +1,22 @@
 import React, {useState,useEffect} from 'react';
-import axios from 'axios';
 import './styles.css';
 import {Markup} from 'interweave';
 import Countdown from '../util/Countdown/Countdown';
 import GoogleMapReact from 'google-map-react';
+import { useParams } from 'react-router';
 
 function Conference(props){
     const [data, setData] = useState(null);
     const [loaded,setLoaded] = useState(false);
+    const {id} = useParams();
 
-
-    useEffect(() => {
-        const { match: { params } } = props;
-
-        const fetchData = async () => {
-            try{
-                const {data} = await axios(`https://skytop-strategies.com/wp-json/wp/v2/conferences/${params.id}?_embed=wp:featuredmedia&per_page=100`)
-                setData(data);
-            }catch (error){
-                console.log(error);
-            }
-            setLoaded(true);
+    useEffect(() => {        
+        const selectCurrentConference = (conferences) => {
+            return (conferences.filter(conf => conf.id === parseInt(id))[0])
         }
-
-        fetchData();
-  },[props])
+        setData(selectCurrentConference(props.conferences));
+        setLoaded(true);
+  },[])
 
     return(
         <div className="" >

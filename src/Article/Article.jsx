@@ -1,29 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {Markup} from "interweave";
+import { useParams } from 'react-router';
+
 
 function Article(props){
     const [data, setData] = useState(null);
     const [loaded,setLoaded] = useState(false);
+    const {id} = useParams();
 
-    useEffect(() => {
-        const { match: { params } } = props;
-        const fetchData = async () => {
-        
-        try{
-            const {data} = await axios(`https://skytop-strategies.com/wp-json/wp/v2/articles/${params.id}?_embed=wp:featuredmedia&per_page=100`)
-
-            setData(data);
-        }catch (error){
-            console.log(error);
+    useEffect(() => {        
+        const selectCurrentConference = (articles) => {
+            return (articles.filter(art => art.id === parseInt(id))[0])
         }
+        setData(selectCurrentConference(props.articles));
         setLoaded(true);
-        }
-        fetchData();
   },[])
 
-    
-    console.log(data);
     return(
         <div className="article-container p-5" >
             {loaded ?
