@@ -4,7 +4,7 @@ import { Markup } from 'interweave';
 import { useParams } from 'react-router';
 import ConfNav from './components/ConfNav';
 import ConfCard from './components/ConfCard';
-import Map from './components/Map';
+import Map from '../util/Map';
 
 
 function Conference(props){
@@ -35,7 +35,7 @@ function Conference(props){
                 <ConfNav />
                 <div className="mt-3 pt-5 pr-5 pl-5 text-left conf-content">
                     <Markup content={data.content.rendered}></Markup>
-                    <Map address={data.acf.street_address} city={data.acf.city}/>
+                    {/* <Map address={data.acf.street_address} city={data.acf.city}/> */}
                 </div>
             </div>
 

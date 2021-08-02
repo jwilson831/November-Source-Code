@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import SideContainer from './components/SideContainer';
-import NewsFeed from './components/NewsFeed';
-import Poll from './components/Poll';
+import NewsFeed from '../util/NewsFeed';
+import Poll from '../util/Poll';
 
-function SideMenu (props){
+function PrimaryMenu (props){
     return(
         <>
             <div className="side-menu-container text-left">
@@ -11,9 +11,8 @@ function SideMenu (props){
                 <Poll />
                 <NewsFeed />
             </div>
-
         </>
     )
 }
 
-export default SideMenu;
+export default PrimaryMenu;

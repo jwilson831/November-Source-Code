@@ -5,7 +5,7 @@ import Section from './Section/Section';
 import Header from './Header/Header';
 import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
-import SideMenu from './SideMenu/SideMenu';
+import PrimaryMenu from './PrimaryMenu/PrimaryMenu';
 import Conference from './Conference/Conference';
 import axios from 'axios';
 import {
@@ -78,9 +78,9 @@ function App() {
 
             <div className="side-menu">
               <Switch>
-                <Route path={"/conferences"}><h1>conference side menu</h1></Route>
+                <Route path={"/conferences/:id"}><h1>conference side menu</h1></Route>
                 <Route path={"*"}>
-                  <SideMenu  conferences={filterByCategory(conferences,activeCategory)}/>
+                  <PrimaryMenu conferences={filterByCategory(conferences,activeCategory)}/>
                 </Route>
               </Switch>
             </div>

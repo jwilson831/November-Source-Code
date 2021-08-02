@@ -10,7 +10,9 @@ function ConfCard(props){
                     <p className="conf-title"><Markup content={props.title}></Markup></p>
                     <p className="conf-tagline"><Markup content={props.tagline}></Markup></p>
                 </div>
-                <button className="btn btn-primary register-button">Register</button>
+                <button className="btn btn-primary register-button">
+                    <a className="text-light" href="https://skytop-strategies.com/cart/?add-to-cart=428" target="_blank">Register</a>
+                </button>
                 
                 <div className="conf-date-locale text-right mr-5">
                     <p className="side-data">{props.city}</p>
