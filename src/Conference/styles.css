@@ -4,7 +4,7 @@
     padding: 1rem;
 }
 .conf-title{
-    font-size: 27px;
+    font-size: 45px;
     font-weight: 600;
 }
 .conf-nav{
@@ -18,13 +18,17 @@
     overflow-y: scroll;
     height: 550px;
 }
+.conf-side-data{
+    font-size: 25px;
+    font-weight: 600;
+}
 
 .conf-text{
     margin-top: 3rem;
     margin-left: 3rem;
 }
 .conf-tagline{
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .conf-date-locale{
@@ -40,4 +44,8 @@
     margin-bottom: 2rem;
     font-size: 30px;
     
+}
+.countdown-text{
+    font-size: 30px;
+    font-weight: 600;
 }

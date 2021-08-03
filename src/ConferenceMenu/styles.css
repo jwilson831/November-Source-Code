@@ -1,0 +1,13 @@
+.convene{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.map-text{
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+    text-align: left;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+}

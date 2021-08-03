@@ -15,6 +15,7 @@ import {
   Link
 } from "react-router-dom";
 import Article from './Article/Article';
+import ConferenceMenu from './ConferenceMenu/ConferenceMenu';
 
 
 function App() {
@@ -78,7 +79,9 @@ function App() {
 
             <div className="side-menu">
               <Switch>
-                <Route path={"/conferences/:id"}><h1>conference side menu</h1></Route>
+                <Route path={"/conferences/:id"}>
+                  <ConferenceMenu conferences={conferences}/>
+                </Route>
                 <Route path={"*"}>
                   <PrimaryMenu conferences={filterByCategory(conferences,activeCategory)}/>
                 </Route>

@@ -1,5 +1,6 @@
 import React from "react";
 import {Markup} from 'interweave';
+import Countdown from "../../util/Countdown";
 
 function ConfCard(props){
     return (
@@ -10,13 +11,14 @@ function ConfCard(props){
                     <p className="conf-title"><Markup content={props.title}></Markup></p>
                     <p className="conf-tagline"><Markup content={props.tagline}></Markup></p>
                 </div>
+                <Countdown date={props.date}/>
                 <button className="btn btn-primary register-button">
                     <a className="text-light" href="https://skytop-strategies.com/cart/?add-to-cart=428" target="_blank">Register</a>
                 </button>
                 
                 <div className="conf-date-locale text-right mr-5">
-                    <p className="side-data">{props.city}</p>
-                    <p className="side-data">{props.date}</p>
+                    <p className="conf-side-data">{props.city}</p>
+                    <p className="conf-side-data">{props.date}</p>
                 </div>
             </div>
         </div>
