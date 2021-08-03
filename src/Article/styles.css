@@ -1,6 +1,10 @@
 .article-text{
     font-size: 21px;
 }
+.article-container{
+    overflow-y: scroll;
+    height: 1400px;
+}
 
 .art-img{
     height: 30rem;

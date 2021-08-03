@@ -11,7 +11,8 @@ function ConfCard(props){
                     <p className="conf-title"><Markup content={props.title}></Markup></p>
                     <p className="conf-tagline"><Markup content={props.tagline}></Markup></p>
                 </div>
-                <Countdown date={props.date}/>
+                {props.date !== "" ? <Countdown date={props.date}/> : ""}
+                
                 <button className="btn btn-primary register-button">
                     <a className="text-light" href="https://skytop-strategies.com/cart/?add-to-cart=428" target="_blank">Register</a>
                 </button>

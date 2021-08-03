@@ -25,8 +25,8 @@ function Map(props) {
 
   
     const mapStyles = {        
-      height: "20rem",
-      width: "80%",
+      height: "22rem",
+      width: "100%",
       margin: "auto"
     };
     

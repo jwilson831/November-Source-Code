@@ -21,13 +21,14 @@ function ConferenceMenu(props){
     },[])
     return(
     
-        <div>
+        <div className="conf-menu-container">
             {loaded ? 
             <div>
                 {/* <Map address={data.acf.street_address}/> */}
                 <div className="map-text">
                     <p className="convene">Convene</p>
-                    <p>{data.acf.street_address}</p>
+                    <p className="convene-address">{data.acf.street_address}</p>
+                    {/* <p className="convene-address">{data.acf.city}</p> */}
                 </div>
             </div>
             : "loading..."}
