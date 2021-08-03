@@ -4,7 +4,7 @@ import React from 'react';
 function NewsFeed(){
     return(
         <div className="news-container">
-            <p className="card-title">Get News Feed</p>
+            <p className="card-title">News Feed</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Email</span>
