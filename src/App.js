@@ -19,8 +19,9 @@ import ConferenceMenu from './ConferenceMenu/ConferenceMenu';
 
 
 function App() {
-  const [articles, setArticles] = useState(null);
-  const [conferences, setConferences] = useState(null);
+  const [articles, setArticles] = useState([]);
+  const [conferences, setConferences] = useState([]);
+  const [comments,setComments] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Home");
   
@@ -30,9 +31,11 @@ function App() {
       try{
         const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_embed=wp:featuredmedia&per_page=100");
         const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_embed=wp:featuredmedia&per_page=100");
+        const comments = await axios("https://skytop-strategies.com/wp-json/wp/v2/comments?per_page=100");
         
         setArticles(articles.data);
         setConferences(conferences.data);
+        setComments(comments.data);
       }catch (err){
         console.error(err);
       }
@@ -63,15 +66,15 @@ function App() {
           <div className="main-grid">
             <Switch>
               <div className="section">
-                <Route exact path="/"><Home articles={articles}/></Route>
-                <Route exact path="/activism"><Section articles={filterByCategory(articles,"Activism")}/></Route>
-                <Route exact path="/investment"><Section articles={filterByCategory(articles,"Investment Management")}/></Route>
-                <Route exact path="/CSR"><Section articles={filterByCategory(articles,"CSR and Sustainability")}/></Route>
-                <Route exact path="/cyber"><Section articles={filterByCategory(articles,"Cyber Resilience")}/></Route>
-                <Route exact path="/capital-markets"><Section articles={filterByCategory(articles,"Capital Markets")}/></Route>
-                <Route exact path="/global-affairs"><Section articles={filterByCategory(articles,"Global Affairs")}/></Route>
+                <Route exact path="/"><Home articles={articles} comments={comments}/></Route>
+                <Route exact path="/activism"><Section articles={filterByCategory(articles,"Activism")} comments={comments}/></Route>
+                <Route exact path="/investment"><Section articles={filterByCategory(articles,"Investment Management")} comments={comments}/></Route>
+                <Route exact path="/CSR"><Section articles={filterByCategory(articles,"CSR and Sustainability")} comments={comments}/></Route>
+                <Route exact path="/cyber"><Section articles={filterByCategory(articles,"Cyber Resilience")} comments={comments}/></Route>
+                <Route exact path="/capital-markets"><Section articles={filterByCategory(articles,"Capital Markets")} comments={comments}/></Route>
+                <Route exact path="/global-affairs"><Section articles={filterByCategory(articles,"Global Affairs")} comments={comments}/></Route>
                 
-                <Route exact path="/articles/:id"><Article articles={articles}/></Route>
+                <Route exact path="/articles/:id"><Article articles={articles} comments={comments}/></Route>
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
 
               </div>

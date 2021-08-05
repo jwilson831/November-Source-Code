@@ -1,0 +1,17 @@
+.comments-box{
+    margin-top: 2rem;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(0,0,0,0.2);
+    color: white;
+    border-radius: 5px;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.com-text{
+    margin: auto;
+}

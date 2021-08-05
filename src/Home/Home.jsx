@@ -9,8 +9,8 @@ function Home (props){
     return(
         <div className="home-grid">
             <div className="feature"><Feature data={props.articles.slice(0,1)}/></div>
-            <div className="subfeature"><SubFeatures articles={props.articles.slice(1,4)}/></div>
-            <div className="recent"><Recents articles={props.articles.slice(4,7)}/></div>
+            <div className="subfeature"><SubFeatures articles={props.articles.slice(1,4)} comments={props.comments}/></div>
+            <div className="recent"><Recents articles={props.articles.slice(4,7)} comments={props.comments}/></div>
         </div>
     )
 }

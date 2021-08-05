@@ -1,3 +1,16 @@
 .form-container{
-    width: 30%;
+    width: 60%;
+    margin-left: 3rem;
+}
+.form-group > label{
+    font-size: 28px;
+}
+.comment-container{
+    font-size: 22px;
+}
+
+.comments-submit{
+    height: 2.5rem;
+    width: 7rem;
+    font-size: 20px;
 }

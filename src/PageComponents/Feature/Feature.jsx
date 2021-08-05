@@ -15,9 +15,6 @@ function Feature (props){
                     <Link to={`articles/${data.id}`}>
                         <h5 className="card-title"><Markup content={data.title.rendered}></Markup></h5>
                     </Link>
-                    {/* <div className="excerpt">
-                        {data.excerpt.rendered.replace(/(<([^>]+)>)/gi, "")}
-                    </div> */}
                     <div className="byline">
                         <p className="m-0">By {data.acf.author} / {moment(data.date).format("MMMM Do, YYYY")}</p>
                     </div>
@@ -25,7 +22,6 @@ function Feature (props){
             </div>
         )
     }
-    
     return(
         <div className="feature-container">
             {props.data ? renderArticles(props.data) : "Loading..."}

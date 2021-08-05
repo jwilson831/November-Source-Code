@@ -31,6 +31,8 @@ function CommentsForm(props){
                     'Authorization': `Bearer ${localStorage.token}`                
                 },  
             });
+            setName("");
+            setContent("");
             props.addComment(data);
         }catch (err){
             console.error(err);
@@ -39,16 +41,16 @@ function CommentsForm(props){
 
     return(
         <div className="form-container">
-            <form onSubmit={handleSubmit} >
+            <form className="comments-form" onSubmit={handleSubmit} >
                 <div className="form-group">
-                    <label for="exampleInputEmail1">Name</label>
-                    <input onChange={(e) => setName(e.target.value)} className="form-control"></input>
+                    <label>Name</label>
+                    <input onChange={(e) => setName(e.target.value)} value={name} className="form-control"></input>
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputPassword1">Comment</label>
-                    <textarea onChange={(e) => setContent(e.target.value)} className="form-control" ></textarea>
+                    <label>Comment</label>
+                    <textarea onChange={(e) => setContent(e.target.value)} value={content} className="form-control" ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary comments-submit">Submit</button>
             </form>
         </div>
     )

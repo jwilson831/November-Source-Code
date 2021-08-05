@@ -1,8 +1,17 @@
 .recent-container{
     grid-area: recent;
 }
+.card-body-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.recents-comments{
+    display: flex;
+    justify-content: flex-end!important;
+}
 
 .recent-img{
     height: 20rem;
-    /* padding-righ t: 10%; */
+    /* padding-right: 10%; */
 }

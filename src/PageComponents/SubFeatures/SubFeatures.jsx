@@ -3,6 +3,7 @@ import './styles.css';
 import moment from 'moment';
 import {Link} from 'react-router-dom';
 import {Markup} from "interweave";
+import CommentsBox from '../../util/CommentsBox/CommentsBox';
 
 
 
@@ -18,11 +19,12 @@ function SubFeatures (props){
                     <div className="byline">
                         <p className="m-0">By {article.acf.author} / {moment(article.date).format("MMMM Do, YYYY")}</p>
                     </div>
+                    <CommentsBox comments={props.comments} id={article.id}/>
                 </div>
             </div>   
         ) 
     }
-
+    console.log(props.comments)
     return(
         <div className="sub-feature-container text-left">
             <p className="section-title">Features</p>

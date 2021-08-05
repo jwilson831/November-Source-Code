@@ -11,7 +11,7 @@ function CommentsContainer(props){
     useEffect(() => {
         const fetchComments = async () => {
             try{
-                const { data } = await axios(`https://skytop-strategies.com/wp-json/wp/v2/comments?article=${props.article.id}`);
+                const { data } = await axios(`https://skytop-strategies.com/wp-json/wp/v2/comments?post=${props.article.id}`);
                 setComments(data);
             }catch(err){
                 console.error(err);
