@@ -12,9 +12,17 @@ a{
 
 .nav-item{
     grid-area: item;
-    margin-right: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
  .nav-text{
      font-weight: bold;
      font-size: medium;
  }
+ .active {
+    background: rgb(38,136,165);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    border-radius: 5px;
+}

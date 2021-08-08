@@ -13,9 +13,9 @@ function ConfCard(props){
                 </div>
                 {props.date !== "" ? <Countdown date={props.date}/> : ""}
                 
-                <button className="btn btn-primary register-button">
-                    <a className="text-light" href="https://skytop-strategies.com/cart/?add-to-cart=428" target="_blank">Register</a>
-                </button>
+                    <a className="text-light" href="https://skytop-strategies.com/cart/?add-to-cart=428" target="_blank">
+                        <button className="btn btn-primary register-button">Register</button>
+                    </a>
                 
                 <div className="conf-date-locale text-right mr-5">
                     <p className="conf-side-data">{props.city}</p>

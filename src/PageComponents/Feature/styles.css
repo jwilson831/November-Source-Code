@@ -41,4 +41,8 @@
 .feature-container{
     grid-area: feature;
 }
+.video{
+    height: 40rem;
+    width: 100%;
+}
 

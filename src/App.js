@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 import Article from './Article/Article';
 import ConferenceMenu from './ConferenceMenu/ConferenceMenu';
+import Author from './Author/Author';
 
 
 function App() {
@@ -24,7 +25,6 @@ function App() {
   const [comments,setComments] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Home");
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,22 +61,63 @@ function App() {
     <div className="App">
       {loaded ? 
         <div className="main-container">
-          <Header changeActiveCategory={changeActiveCategory}/>
-          <Nav changeActiveCategory={changeActiveCategory}/>
+          <Header/>
+          <Nav changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/>
           <div className="main-grid">
             <Switch>
               <div className="section">
-                <Route exact path="/"><Home articles={articles} comments={comments}/></Route>
-                <Route exact path="/activism"><Section articles={filterByCategory(articles,"Activism")} comments={comments}/></Route>
-                <Route exact path="/investment"><Section articles={filterByCategory(articles,"Investment Management")} comments={comments}/></Route>
-                <Route exact path="/CSR"><Section articles={filterByCategory(articles,"CSR and Sustainability")} comments={comments}/></Route>
-                <Route exact path="/cyber"><Section articles={filterByCategory(articles,"Cyber Resilience")} comments={comments}/></Route>
-                <Route exact path="/capital-markets"><Section articles={filterByCategory(articles,"Capital Markets")} comments={comments}/></Route>
-                <Route exact path="/global-affairs"><Section articles={filterByCategory(articles,"Global Affairs")} comments={comments}/></Route>
+                <Route exact path="/">
+                  <Home 
+                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv1-0euju2O2-keMsHj1mALV"} 
+                    articles={articles} 
+                    comments={comments}/>
+                </Route>
+
+                <Route exact path="/activism">
+                  <Section
+                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv2uiwYOn97Uc8I8bW9ZaVxM"}
+                    articles={filterByCategory(articles,"Activism")} 
+                    comments={comments}/>
+                </Route>
+
+                <Route exact path="/investment">
+                  <Section
+                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv3NCts2MmcWa-wzX_gUJoMg"} 
+                    articles={filterByCategory(articles,"Investment Management")} 
+                    comments={comments}/>
+                </Route>
+
+                <Route exact path="/CSR">
+                  <Section
+                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv3vOIa9xSPbUAv1BT1SPfeG"} 
+                    articles={filterByCategory(articles,"CSR and Sustainability")} 
+                    comments={comments}/>
+                </Route>
+
+                <Route exact path="/cyber">
+                  <Section
+                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv1cod0xuCi9VUdz7uSqw7uo"} 
+                    articles={filterByCategory(articles,"Cyber Resilience")} 
+                    comments={comments}/>
+                </Route>
+
+                <Route exact path="/capital-markets">
+                  <Section
+                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv29i9uuPDdJM5WJ8U5nAAd-"} 
+                    articles={filterByCategory(articles,"Capital Markets")} 
+                    comments={comments}/>
+                </Route>
+
+                <Route exact path="/global-affairs">
+                  <Section
+                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv10zArc_uH8t0u1kdf-Ds6Q"} 
+                    articles={filterByCategory(articles,"Global Affairs")} 
+                    comments={comments}/>
+                </Route>
                 
+                <Route exact path="/authors/:id"><Author articles={articles} comments={comments}/></Route>
                 <Route exact path="/articles/:id"><Article articles={articles} comments={comments}/></Route>
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
-
               </div>
             </Switch>
 

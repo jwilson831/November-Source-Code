@@ -16,7 +16,7 @@ function Feature (props){
                         <h5 className="card-title"><Markup content={data.title.rendered}></Markup></h5>
                     </Link>
                     <div className="byline">
-                        <p className="m-0">By {data.acf.author} / {moment(data.date).format("MMMM Do, YYYY")}</p>
+                        <p className="m-0">By {data.acf.author.post_title} / {moment(data.date).format("MMMM Do, YYYY")}</p>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@ function Feature (props){
     }
     return(
         <div className="feature-container">
-            {props.data ? renderArticles(props.data) : "Loading..."}
+            <iframe className="video" src={props.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     )
 }
