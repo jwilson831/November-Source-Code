@@ -1,13 +1,15 @@
 import React from 'react';
-import Recents from '../PageComponents/Recents/Recents';
+import {Markup} from 'interweave';
 
 function Author(props){
     return(
-        <div>
-            <h1>Author Page</h1>
-            <div className="recent"><Recents articles={props.articles.slice(1,4)} comments={props.comments}/></div>
+        <div className="author-content text-left">
+            <img className="author-img" src={props.img}></img>
+            <p className="author-name">{props.name}</p>
+            <div className="p-3">
+                <p className="author-text"><Markup content={props.bio}></Markup></p>
+            </div>
         </div>
     )
 }
-
 export default Author;

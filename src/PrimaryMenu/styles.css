@@ -1,6 +1,5 @@
 .side-menu-container{
     padding-left: 1rem;
-    padding-right: 1rem;
     grid-template-columns: 1fr;
     grid-row: auto;
     grid-template-areas: 

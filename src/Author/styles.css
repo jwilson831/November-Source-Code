@@ -1,0 +1,17 @@
+.author-text{
+    font-size: 22px;
+}
+.author-content{
+    width: 90%;
+}
+
+.author-img{
+    height: 38rem;
+    width: auto;
+    padding: 2rem; 
+    padding-left: 0px;
+}
+.author-name{
+    font-size: 35px;
+    font-weight: 800;
+}

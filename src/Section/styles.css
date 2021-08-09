@@ -1,6 +1,10 @@
 .section-feature{
-    padding: 3rem;
-    width: 90%;
+    padding: 2rem;
+    width: 100%;
     justify-content: center;
     border-bottom: 1px solid rgb(0,0,0,0.2);
+}
+
+.section-grid{
+    padding-right:2rem;
 }

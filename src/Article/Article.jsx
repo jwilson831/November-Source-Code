@@ -11,10 +11,14 @@ function Article(props){
     const {id} = useParams();
 
     useEffect(() => {        
-        const selectCurrentConference = (articles) => {
-            return (articles.find(art => art.id === parseInt(id)))
+        const selectCurrentArticle = (data) => {
+            if(Array.isArray(data)){
+                return (data.find(article => article.id === parseInt(id)));
+            }else{
+                return data;
+            }
         }
-        setData(selectCurrentConference(props.articles));
+        setData(selectCurrentArticle(props.articles));
         setLoaded(true);
   },[])
 

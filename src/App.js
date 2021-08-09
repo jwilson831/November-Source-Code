@@ -16,13 +16,15 @@ import {
 } from "react-router-dom";
 import Article from './Article/Article';
 import ConferenceMenu from './ConferenceMenu/ConferenceMenu';
-import Author from './Author/Author';
+import Author from './Author/AuthorContainer';
+import AuthorContainer from './Author/AuthorContainer';
 
 
 function App() {
   const [articles, setArticles] = useState([]);
   const [conferences, setConferences] = useState([]);
   const [comments,setComments] = useState([]);
+  const [editorial, setEditorial] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Home");
 
@@ -32,10 +34,12 @@ function App() {
         const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_embed=wp:featuredmedia&per_page=100");
         const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_embed=wp:featuredmedia&per_page=100");
         const comments = await axios("https://skytop-strategies.com/wp-json/wp/v2/comments?per_page=100");
+        const editorials = await axios("https://skytop-strategies.com/wp-json/wp/v2/editorials?_embed=wp:featuredmedia")
         
         setArticles(articles.data);
         setConferences(conferences.data);
         setComments(comments.data);
+        setEditorial(editorials.data[0]);
       }catch (err){
         console.error(err);
       }
@@ -68,55 +72,56 @@ function App() {
               <div className="section">
                 <Route exact path="/">
                   <Home 
-                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv1-0euju2O2-keMsHj1mALV"} 
+                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv1-0euju2O2-keMsHj1mALV"} 
                     articles={articles} 
                     comments={comments}/>
                 </Route>
 
                 <Route exact path="/activism">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv2uiwYOn97Uc8I8bW9ZaVxM"}
+                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv2uiwYOn97Uc8I8bW9ZaVxM"}
                     articles={filterByCategory(articles,"Activism")} 
                     comments={comments}/>
                 </Route>
 
                 <Route exact path="/investment">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv3NCts2MmcWa-wzX_gUJoMg"} 
+                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv3NCts2MmcWa-wzX_gUJoMg"} 
                     articles={filterByCategory(articles,"Investment Management")} 
                     comments={comments}/>
                 </Route>
 
                 <Route exact path="/CSR">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv3vOIa9xSPbUAv1BT1SPfeG"} 
+                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv3vOIa9xSPbUAv1BT1SPfeG"} 
                     articles={filterByCategory(articles,"CSR and Sustainability")} 
                     comments={comments}/>
                 </Route>
 
                 <Route exact path="/cyber">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv1cod0xuCi9VUdz7uSqw7uo"} 
+                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv1cod0xuCi9VUdz7uSqw7uo"} 
                     articles={filterByCategory(articles,"Cyber Resilience")} 
                     comments={comments}/>
                 </Route>
 
                 <Route exact path="/capital-markets">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv29i9uuPDdJM5WJ8U5nAAd-"} 
+                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv29i9uuPDdJM5WJ8U5nAAd-"} 
                     articles={filterByCategory(articles,"Capital Markets")} 
                     comments={comments}/>
                 </Route>
 
                 <Route exact path="/global-affairs">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL7NmqcDhuRv10zArc_uH8t0u1kdf-Ds6Q"} 
+                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv10zArc_uH8t0u1kdf-Ds6Q"} 
                     articles={filterByCategory(articles,"Global Affairs")} 
                     comments={comments}/>
                 </Route>
                 
-                <Route exact path="/authors/:id"><Author articles={articles} comments={comments}/></Route>
+                <Route exact path="/authors/:id"><AuthorContainer articles={articles} comments={comments}/></Route>
                 <Route exact path="/articles/:id"><Article articles={articles} comments={comments}/></Route>
+                <Route exact path="/editorial"><Article articles={editorial}/></Route>
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
               </div>
             </Switch>
@@ -127,7 +132,7 @@ function App() {
                   <ConferenceMenu conferences={conferences}/>
                 </Route>
                 <Route path={"*"}>
-                  <PrimaryMenu conferences={filterByCategory(conferences,activeCategory)}/>
+                  <PrimaryMenu conferences={filterByCategory(conferences,activeCategory)} editorial={editorial} comments={comments}/>
                 </Route>
               </Switch>
             </div>
