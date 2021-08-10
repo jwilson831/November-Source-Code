@@ -15,9 +15,10 @@ import {
   Link
 } from "react-router-dom";
 import Article from './Article/Article';
-import ConferenceMenu from './ConferenceMenu/ConferenceMenu';
+import ConferenceMenu from './Conference/ConferenceMenu/ConferenceMenu';
 import Author from './Author/AuthorContainer';
 import AuthorContainer from './Author/AuthorContainer';
+import AuthorMenu from './Author/AuthorMenu/AuthorMenu';
 
 
 function App() {
@@ -130,6 +131,9 @@ function App() {
               <Switch>
                 <Route path={"/conferences/:id"}>
                   <ConferenceMenu conferences={conferences}/>
+                </Route>
+                <Route path={"/authors/:id"}>
+                  <AuthorMenu />
                 </Route>
                 <Route path={"*"}>
                   <PrimaryMenu conferences={filterByCategory(conferences,activeCategory)} editorial={editorial} comments={comments}/>

@@ -35,7 +35,6 @@ function Conference(props){
                 <ConfNav />
                 <div className="mt-3 pt-5 pr-5 pl-5 text-left conf-content">
                     <Markup content={data.content.rendered}></Markup>
-                    {/* <Map address={data.acf.street_address} city={data.acf.city}/> */}
                 </div>
             </div>
 

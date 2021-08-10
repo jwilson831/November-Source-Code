@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
-import Map from '../util/Map';
-import NewsFeed from '../util/NewsFeed';
-import Poll from '../util/Poll';
+import Map from '../../util/Map';
+import NewsFeed from '../../util/NewsFeed';
+import Poll from '../../util/Poll';
 import {useParams} from 'react-router-dom';
 import './styles.css'
 
@@ -24,7 +24,7 @@ function ConferenceMenu(props){
         <div className="conf-menu-container">
             {loaded ? 
             <div>
-                <Map address={data.acf.street_address}/>
+                {/* <Map address={data.acf.street_address}/> */}
                 <div className="map-text">
                     <p className="convene">Convene</p>
                     <p className="convene-address">{data.acf.street_address}</p>
