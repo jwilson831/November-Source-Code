@@ -3,18 +3,20 @@ import {Markup} from 'interweave';
 
 function About(props){
     return(
-        <div>
-            <div className="engage">
-                <p>ENGAGE</p>
-                <Markup content={props.engage}></Markup>
+        <div className="about-grid">
+            <div className="about-box engage">
+                <p className="about-title">ENGAGE</p>
+                <p className="about-txt"><Markup content={props.engage}></Markup></p>
+                
             </div>
-            <div className="discover">
-                <p>DISCOVER</p>
-                <Markup content={props.discover}></Markup>
+            <div className="about-box discover">
+                <p className="about-title">DISCOVER</p>
+                <p className="about-txt"><Markup content={props.discover}></Markup></p>
+                
             </div>
-            <div className="apply">
-                <p>APPLY</p>
-                <Markup content={props.apply}></Markup>
+            <div className="about-box apply">
+                <p className="about-title">APPLY</p>
+                <p className="about-txt"><Markup content={props.apply}></Markup></p>
             </div>
         </div>
     )

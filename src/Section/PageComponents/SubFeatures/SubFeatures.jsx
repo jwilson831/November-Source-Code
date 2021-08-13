@@ -3,8 +3,8 @@ import './styles.css';
 import moment from 'moment';
 import {Link} from 'react-router-dom';
 import {Markup} from "interweave";
-import CommentsBox from '../../util/CommentsBox/CommentsBox';
-import PageLoader from '../../util/Loader';
+import CommentsBox from '../../../util/CommentsBox/CommentsBox';
+import PageLoader from '../../../util/Loader';
 
 
 

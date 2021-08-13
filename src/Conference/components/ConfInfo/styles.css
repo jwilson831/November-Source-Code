@@ -3,6 +3,28 @@
     font-size: 25px;
     font-weight: 400;
 }
+/* ABOUT */
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.about-box{
+    padding: 2rem;
+    border: 3px solid rgb(38,136,165);
+    margin: 1rem;
+    border-radius: 8px;
+}
+.about-title{
+    color: rgb(38,136,165);
+    font-size: 32px;
+    font-weight: 700;
+}
+.about-box > span{}
+.about-txt{
+    font-size: 22px;
+    font: 'Times New Roman';
+}
 /* SPONSORS */
 .sponsors-container{
     text-align: center;

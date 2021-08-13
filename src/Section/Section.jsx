@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
-import Feature from '../PageComponents/Feature/Feature';
-import Recents from '../PageComponents/Recents/Recents';
+import Feature from './PageComponents/Feature/Feature';
+import Recents from './PageComponents/Recents/Recents';
 import ViewAllBtn from '../ViewAll/ViewAllBtn';
 
 function Section (props){

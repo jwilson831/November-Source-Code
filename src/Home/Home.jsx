@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.css';
-import Feature from '../PageComponents/Feature/Feature';
-import Recents from '../PageComponents/Recents/Recents';
-import SubFeatures from '../PageComponents/SubFeatures/SubFeatures';
+import Feature from '../Section/PageComponents/Feature/Feature';
+import Recents from '../Section/PageComponents/Recents/Recents';
+import SubFeatures from '../Section/PageComponents/SubFeatures/SubFeatures';
 
 function Home (props){
 

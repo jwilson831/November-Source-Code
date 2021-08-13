@@ -14,6 +14,7 @@
 .conference-container{
     grid-area: conferences;
     margin-bottom: 3rem;
+    padding-right: 3rem;
 }
 .poll-container{
     grid-area: poll;

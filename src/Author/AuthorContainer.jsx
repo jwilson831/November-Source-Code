@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import Recents from '../PageComponents/Recents/Recents';
+import Recents from '../Section/PageComponents/Recents/Recents';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Author from './Author';

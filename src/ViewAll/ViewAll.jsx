@@ -1,6 +1,6 @@
 import React from 'react';
 import ConfCard from '../Conference/components/ConfCard';
-import Recents from '../PageComponents/Recents/Recents';
+import Recents from '../Section/PageComponents/Recents/Recents';
 import './styles.css';
 
 function ViewAll(props){

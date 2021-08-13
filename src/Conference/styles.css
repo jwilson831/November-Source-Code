@@ -10,10 +10,7 @@
 .conf-nav{
     z-index: 5;
 }
-.nav-item:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
+
 .conf-content{
     overflow-y: scroll;
     height: 750px;
