@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Author from './Author';
 import './styles.css';
+import PageLoader from '../util/Loader';
 
 function AuthorContainer(props){
     const [author, setAuthor] = useState(null);
@@ -41,7 +42,7 @@ function AuthorContainer(props){
                     <div className="recent"><Recents articles={filterByAuthor(props.articles, id)} comments={props.comments}/></div>
                 </div>
                 :
-                "loading..."
+                <PageLoader/>
             }
         </>
     )

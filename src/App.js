@@ -20,6 +20,8 @@ import Author from './Author/AuthorContainer';
 import AuthorContainer from './Author/AuthorContainer';
 import AuthorMenu from './Author/AuthorMenu/AuthorMenu';
 import ViewAll from './ViewAll/ViewAll';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import PageLoader from './util/Loader';
 
 
 function App() {
@@ -33,7 +35,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try{
-        const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_embed=wp:featuredmedia&per_page=100");
+        const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=date&_fields[]=id&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
         const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_embed=wp:featuredmedia&per_page=100");
         const comments = await axios("https://skytop-strategies.com/wp-json/wp/v2/comments?per_page=100");
         const editorials = await axios("https://skytop-strategies.com/wp-json/wp/v2/editorials?_embed=wp:featuredmedia")
@@ -65,9 +67,9 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       {loaded ? 
         <div className="main-container">
-          <Header/>
           <Nav changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/>
           <div className="main-grid">
             <Switch>
@@ -147,7 +149,9 @@ function App() {
           </div>
         </div>
       : 
-      "Loading..."
+        <div className="loader">
+          <PageLoader/>
+        </div>
       }
         <Footer/>
     </div>

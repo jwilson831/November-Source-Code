@@ -3,6 +3,7 @@ import CommentsDisplay from './CommentsDisplay';
 import CommentsForm from './CommentsForm';
 import './styles.css';
 import axios from 'axios';
+import PageLoader from '../util/Loader';
 
 function CommentsContainer(props){
     const [comments,setComments] = useState(null);
@@ -36,7 +37,7 @@ function CommentsContainer(props){
                     <CommentsDisplay comments={comments}/>
             </div>
             : 
-                "loading..."
+                <PageLoader />
             }
         </>
 

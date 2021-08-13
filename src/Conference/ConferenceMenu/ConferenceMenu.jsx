@@ -4,6 +4,7 @@ import NewsFeed from '../../util/NewsFeed';
 import Poll from '../../util/Poll';
 import {useParams} from 'react-router-dom';
 import './styles.css'
+import PageLoader from '../../util/Loader';
 
 
 function ConferenceMenu(props){
@@ -30,7 +31,7 @@ function ConferenceMenu(props){
                     <p className="convene-address">{data.acf.street_address}</p>
                 </div>
             </div>
-            : "loading..."}
+            : <PageLoader/>}
             <NewsFeed/>
             <Poll />
         </div>

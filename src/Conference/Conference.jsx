@@ -15,6 +15,7 @@ import Agenda from './components/ConfInfo/Agenda';
 import Speakers from './components/ConfInfo/Speakers';
 import Delegates from './components/ConfInfo/Delegates';
 import Sponsors from './components/ConfInfo/Sponsors';
+import PageLoader from '../util/Loader';
 
 
 function Conference(props){
@@ -66,7 +67,7 @@ function Conference(props){
                 </div>
             </div>
 
-            : "loading..."}
+            : <PageLoader/>}
         </>
     )
 }

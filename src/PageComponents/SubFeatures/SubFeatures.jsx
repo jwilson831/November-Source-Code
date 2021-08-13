@@ -4,6 +4,7 @@ import moment from 'moment';
 import {Link} from 'react-router-dom';
 import {Markup} from "interweave";
 import CommentsBox from '../../util/CommentsBox/CommentsBox';
+import PageLoader from '../../util/Loader';
 
 
 
@@ -27,7 +28,7 @@ function SubFeatures (props){
     return(
         <div className="sub-feature-container text-left">
             <p className="section-title">Features</p>
-            {props.articles ? renderArticles(props.articles) : "Loading..."}
+            {props.articles ? renderArticles(props.articles) : <PageLoader/>}
         </div>
     )
 }

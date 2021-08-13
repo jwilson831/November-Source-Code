@@ -3,6 +3,7 @@ import './styles.css'
 import {Markup} from "interweave";
 import { useParams } from 'react-router';
 import CommentsContainer from '../Comments/CommentsContainer';
+import PageLoader from '../util/Loader';
 
 
 function Article(props){
@@ -40,7 +41,7 @@ function Article(props){
                     <CommentsContainer article={data}/>
                 </div>
             </div>
-        : "loading..."}
+        : <PageLoader/>}
         </>
     )
 }
