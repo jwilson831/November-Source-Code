@@ -21,10 +21,11 @@
 /* AGENDA */
 table{
     table-layout: fixed;
+    border-radius: 5px;
 }
 
 table td{
-    border: 1px solid black;
+    border: 1px solid rgb(186, 186, 186);
     padding: 1rem;
     font-size: 22px;
 }

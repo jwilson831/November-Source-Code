@@ -14,7 +14,7 @@ function AuthorContainer(props){
     useEffect(() => {
         const fetchAuthor = async () => {
             try{
-                const { data } = await axios(`https://skytop-strategies.com/wp-json/wp/v2/contributors/${id}?_embed=wp:featuredmedia&per_page=100`);
+                const { data } = await axios(`https://skytop-strategies.com/wp-json/wp/v2/people/${id}?_embed=wp:featuredmedia&per_page=100`);
                 setAuthor(data);
                 setLoaded(true);
             }catch(err){
@@ -26,24 +26,28 @@ function AuthorContainer(props){
     }, [id]);
 
     const filterByAuthor = (articles, authorId) => {
-        return articles.filter(art => art.acf.author["ID"] === parseInt(authorId))
+        return articles.filter(art => art.acf.author[0]["ID"] === parseInt(authorId))
     }
     return(
         <>
-            {loaded ? 
                 <div className="section-grid">
+            {loaded ? 
                     <div className="feature">
                         <Author 
                             name={author.acf.name}
                             bio={author.acf.bio}
-                            img={author._embedded["wp:featuredmedia"][0].source_url}
+                            img={author.acf.image}
                         />
                     </div>
+                    :
+                    <div className="author-loader">
+                        <PageLoader/>
+                    </div>
+            }
                     <div className="recent"><Recents articles={filterByAuthor(props.articles, id)} comments={props.comments}/></div>
                 </div>
-                :
-                <PageLoader/>
-            }
+                
+                
         </>
     )
 }
