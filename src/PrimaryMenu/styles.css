@@ -7,6 +7,10 @@
         "poll"
         "news";
 }
+.side-conference{
+    width: 75%;
+    margin-left: 2rem;
+}
 .conference-container{
     grid-area: conferences;
     margin-bottom: 3rem;

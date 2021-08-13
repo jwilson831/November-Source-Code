@@ -1,0 +1,10 @@
+.view-all > a:hover{
+    text-decoration: none;
+}
+.view-all > a > p{
+    color:white;
+}
+.view-all:hover{
+    background-color: rgb(38,136,165);
+}
+

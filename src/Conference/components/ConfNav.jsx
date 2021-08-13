@@ -1,21 +1,13 @@
 import React from 'react';
 
-function ConfNav(){
-
-    const scrollToSection = (className) => {
-        document.querySelector(`.${className}`).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-        
-    };
+function ConfNav(props){
     return(
         <div className="nav conf-nav">
-            <div className="nav-item"> <a onClick={() => scrollToSection("about")}>ABOUT</a></div>
-            <div className="nav-item"> <a onClick={() => scrollToSection("agenda")}>AGENDA</a></div>
-            <div className="nav-item"> <a onClick={() => scrollToSection("speakers")}>SPEAKERS</a></div>
-            <div className="nav-item"> <a onClick={() => scrollToSection("delegates")}>DELEGATES</a></div>
-            <div className="nav-item"> <a onClick={() => scrollToSection("sponsors")}>SPONSORS</a></div>
+            <div className="nav-item"> <a onClick={() => props.clickHandler(0)}>ABOUT</a></div>
+            <div className="nav-item"> <a onClick={() => props.clickHandler(1)}>AGENDA</a></div>
+            <div className="nav-item"> <a onClick={() => props.clickHandler(2)}>SPEAKERS</a></div>
+            <div className="nav-item"> <a onClick={() => props.clickHandler(3)}>DELEGATES</a></div>
+            <div className="nav-item"> <a onClick={() => props.clickHandler(4)}>SPONSORS</a></div>
         </div>
     )
 }

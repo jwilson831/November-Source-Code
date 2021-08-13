@@ -38,7 +38,7 @@ function Recents (props){
     return(
         <div className="recent-container text-left">
             <p className="section-title">Recent Articles</p>
-            {props.articles ? renderArticles(props.articles) : "Loading..."}
+            {renderArticles(props.articles)}
         </div>
     )
 }

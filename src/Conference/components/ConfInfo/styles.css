@@ -1,0 +1,30 @@
+/* GENERAL */
+.conf-info-title{
+    font-size: 25px;
+    font-weight: 400;
+}
+/* SPONSORS */
+.sponsors-container{
+    text-align: center;
+}
+
+.sponsors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+}
+.wp-block-image{
+    height: 100%
+}
+
+/* AGENDA */
+table{
+    table-layout: fixed;
+}
+
+table td{
+    border: 1px solid black;
+    padding: 1rem;
+    font-size: 22px;
+}

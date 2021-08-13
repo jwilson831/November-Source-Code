@@ -1,4 +1,5 @@
 import React from 'react';
+import ViewAllBtn from '../../ViewAll/ViewAllBtn';
 import '../styles.css';
 import SideConference from './SideConference';
 
@@ -19,6 +20,9 @@ function SideContainer(props){
         <div className="conference-container">
             <p className="section-title">Conferences</p>
             {props.conferences ? renderConferences(props.conferences) : ""}
+            <div className="text-right">
+                <ViewAllBtn linkTo={"conference"}/>
+            </div>
         </div>
     )
 }

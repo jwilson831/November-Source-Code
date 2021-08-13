@@ -19,6 +19,7 @@ import ConferenceMenu from './Conference/ConferenceMenu/ConferenceMenu';
 import Author from './Author/AuthorContainer';
 import AuthorContainer from './Author/AuthorContainer';
 import AuthorMenu from './Author/AuthorMenu/AuthorMenu';
+import ViewAll from './ViewAll/ViewAll';
 
 
 function App() {
@@ -124,6 +125,9 @@ function App() {
                 <Route exact path="/articles/:id"><Article articles={articles} comments={comments}/></Route>
                 <Route exact path="/editorial"><Article articles={editorial}/></Route>
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
+                <Route exact path="/index/conferences"><ViewAll conferences={conferences} comments={comments}/></Route>
+                <Route exact path="/index/articles"><ViewAll articles={articles} comments={comments}/></Route>
+
               </div>
             </Switch>
 

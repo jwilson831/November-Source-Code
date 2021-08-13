@@ -1,6 +1,7 @@
 import React from "react";
 import {Markup} from 'interweave';
 import Countdown from "../../util/Countdown";
+import {Link} from 'react-router-dom';
 
 function ConfCard(props){
     return (
@@ -8,7 +9,12 @@ function ConfCard(props){
             <img className="card-img-top conf-img" src={props.imgUrl} alt="Card image cap"></img>
             <div className="conf-info card-img-overlay text-light text-left conf-text">
                 <div>
-                    <p className="conf-title"><Markup content={props.title}></Markup></p>
+                    {props.id ?
+                        <Link className="text-light" to={`/conferences/${props.id}`}><p className="conf-title"><Markup content={props.title}></Markup></p></Link>
+                        :
+                        <p className="conf-title"><Markup content={props.title}></Markup></p>
+                    }
+
                     <p className="conf-tagline"><Markup content={props.tagline}></Markup></p>
                 </div>
                 {props.date !== "" ? <Countdown date={props.date}/> : ""}
