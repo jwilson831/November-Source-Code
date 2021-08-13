@@ -36,7 +36,7 @@ function App() {
     const fetchData = async () => {
       try{
         const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=date&_fields[]=id&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
-        const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_embed=wp:featuredmedia&per_page=100");
+        const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_fields[]=id&_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
         const comments = await axios("https://skytop-strategies.com/wp-json/wp/v2/comments?per_page=100");
         const editorials = await axios("https://skytop-strategies.com/wp-json/wp/v2/editorials?_embed=wp:featuredmedia")
         
