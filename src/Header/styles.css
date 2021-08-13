@@ -1,8 +1,9 @@
 .header-container {
     margin: auto;
     margin-top: 3rem;
+    align-items: center;
     display: grid;
-    grid-template-columns: 3fr 7fr 1fr 1fr;
+    grid-template-columns: 325px 7fr 1fr 1fr;
     grid-template-areas: 
         "brand tagline cart search";
 }
@@ -21,6 +22,7 @@
     margin-bottom: auto;
     padding-left: 1.5rem;
     font-weight: 400;
+    justify-self: left;
 }
 .header-icon{
     height: 2rem;
