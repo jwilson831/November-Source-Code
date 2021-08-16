@@ -13,7 +13,7 @@ function Recents (props){
             <div className="card mb-5">
                 <div className="row no-gutters">
                     <div className="col-md-6 text-left">
-                        <img className="card-img-top recent-img" src={article._embedded["wp:featuredmedia"][0].source_url} alt="Card image cap"></img>
+                        <img className="card-img-top recent-img" src={article.acf.image} alt="Card image cap"></img>
                     </div>
                     <div className="col-md-6 card-body-column">
                         <div className="card-body">

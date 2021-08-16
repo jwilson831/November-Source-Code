@@ -31,7 +31,7 @@ function Article(props){
                     <div>
                         <h1><Markup content={data.title.rendered}></Markup></h1>
             
-                        <img className="card-img-top art-img" src={data._embedded["wp:featuredmedia"][0].source_url} alt="Card image cap"></img>
+                        <img className="card-img-top art-img" src={data.acf.image} alt="Card image cap"></img>
                         <div className="article-text text-left">
                             <p className="article-text"><Markup content={data.content.rendered}></Markup></p>
                         </div>

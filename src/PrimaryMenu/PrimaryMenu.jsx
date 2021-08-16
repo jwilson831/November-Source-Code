@@ -9,7 +9,7 @@ function PrimaryMenu (props){
     useEffect(() => {
         setCurrentWindow(window.location.pathname)
     },[window.location.pathname])
-    console.log(currentWindow)
+    console.log(props.editorial)
     return(
         <>
             <div className="side-menu-container text-left">
@@ -18,7 +18,7 @@ function PrimaryMenu (props){
                     <Editorial
                         id={props.editorial.id}
                         title={props.editorial.title.rendered}
-                        img={props.editorial._embedded["wp:featuredmedia"][0].source_url}
+                        img={props.editorial.acf.image}
                         excerpt={props.editorial.excerpt.rendered}
                         comments={props.comments}
                     />

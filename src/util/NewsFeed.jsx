@@ -5,7 +5,7 @@ function NewsFeed(){
     return(
         <div className="news-container">
             <p className="card-title">News Feed</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Join the Skytop News Mailing List!</p>
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Email</span>
                 <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"></input>

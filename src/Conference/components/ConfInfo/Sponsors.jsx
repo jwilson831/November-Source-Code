@@ -8,6 +8,7 @@ function Sponsors(props){
     }
     return(
         <div className="sponsors-container">
+            <p className="category conf-info-title poll-title mb-5">Sponsors</p>
             <p className="conf-info-title">WE THANK OUR SPONSORS FOR SUPPORTING THIS PROGRAM</p>
             <div className="sponsors"> 
                 {props.sponsors ? renderSponsors(props.sponsors): ""}
