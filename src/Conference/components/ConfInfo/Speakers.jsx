@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import './styles.css'
 import PageLoader from '../../../util/Loader';
 
 
@@ -11,7 +12,7 @@ function Speakers(props){
             const ids = props.speakers.toString();
             const fetch = async () => {
                 try{
-                    const {data}= await axios(`https://skytop-strategies.com/wp-json/wp/v2/people?include=${ids}`);
+                    const {data}= await axios(`https://skytop-strategies.com/wp-json/wp/v2/people?include=${ids}&per_page=100`);
                     setSpeakers(data);
                     console.log(data);
                     setLoaded(true);
@@ -25,7 +26,7 @@ function Speakers(props){
     },[])
     const renderSpeakers = (speakers) => {
         return speakers.map(speaker => 
-            <div>
+            <div className="speaker">
                 <img className="speaker-img" src={speaker.acf.image}></img>
                 <h3><u>{speaker.acf.name}</u></h3>
                 <h5>{speaker.acf.job_title}</h5>

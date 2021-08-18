@@ -55,13 +55,25 @@ table td{
 /* DELEGATES */
 .delegates{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
+}
+.delegate{
+    padding: 1rem;
 }
 
 /* SPEAKERS */
 .speaker-img{
     height: 15rem;
-    width: auto;
+    width: 15rem;
     border-radius: 100%;
+}
+.speakers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.speaker{
+    padding: 3rem;
+    padding-right: 1rem;
 }

@@ -11,7 +11,7 @@ function Delegates(props){
             const ids = props.delegates.toString();
             const fetch = async () => {
                 try{
-                    const {data}= await axios(`https://skytop-strategies.com/wp-json/wp/v2/people?include=${ids}`);
+                    const {data}= await axios(`https://skytop-strategies.com/wp-json/wp/v2/people?include=${ids}&per_page=100`);
                     setDelegates(data);
                     console.log(data);
                     setLoaded(true);
@@ -24,7 +24,7 @@ function Delegates(props){
     },[])
     const renderDelegates = (delegates) => {
         return delegates.map(del => 
-            <div>
+            <div className="delegate">
                 <h3><u>{del.acf.name}</u></h3>
                 <h5>{del.acf.job_title}</h5>
                 <h5>{del.acf.company}</h5>
