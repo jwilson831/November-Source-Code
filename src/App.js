@@ -22,6 +22,7 @@ import AuthorMenu from './Author/AuthorMenu/AuthorMenu';
 import ViewAll from './ViewAll/ViewAll';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import PageLoader from './util/Loader';
+import ArticleMenu from './Article/ArticleMenu';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
     const fetchData = async () => {
       try{
         const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=date&_fields[]=id&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
-        const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_fields[]=id&_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
+        const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_fields[]=id&_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=_links&_embed=wp:featuredmedia&per_page=100&order=asc");
         const comments = await axios("https://skytop-strategies.com/wp-json/wp/v2/comments?per_page=100");
         const editorials = await axios("https://skytop-strategies.com/wp-json/wp/v2/editorials?_embed=wp:featuredmedia")
         
@@ -138,8 +139,11 @@ function App() {
                 <Route path={"/conferences/:id"}>
                   <ConferenceMenu conferences={conferences}/>
                 </Route>
-                <Route path={"/authors/:id"}>
-                  <AuthorMenu />
+                <Route path={["/authors/:id","/editorial"]}>
+                  <AuthorMenu conferences={conferences}/>
+                </Route>
+                <Route path={"/articles/:id"}>
+                  <ArticleMenu articles={articles} filterByCategory={filterByCategory} conferences={conferences}/>
                 </Route>
                 <Route path={"*"}>
                   <PrimaryMenu conferences={filterByCategory(conferences,activeCategory)} editorial={editorial} comments={comments}/>

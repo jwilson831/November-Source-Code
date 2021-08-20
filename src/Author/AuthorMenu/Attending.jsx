@@ -1,9 +1,8 @@
 import React from 'react';
-import ViewAllBtn from '../../ViewAll/ViewAllBtn';
-import '../styles.css';
-import SideConference from './SideConference';
+import SideConference from '../../PrimaryMenu/components/SideConference';
 
-function SideContainer(props){
+function Attending(props){
+    console.log(props.conferences);
     const renderConferences = (conferences) => {
         return conferences.map(conference => 
             <SideConference 
@@ -16,15 +15,13 @@ function SideContainer(props){
             />    
         )
     }
+
     return(
-        <div className="conference-container">
-            <p className="section-title">Upcoming Conferences</p>
-            {props.conferences ? renderConferences(props.conferences) : ""}
-            <div className="text-right">
-                <ViewAllBtn linkTo={"conference"}/>
-            </div>
+        <div>
+            <p className="edit-title">Attending Conferences</p>
+            {renderConferences(props.conferences)}
         </div>
     )
 }
 
-export default SideContainer;
+export default Attending;

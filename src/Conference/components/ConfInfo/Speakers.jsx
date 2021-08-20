@@ -28,13 +28,14 @@ function Speakers(props){
         return speakers.map(speaker => 
             <div className="speaker">
                 <img className="speaker-img" src={speaker.acf.image}></img>
-                <h3><u>{speaker.acf.name}</u></h3>
+                <a href={speaker.acf.url} target="_blank"><h3><u>{speaker.acf.name}</u></h3></a>
                 <h5>{speaker.acf.job_title}</h5>
                 <h5>{speaker.acf.company}</h5>
                 <h5>{speaker.acf.location}</h5>
             </div>
         )
     }
+    console.log(speakers[0])
     return(
         <div>
             <p className="category conf-info-title poll-title">speakers</p>

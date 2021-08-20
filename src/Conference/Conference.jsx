@@ -35,7 +35,15 @@ function Conference(props){
                     <Agenda agenda={data.content.rendered}/>,
                     <Speakers speakers={data.acf.speakers}/>,
                     <Delegates delegates={data.acf.delegates}/>,
-                    <Sponsors sponsors={data.acf.sponsors}/>
+                    <Sponsors 
+                        lead={data.acf.lead_sponsors}
+                        co_lead={data.acf.co_lead_sponsors}
+                        title_sponsors={data.acf.title_sponsors}
+                        program={data.acf.program_sponsors}
+                        strategic={data.acf.strategic_partners}
+                        network={data.acf.networking_partners}
+                        amb={data.acf.ambassador_sponsors}
+                    />
                 ])
 
             }catch(err){
@@ -60,9 +68,10 @@ function Conference(props){
                     tagline={data.acf.tagline}
                     city={data.acf.city}
                     date={data.acf.date}
+                    product_id={data.acf.event_ticket[0]["ID"]}
                 />    
                 <ConfNav clickHandler={clickHandler}/>
-                <div className="mt-3 pt-5 pr-5 pl-5 text-left conf-content">
+                <div className="mt-3 pt-5 pr-5 pl-2 text-left conf-content">
                     {info[key]}
                 </div>
             </div>

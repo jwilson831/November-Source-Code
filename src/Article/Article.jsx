@@ -21,7 +21,7 @@ function Article(props){
         }
         setData(selectCurrentArticle(props.articles));
         setLoaded(true);
-  },[])
+    },[])
 
     return(
         <>

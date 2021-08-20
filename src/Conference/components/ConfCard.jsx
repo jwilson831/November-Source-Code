@@ -19,7 +19,7 @@ function ConfCard(props){
                 </div>
                 {props.date !== "" ? <Countdown date={props.date}/> : ""}
                 
-                    <a className="text-light" href="https://skytop-strategies.com/cart/?add-to-cart=428" target="_blank">
+                    <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${props.product_id}`} target="_blank">
                         <button className="btn btn-primary register-button">Register</button>
                     </a>
                 

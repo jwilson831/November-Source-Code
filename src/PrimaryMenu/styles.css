@@ -19,11 +19,15 @@
 .poll-container{
     grid-area: poll;
     margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
 }
 .news-container{
     grid-area: news;
     margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
 }
 
