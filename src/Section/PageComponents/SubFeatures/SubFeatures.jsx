@@ -1,14 +1,29 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './styles.css';
 import moment from 'moment';
 import {Link} from 'react-router-dom';
 import {Markup} from "interweave";
 import CommentsBox from '../../../util/CommentsBox/CommentsBox';
-import PageLoader from '../../../util/Loader';
+import { findById } from '../../../util/findById';
 
 
 
 function SubFeatures (props){
+    const [articles,setArticles] = useState([]);
+
+    const findArticles = (idArray) => {
+        const articles = [];
+        idArray.forEach(id => {
+            const art = findById(id, props.articles);
+            articles.push(art);
+        })
+        return articles;
+    }
+
+    useEffect(() => {
+        setArticles(findArticles(props.ids))
+    },[])
+
     const renderArticles = (articles) => {    
         return articles.map( article => 
             <div className="card sub-feature-card">
@@ -28,7 +43,7 @@ function SubFeatures (props){
     return(
         <div className="sub-feature-container text-left">
             <p className="section-title">Features</p>
-            {props.articles ? renderArticles(props.articles) : <PageLoader/>}
+            {renderArticles(articles)}
         </div>
     )
 }

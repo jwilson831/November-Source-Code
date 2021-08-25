@@ -10,7 +10,6 @@ function Sponsors(props){
     }
     return(
         <div className="sponsors-container">
-            <p className="category conf-info-title poll-title mb-5">Sponsors</p>
             <p className="conf-info-title">WE THANK OUR SPONSORS FOR SUPPORTING THIS PROGRAM!</p>
             <div className="sponsors">
                 {props.lead ?
@@ -23,7 +22,7 @@ function Sponsors(props){
                     </div> : ""
                 } 
                 {props.co_lead ?
-                    <div>
+                    <div className="sponsor-type">
                         <p className="sponsor-cat-txt">Co-Lead Sponsors</p>
                         <hr></hr>
                         <div className="sponsor-grid">
@@ -32,7 +31,7 @@ function Sponsors(props){
                     </div> : ""
                 } 
                 {props.title_sponsors ?
-                    <div>
+                    <div className="sponsor-type">
                         <p className="sponsor-cat-txt">Title Sponsors</p>
                         <hr></hr>
                         <div className="sponsor-grid">
@@ -41,7 +40,7 @@ function Sponsors(props){
                     </div> : ""
                 } 
                 {props.program ?
-                    <div>
+                    <div className="sponsor-type">
                         <p className="sponsor-cat-txt">Program Sponsors</p>
                         <hr></hr>
                         <div className="sponsor-grid">
@@ -50,7 +49,7 @@ function Sponsors(props){
                     </div> : ""
                 } 
                 {props.strategic ?
-                    <div>
+                    <div className="sponsor-type">
                         <p className="sponsor-cat-txt">Strategic Partners</p>
                         <hr></hr>
                         <div className="sponsor-grid">
@@ -59,7 +58,7 @@ function Sponsors(props){
                     </div> : ""
                 } 
                 {props.network ?
-                    <div>
+                    <div className="sponsor-type">
                         <p className="sponsor-cat-txt">Networking Partners</p>
                         <hr></hr>
                         <div className="sponsor-grid">
@@ -68,7 +67,7 @@ function Sponsors(props){
                     </div> : ""
                 } 
                 {props.amb ?
-                    <div>
+                    <div className="sponsor-type">
                         <p className="sponsor-cat-txt">Ambassador Sponsors</p>
                         <hr></hr>
                         <div className="sponsor-grid">

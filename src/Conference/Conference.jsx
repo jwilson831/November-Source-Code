@@ -31,19 +31,11 @@ function Conference(props){
                 const data = (conferences.find(conf => conf.id === parseInt(id)));
                 setData(data);
                 setInfo([
-                    <About engage={data.acf.engage} discover={data.acf.discover} apply={data.acf.apply}/>,
+                    <About data={data} engage={data.acf.engage} discover={data.acf.discover} apply={data.acf.apply}/>,
                     <Agenda agenda={data.content.rendered}/>,
                     <Speakers speakers={data.acf.speakers}/>,
                     <Delegates delegates={data.acf.delegates}/>,
-                    <Sponsors 
-                        lead={data.acf.lead_sponsors}
-                        co_lead={data.acf.co_lead_sponsors}
-                        title_sponsors={data.acf.title_sponsors}
-                        program={data.acf.program_sponsors}
-                        strategic={data.acf.strategic_partners}
-                        network={data.acf.networking_partners}
-                        amb={data.acf.ambassador_sponsors}
-                    />
+                    
                 ])
 
             }catch(err){

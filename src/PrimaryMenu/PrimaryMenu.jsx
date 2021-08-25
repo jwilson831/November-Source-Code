@@ -5,6 +5,7 @@ import Poll from '../util/Poll/Poll';
 import Editorial from '../util/Editorial/Editorial';
 import Advert from '../util/Advert/Advert';
 import ad from '../util/Advert/CMi2i.png'
+import Publisher from '../util/Publisher/Publisher';
 
 function PrimaryMenu (props){
     const [currentWindow, setCurrentWindow] = useState(window.location.pathname);
@@ -15,9 +16,9 @@ function PrimaryMenu (props){
     return(
         <>
             <div className="side-menu-container text-left">
-                <SideContainer conferences={props.conferences.slice(0,3)}/>
+                <SideContainer conferences={props.conferences.slice(0,6)}/>
                 {window.location.pathname === "/" ?
-                
+                <div>
                     <Editorial
                         id={props.editorial.id}
                         title={props.editorial.title.rendered}
@@ -25,6 +26,8 @@ function PrimaryMenu (props){
                         excerpt={props.editorial.excerpt.rendered}
                         comments={props.comments}
                     />
+                    <Publisher/>
+                    </div>
                 :""}
                 <img className="menu-advert" src={ad}></img>
                 <Poll />

@@ -9,7 +9,7 @@ function Poll(){
     }
     return(
         <div className="poll-container text-left">
-            <div className="category poll-title"><p>Opinion</p></div>
+            <div className="category poll-title"><p>Weigh In With Us</p></div>
             <form onSubmit={(e) => submitHandler(e)}>
                 <p className="question">How realistic do you think it is that meaningful climate change will happen in your lifetime?</p>
                 <select className="form-select" multiple aria-label="multiple select example">

@@ -23,7 +23,7 @@ function Countdown(props){
         minutes = (minutes < 10) ? "0" + minutes : minutes;
         seconds = (seconds < 10) ? "0" + seconds : seconds;
       
-        return days + ' : ' + hours + " : " + minutes + " : " + seconds;
+        return days + ' days : ' + hours + " hrs : " + minutes + " min : " + seconds + "s";
       }
 
     return (

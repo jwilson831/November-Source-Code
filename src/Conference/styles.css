@@ -38,7 +38,7 @@
 .countdown{
     margin-top: 2rem;
     font-size: 30px;
-    width: 20rem;
+    width: fit-content;
     padding: 0.5rem;
     text-align: center;
     border: 3px dashed white;
@@ -48,4 +48,7 @@
 .countdown-text{
     font-size: 30px;
     font-weight: 600;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
 }

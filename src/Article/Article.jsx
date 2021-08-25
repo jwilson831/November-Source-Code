@@ -27,7 +27,7 @@ function Article(props){
         <>
         {loaded ?
             <div>
-                <div className="article-container p-5" >
+                <div className="article-container p-5 mt-3" >
                     <div>
                         <h1><Markup content={data.title.rendered}></Markup></h1>
             

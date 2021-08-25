@@ -37,6 +37,7 @@ function AuthorContainer(props){
                             name={author.acf.name}
                             bio={author.acf.bio}
                             img={author.acf.image}
+                            link={author.acf.url}
                         />
                     </div>
                     :

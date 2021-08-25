@@ -23,6 +23,7 @@ import ViewAll from './ViewAll/ViewAll';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import PageLoader from './util/Loader';
 import ArticleMenu from './Article/ArticleMenu';
+import { orderByDate } from './util/orderByDate';
 
 
 function App() {
@@ -31,18 +32,20 @@ function App() {
   const [comments,setComments] = useState([]);
   const [editorial, setEditorial] = useState("");
   const [loaded, setLoaded] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("Home");
+  const [activeCategory, setActiveCategory] = useState("Headlines");
 
   useEffect(() => {
     const fetchData = async () => {
       try{
         const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=date&_fields[]=id&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
-        const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_fields[]=id&_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=_links&_embed=wp:featuredmedia&per_page=100&order=asc");
+        const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_fields[]=id&_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
         const comments = await axios("https://skytop-strategies.com/wp-json/wp/v2/comments?per_page=100");
         const editorials = await axios("https://skytop-strategies.com/wp-json/wp/v2/editorials?_embed=wp:featuredmedia")
         
+        
         setArticles(articles.data);
-        setConferences(conferences.data);
+        setConferences(orderByDate(conferences))
+        // setConferences(conferences.data);
         setComments(comments.data);
         setEditorial(editorials.data[0]);
       }catch (err){
@@ -51,10 +54,11 @@ function App() {
       setLoaded(true);
     }
     fetchData();
-  },[])
+  },[]);
+  
 
   const filterByCategory = (data, category) => {
-    if(category === "Home"){
+    if(category === "Headlines"){
       return data;
     }else{
       return data.filter((item) => item.acf.category === category )
@@ -72,6 +76,9 @@ function App() {
       {loaded ? 
         <div className="main-container">
           <Nav changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/>
+          <div className="text-left">
+            <h1 className="section-heading">{activeCategory}</h1>
+          </div>
           <div className="main-grid">
             <Switch>
               <div className="section">
@@ -79,49 +86,62 @@ function App() {
                   <Home 
                     video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv1-0euju2O2-keMsHj1mALV"} 
                     articles={articles} 
-                    comments={comments}/>
+                    comments={comments}
+                    changeActiveCategory={changeActiveCategory}/>
                 </Route>
 
                 <Route exact path="/activism">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv2uiwYOn97Uc8I8bW9ZaVxM"}
-                    articles={filterByCategory(articles,"Activism")} 
-                    comments={comments}/>
+                    video={"https://www.youtube.com/embed/uUlqdOlKMEI"}
+                    articles={articles}
+                    ids={[1328,190,1322,627,593,596]}
+                    comments={comments}
+                    changeActiveCategory={changeActiveCategory}/>
                 </Route>
 
                 <Route exact path="/investment">
                   <Section
                     video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv3NCts2MmcWa-wzX_gUJoMg"} 
-                    articles={filterByCategory(articles,"Investment Management")} 
-                    comments={comments}/>
+                    articles={articles}
+                    ids={[622,583,604,607,197,184]}                    
+                    comments={comments}
+                    changeActiveCategory={changeActiveCategory}/>
                 </Route>
 
                 <Route exact path="/CSR">
                   <Section
                     video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv3vOIa9xSPbUAv1BT1SPfeG"} 
-                    articles={filterByCategory(articles,"CSR and Sustainability")} 
-                    comments={comments}/>
+                    articles={articles}
+                    ids={[599,616,601,590,177,580]}                    
+                    comments={comments}
+                    changeActiveCategory={changeActiveCategory}/>
                 </Route>
 
                 <Route exact path="/cyber">
                   <Section
                     video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv1cod0xuCi9VUdz7uSqw7uo"} 
-                    articles={filterByCategory(articles,"Cyber Resilience")} 
-                    comments={comments}/>
+                    articles={articles}
+                    ids={[187,1319,1306,1309,1337]}                    
+                    comments={comments}
+                    changeActiveCategory={changeActiveCategory}/>
                 </Route>
 
                 <Route exact path="/capital-markets">
                   <Section
                     video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv29i9uuPDdJM5WJ8U5nAAd-"} 
-                    articles={filterByCategory(articles,"Capital Markets")} 
-                    comments={comments}/>
+                    articles={articles}
+                    ids={[1303,585,630,612,181,1334]}                    
+                    comments={comments}
+                    changeActiveCategory={changeActiveCategory}/>
                 </Route>
 
                 <Route exact path="/global-affairs">
                   <Section
                     video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv10zArc_uH8t0u1kdf-Ds6Q"} 
-                    articles={filterByCategory(articles,"Global Affairs")} 
-                    comments={comments}/>
+                    articles={articles}
+                    ids={[624,609,218,215,200,193]}                    
+                    comments={comments}
+                    changeActiveCategory={changeActiveCategory}/>
                 </Route>
                 
                 <Route exact path="/authors/:id"><AuthorContainer articles={articles} comments={comments}/></Route>

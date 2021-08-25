@@ -14,7 +14,6 @@
     grid-row: auto;
     grid-template-areas: 
         "section side-menu";
-  margin-top: 2rem;
 
 }
 
@@ -30,6 +29,12 @@
   font-size: 23px;
   font-weight:800;
 }
+.section-heading{
+  font-size: 35px;
+  font-weight:800;
+  margin: 2rem 0rem 1rem 3rem;
+
+}
 
 .loader{
   margin-top: 15rem;
@@ -37,10 +42,12 @@
 }
 
 .advert{
-  height: 23rem;
-  width: auto;
+  height: 20rem;
+  width: fit-content;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  padding-right: 1rem;
+
 }
 
 .menu-advert{
@@ -48,6 +55,8 @@
   width: auto;
   margin-left: 1rem;
   margin-bottom: 3rem;
+  box-shadow: 1px 2px 2px 4px rgb(0,0,0,0.1);
+
 }
 
 

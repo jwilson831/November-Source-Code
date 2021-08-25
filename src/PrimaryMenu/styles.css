@@ -8,8 +8,9 @@
         "news";
 }
 .side-conference{
-    width: 75%;
-    margin-left: 2rem;
+    width: 85%;
+    margin-left: 1rem;
+    height: fit-content;
 }
 .conference-container{
     grid-area: conferences;
@@ -19,8 +20,10 @@
 .poll-container{
     grid-area: poll;
     margin-bottom: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
+    box-shadow: 1px 2px 2px 4px rgb(0,0,0,0.1);
+    border-radius: 5px;
+
 
 }
 .news-container{
@@ -33,6 +36,9 @@
 
 #side-conference-title{
     font-size: 23px;
+}
+.side-conf-tagline{
+    font-size: 20px;
 }
 
 .conference-banner{
@@ -53,7 +59,7 @@ select{
 }
 
 .side-img{
-    height: 15rem;
+    height: 18rem;
     margin-bottom: 2.5rem;
     padding-left: 1rem;
 }

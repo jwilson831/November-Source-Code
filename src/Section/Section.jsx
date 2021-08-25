@@ -3,6 +3,8 @@ import './styles.css';
 import Feature from './PageComponents/Feature/Feature';
 import Recents from './PageComponents/Recents/Recents';
 import ViewAllBtn from '../ViewAll/ViewAllBtn';
+import Advert from '../util/Advert/Advert';
+import ad from '../util/Advert/cyberad.png'
 
 function Section (props){
 
@@ -10,7 +12,8 @@ function Section (props){
         <div className="">
             <div className="section-feature"><Feature video={props.video}  comments={props.comments}/></div>
             <div className="recent">
-                <Recents articles={props.articles.slice(0,3)} comments={props.comments}/>
+                <Advert image={ad}/>
+                <Recents changeActiveCategory={props.changeActiveCategory} articles={props.articles} ids={props.ids} comments={props.comments}/>
                 <ViewAllBtn linkTo={"article"}/>
             </div>
 

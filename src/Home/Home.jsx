@@ -5,7 +5,7 @@ import Recents from '../Section/PageComponents/Recents/Recents';
 import SubFeatures from '../Section/PageComponents/SubFeatures/SubFeatures';
 import ViewAllBtn from '../ViewAll/ViewAllBtn';
 import Advert from '../util/Advert/Advert';
-import ad from '../util/Advert/ICM.jpg';
+import ad from '../util/Advert/cyberad.png';
 
 function Home (props){
 
@@ -14,11 +14,11 @@ function Home (props){
             <div className="feature">
                 <Feature video={props.video} />
             </div>
-            <div className="subfeature"><SubFeatures articles={props.articles.slice(0,3)} comments={props.comments}/></div>
+            <div className="subfeature"><SubFeatures articles={props.articles} ids={[1316,1325,1322]} comments={props.comments}/></div>
                 
             <div className="recent">
                 <Advert image={ad}/>
-                <Recents articles={props.articles.slice(4,8)} comments={props.comments}/>
+                <Recents changeActiveCategory={props.changeActiveCategory} articles={props.articles} ids={[1284,1319,203,643]} comments={props.comments}/>
             </div>
             <ViewAllBtn linkTo={"article"}/>
         </div>
