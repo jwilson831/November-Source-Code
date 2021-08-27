@@ -8,7 +8,7 @@ function Cart(){
     useEffect(() => {
         const fetchProducts = async () => {
             try{
-                const { data }= await axios(`https://skytop-strategies.com/wp-json/wc/v3/products?consumer_key=ck_d753a6a74fd14580135ae44ed3099362db977b0f&consumer_secret=cs_fcb999ebf5754c8c1f678f7f55d620a05f11da0e&_fields[]=id&_fields[]=price&_fields[]=name&_fields[]=images&per_page=100`);
+                const { data }= await axios(`https://skytop-strategies.com/wp-json/wc/v3/products?consumer_key=${process.env.REACT_APP_WOO_CK}&consumer_secret=${process.env.REACT_APP_WOO_CS}&_fields[]=id&_fields[]=price&_fields[]=name&_fields[]=images&per_page=100`);
                 setProducts(data);
             }catch(e){
                 console.error(e)
