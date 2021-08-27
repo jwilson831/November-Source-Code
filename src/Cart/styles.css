@@ -1,0 +1,21 @@
+.product-img{
+    height: 30rem;
+    width: auto;
+}
+.product-card{
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 2px rgb(0,0,0,0.2);
+    width: 80%;
+    margin: auto;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.prod-body{
+    margin-top: 8rem;
+}
+
+.products-container{
+    overflow-y: scroll;
+    height: 120rem;
+}

@@ -27,6 +27,7 @@ import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
 import { Markup } from 'interweave';
 import Policy from './util/Policy/Policy';
+import Cart from './Cart/Cart';
 
 
 function App() {
@@ -164,6 +165,7 @@ function App() {
                 <Route exact path="/about-us"><AboutUs changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/></Route>
                 <Route exact path="/privacy"><Policy policy="Privacy"/></Route>
                 <Route exact path="/cancel"><Policy policy="Cancel"/></Route>
+                <Route exact path="/cart"><Cart/></Route>
 
 
               </div>

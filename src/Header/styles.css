@@ -27,9 +27,14 @@
     justify-self: left;
 }
 .header-icon{
-    height: 2rem;
+    height: 3rem;
     width: auto;
     margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.header-icon:hover{
+    box-shadow: 1px 1px 2px 2px rgb(0,0,0,0.2);
 }
 
 .cart{

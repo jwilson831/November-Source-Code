@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 function Header (){
@@ -7,7 +8,9 @@ function Header (){
             <div className="header-container">
                 <img className="skytop-brand" src="https://utcoleca.sirv.com/skytop%20logo%20FINAL.png" alt="" />
                 <h5 className="tagline">Where Corporate Insight and Disruptive Ideas Converge</h5>
-                <img className="cart header-icon" src="https://utcoleca.sirv.com/shopping-cart.png" />
+                <Link to="/cart">
+                    <img className="cart header-icon" src="https://utcoleca.sirv.com/shopping-cart.png" />
+                </Link>
                 <img className="search header-icon" src="https://utcoleca.sirv.com/search.png" width="512" />
             </div>
         </div>
