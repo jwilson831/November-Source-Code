@@ -6,10 +6,12 @@ import SubFeatures from '../Section/PageComponents/SubFeatures/SubFeatures';
 import ViewAllBtn from '../ViewAll/ViewAllBtn';
 import Advert from '../util/Advert/Advert';
 import ad from '../util/Advert/cyberad.png';
+import Calendar from '../util/Calendar/Calendar';
 
 function Home (props){
-
+    console.log(props)
     return(
+        <>
         <div className="home-grid">
             <div className="feature">
                 <Feature video={props.video} />
@@ -19,9 +21,14 @@ function Home (props){
             <div className="recent">
                 <Advert image={ad}/>
                 <Recents changeActiveCategory={props.changeActiveCategory} articles={props.articles} ids={[1284,1319,203,643]} comments={props.comments}/>
+                <ViewAllBtn linkTo={"article"}/>
             </div>
-            <ViewAllBtn linkTo={"article"}/>
         </div>
+        <hr></hr>
+        <div className="text-left">
+            <Calendar calendar={props.calendar}/>
+        </div>
+        </>
     )
 }
 

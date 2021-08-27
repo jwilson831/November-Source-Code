@@ -13,7 +13,6 @@ function Poll(){
             const choices = [];
             let currentQuestion = questions[question]
             let currentChoices = currentQuestion.choices;
-            console.log(questions[question])
 
             for(const choice in currentChoices){
                 choices.push(currentChoices[choice])
@@ -38,7 +37,6 @@ function Poll(){
         }
         fetchPoll();
     },[])
-    console.log(data)
     return(
         <div className="poll-container text-left">
             <div className="category poll-title"><p>Weigh In With Us</p></div>

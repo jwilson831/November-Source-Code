@@ -25,7 +25,6 @@ function AuthorMenu(props){
         setConferences(filterByAuthor(props.conferences));
         setLoaded(true);
     },[])
-    console.log(id)
     return(
         <div className=" pl-3 text-left">
             {loaded ? 

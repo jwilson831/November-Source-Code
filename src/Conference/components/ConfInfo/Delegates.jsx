@@ -13,7 +13,6 @@ function Delegates(props){
                 try{
                     const {data}= await axios(`https://skytop-strategies.com/wp-json/wp/v2/people?include=${ids}&per_page=100`);
                     setDelegates(data);
-                    console.log(data);
                     setLoaded(true);
                 }catch(err){
                     console.log(err);

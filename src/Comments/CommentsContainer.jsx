@@ -26,7 +26,6 @@ function CommentsContainer(props){
         setComments(comments => [comment, ...comments]);
     }
 
-    console.log(comments);
     return(
         <>
         {loaded ? 

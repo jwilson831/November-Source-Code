@@ -34,6 +34,7 @@ function App() {
   const [conferences, setConferences] = useState([]);
   const [comments,setComments] = useState([]);
   const [editorial, setEditorial] = useState("");
+  const [editCalendar,setCal] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Headlines");
 
@@ -49,7 +50,8 @@ function App() {
         setArticles(articles.data);
         setConferences(orderByDate(conferences))
         setComments(comments.data);
-        setEditorial(editorials.data[0]);
+        setEditorial(editorials.data[1]);
+        setCal(editorials.data[0])
       }catch (err){
         console.error(err);
       }
@@ -71,7 +73,6 @@ function App() {
     if(category === "Headlines" || !categories.includes(category)){
       return data;
     }else{
-      console.log(data,category)
       return data.filter((item) => item.acf.category === category )
 
     }
@@ -96,7 +97,8 @@ function App() {
                     video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv1-0euju2O2-keMsHj1mALV"} 
                     articles={articles} 
                     comments={comments}
-                    changeActiveCategory={changeActiveCategory}/>
+                    changeActiveCategory={changeActiveCategory}
+                    calendar={editCalendar}/>
                 </Route>
 
                 <Route exact path="/activism">

@@ -49,7 +49,6 @@ function Conference(props){
     const clickHandler = (key) => {
         setKey(key);
     }
-    console.log(data);
     return(
         <>
             {loaded ?

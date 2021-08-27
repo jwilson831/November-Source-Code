@@ -2,7 +2,6 @@ import React from 'react';
 import SideConference from '../../PrimaryMenu/components/SideConference';
 
 function Attending(props){
-    console.log(props.conferences);
     const renderConferences = (conferences) => {
         return conferences.map(conference => 
             <SideConference 

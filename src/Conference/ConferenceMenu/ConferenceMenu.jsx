@@ -18,7 +18,6 @@ function ConferenceMenu(props){
         }
         setData(selectCurrentConference(props.conferences));
         setLoaded(true);
-        console.log(selectCurrentConference(props.conferences))
     },[])
     return(
     

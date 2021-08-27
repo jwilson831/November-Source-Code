@@ -12,7 +12,6 @@ function PrimaryMenu (props){
     useEffect(() => {
         setCurrentWindow(window.location.pathname)
     },[window.location.pathname])
-    console.log(props.editorial)
     return(
         <>
             <div className="side-menu-container text-left">

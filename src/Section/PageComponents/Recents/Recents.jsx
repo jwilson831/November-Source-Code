@@ -18,7 +18,6 @@ function Recents (props){
         return articles;
     }
     const renderByLine = (authorArray) => {
-        console.log("renderByLine is running")
         let byline = ``;
 
         let position = 'Skytop Contributor';
@@ -61,7 +60,6 @@ function Recents (props){
                                 <h5  onClick={() => props.changeActiveCategory(article.acf.category)} className="card-title"><Markup content={article.title.rendered}></Markup></h5>
                             </Link>
                             <div className="byline">
-                                {console.log(article.acf.byline)}
                                 {article.acf.custom_byline ? 
                                     <p><Markup content={article.acf.custom_byline}/></p>
                                     :

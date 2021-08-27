@@ -1,0 +1,26 @@
+.cal-container{
+    /* text-align: center; */
+  box-shadow: 1px 2px 2px 4px rgb(0,0,0,0.1);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 5px;
+  
+  width: 80%;
+}
+
+span > ol > li{
+    padding-left: 3rem;
+    font-size: 20px;
+}
+
+.cal-dates > p > span > p{
+    font-size: 20px;
+}
+
+.cal-dates{
+    overflow-y: scroll;
+    height: 60rem;
+}

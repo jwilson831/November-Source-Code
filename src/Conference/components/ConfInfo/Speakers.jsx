@@ -14,7 +14,6 @@ function Speakers(props){
                 try{
                     const {data}= await axios(`https://skytop-strategies.com/wp-json/wp/v2/people?include=${ids}&per_page=100`);
                     setSpeakers(data);
-                    console.log(data);
                     setLoaded(true);
                 }catch(err){
                     console.log(err);
@@ -35,7 +34,6 @@ function Speakers(props){
             </div>
         )
     }
-    console.log(speakers[0])
     return(
         <div>
             <p className="category conf-info-title poll-title">speakers</p>

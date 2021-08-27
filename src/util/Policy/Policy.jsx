@@ -11,7 +11,6 @@ function Policy(props){
         const fetchPolicy =  async () => {
             try{
                 const {data} = await axios('https://skytop-strategies.com/wp-json/wp/v2/policies');
-                console.log(data);
                 if(props.policy === "Privacy"){
                     setPolicy(data[0])
                 }else{
