@@ -62,11 +62,17 @@
    
 }
 
-.footer-text > p {
+.footer-text > a {
     margin-top:auto;
     margin-bottom:auto;  
     font-weight:600;
+    color: rgb(98,104,147)!important;
 
+}
+
+.footer-text > a:hover{
+    color: white!important;
+    text-decoration: none;
 }
 .about{
     grid-area: about;

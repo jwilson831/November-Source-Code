@@ -14,7 +14,7 @@
     grid-row: auto;
     grid-template-areas: 
         "section side-menu";
-
+  padding-top: 2rem;
 }
 
 .section{

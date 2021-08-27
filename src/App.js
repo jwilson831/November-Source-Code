@@ -26,6 +26,7 @@ import ArticleMenu from './Article/ArticleMenu';
 import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
 import { Markup } from 'interweave';
+import Policy from './util/Policy/Policy';
 
 
 function App() {
@@ -47,7 +48,6 @@ function App() {
         
         setArticles(articles.data);
         setConferences(orderByDate(conferences))
-        // setConferences(conferences.data);
         setComments(comments.data);
         setEditorial(editorials.data[0]);
       }catch (err){
@@ -84,13 +84,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+      <Header />
       {loaded ? 
         <div className="main-container">
           <Nav changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/>
-          <div className="text-left">
-            <h1 className="section-heading"><Markup content={activeCategory}></Markup></h1>
-          </div>
           <div className="main-grid">
             <Switch>
               <div className="section">
@@ -163,6 +160,9 @@ function App() {
                 <Route exact path="/index/conferences"><ViewAll conferences={conferences} comments={comments}/></Route>
                 <Route exact path="/index/articles"><ViewAll articles={articles} comments={comments}/></Route>
                 <Route exact path="/about-us"><AboutUs changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/></Route>
+                <Route exact path="/privacy"><Policy policy="Privacy"/></Route>
+                <Route exact path="/cancel"><Policy policy="Cancel"/></Route>
+
 
               </div>
             </Switch>

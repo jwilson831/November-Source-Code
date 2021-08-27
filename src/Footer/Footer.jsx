@@ -11,8 +11,12 @@ function Footer (props){
                     <Link to="/about-us">
                         <p onClick={() => props.changeActiveCategory("About Us")} className="about">ABOUT US</p>
                     </Link>
-                    <p className="cancel">CANCELLATION POLICY</p>
-                    <p className="privacy">PRIVACY POLICY</p>
+                    <Link to="/cancel">
+                        <p className="cancel">CANCELLATION POLICY</p>
+                    </Link>
+                    <Link to="/privacy">
+                        <p className="privacy">PRIVACY POLICY</p>
+                    </Link>
                     <p id="address">475 Park Ave South Suite 920 New York, NY 10016</p>
                 </div>
                     <span className="twitter"><i class="fab fa-twitter"></i></span>

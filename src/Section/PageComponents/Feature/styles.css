@@ -41,6 +41,7 @@
 }
 .feature-container{
     grid-area: feature;
+    margin-top: 4rem;
 }
 .video{
     height: 45rem;
