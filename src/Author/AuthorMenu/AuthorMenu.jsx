@@ -30,7 +30,7 @@ function AuthorMenu(props){
         <div className=" pl-3 text-left">
             {loaded ? 
             <>
-                {id && conferences.length > 0 ? <Attending conferences={conferences}/> : <SideContainer conferences={props.conferences.slice(0,3)}/>}
+                {id && conferences.length > 0 ? <Attending conferences={conferences}/> : <SideContainer conferences={props.conferences}/>}
                 <Poll/>
                 <NewsFeed/>
             </>

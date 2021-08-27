@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css'
 
-function Footer (){
+function Footer (props){
     return(
         <div className="footer">
             <div className="top-footer">
                 <img className="footer-brand" src="https://utcoleca.sirv.com/skytop%20logo%20KO%20FINAL.png" alt="" />
                 <div className="footer-text">
-                    <p className="about">ABOUT US</p>
+                    <Link to="/about-us">
+                        <p onClick={() => props.changeActiveCategory("About Us")} className="about">ABOUT US</p>
+                    </Link>
                     <p className="cancel">CANCELLATION POLICY</p>
                     <p className="privacy">PRIVACY POLICY</p>
                     <p id="address">475 Park Ave South Suite 920 New York, NY 10016</p>

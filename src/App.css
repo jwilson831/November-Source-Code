@@ -20,6 +20,7 @@
 .section{
   grid-area: section;
   border-right: 1px solid rgb(0,0,0,0.2);
+  padding-right: 1rem;
 }
 .side-menu{
   grid-area: side-menu;
@@ -58,7 +59,9 @@
   box-shadow: 1px 2px 2px 4px rgb(0,0,0,0.1);
 
 }
-
+optgroup{
+  font-size: 40px;
+}
 
 
 

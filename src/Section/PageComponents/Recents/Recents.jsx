@@ -6,9 +6,6 @@ import {Markup} from "interweave";
 import CommentsBox from '../../../util/CommentsBox/CommentsBox';
 import { findById } from '../../../util/findById';
 
-
-
-
 function Recents (props){
     const [articles,setArticles] = useState([]);
 

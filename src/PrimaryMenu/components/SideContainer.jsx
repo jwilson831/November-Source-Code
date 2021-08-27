@@ -19,7 +19,9 @@ function SideContainer(props){
     return(
         <div className="conference-container">
             <p className="section-title">Upcoming Conferences</p>
-            {props.conferences ? renderConferences(props.conferences) : ""}
+            <div className="side-conference-overflow">
+                {props.conferences ? renderConferences(props.conferences) : ""}
+            </div>
             <div className="text-right">
                 <ViewAllBtn linkTo={"conference"}/>
             </div>

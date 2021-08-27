@@ -17,14 +17,19 @@
     margin-bottom: 3rem;
     padding-right: 3rem;
 }
+.side-conference-overflow{
+    overflow-y: scroll;
+    height: fit-content;
+    max-height: 45rem;
+}
 .poll-container{
     grid-area: poll;
     margin-bottom: 3rem;
-    padding: 1rem;
-    box-shadow: 1px 2px 2px 4px rgb(0,0,0,0.1);
+    padding: 2rem;
+    margin-left: 1rem;
+    padding-left: 2rem;
+    box-shadow: 1px 2px 2px 4px rgb(0 0 0 / 10%);
     border-radius: 5px;
-
-
 }
 .news-container{
     grid-area: news;

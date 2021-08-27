@@ -16,7 +16,7 @@ function PrimaryMenu (props){
     return(
         <>
             <div className="side-menu-container text-left">
-                <SideContainer conferences={props.conferences.slice(0,6)}/>
+                <SideContainer conferences={props.conferences}/>
                 {window.location.pathname === "/" ?
                 <div>
                     <Editorial

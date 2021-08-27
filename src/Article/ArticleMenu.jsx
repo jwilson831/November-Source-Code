@@ -26,7 +26,7 @@ function ArticleMenu(props){
             {loaded ? 
                 <>
                     <SideContainer 
-                        conferences={props.filterByCategory(props.conferences,category).slice(0,4)}
+                        conferences={props.filterByCategory(props.conferences,category)}
                     />
                     <Poll/>
                     <NewsFeed/>

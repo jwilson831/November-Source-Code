@@ -24,6 +24,8 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import PageLoader from './util/Loader';
 import ArticleMenu from './Article/ArticleMenu';
 import { orderByDate } from './util/orderByDate';
+import AboutUs from './Footer/About/AboutUs';
+import { Markup } from 'interweave';
 
 
 function App() {
@@ -58,10 +60,20 @@ function App() {
   
 
   const filterByCategory = (data, category) => {
-    if(category === "Headlines"){
+    const categories = [  
+      "Activism", 
+      "Capital Markets", 
+      "Cyber Resilience", 
+      "CSR and Sustainability", 
+      "Investment Management", 
+      "Washington & The World"]
+
+    if(category === "Headlines" || !categories.includes(category)){
       return data;
     }else{
+      console.log(data,category)
       return data.filter((item) => item.acf.category === category )
+
     }
   }
   const changeActiveCategory = (category) => {
@@ -77,7 +89,7 @@ function App() {
         <div className="main-container">
           <Nav changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/>
           <div className="text-left">
-            <h1 className="section-heading">{activeCategory}</h1>
+            <h1 className="section-heading"><Markup content={activeCategory}></Markup></h1>
           </div>
           <div className="main-grid">
             <Switch>
@@ -135,7 +147,7 @@ function App() {
                     changeActiveCategory={changeActiveCategory}/>
                 </Route>
 
-                <Route exact path="/global-affairs">
+                <Route exact path="/washington-world">
                   <Section
                     video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv10zArc_uH8t0u1kdf-Ds6Q"} 
                     articles={articles}
@@ -150,6 +162,7 @@ function App() {
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
                 <Route exact path="/index/conferences"><ViewAll conferences={conferences} comments={comments}/></Route>
                 <Route exact path="/index/articles"><ViewAll articles={articles} comments={comments}/></Route>
+                <Route exact path="/about-us"><AboutUs changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/></Route>
 
               </div>
             </Switch>
@@ -177,7 +190,7 @@ function App() {
           <PageLoader/>
         </div>
       }
-        <Footer/>
+        <Footer changeActiveCategory={changeActiveCategory}/>
     </div>
   );
 }
