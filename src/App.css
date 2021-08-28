@@ -1,20 +1,37 @@
+body{
+  position: absolute;
+}
+
 .App{
   text-align: center;
   width: 100%;
   height: 100%;
+  margin: auto;
+  overflow-x: hidden;
 }
 
 .main-container{
   width: 90%;
   margin: auto;
 }
+
 .main-grid{
   display: grid;
   grid-template-columns: 2.5fr 1fr;
-    grid-row: auto;
-    grid-template-areas: 
-        "section side-menu";
+  grid-row: auto;
+  grid-template-areas: 
+      "section side-menu";
   padding-top: 2rem;
+  
+}
+@media only screen and (max-width: 800px) {
+  .main-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "section"
+    "side-menu";
+  }
 }
 
 .section{
@@ -43,7 +60,8 @@
 }
 
 .advert{
-  height: 20rem;
+  max-height: 100%;
+  max-width: 100%;
   width: fit-content;
   margin-top: 1rem;
   margin-bottom: 2rem;

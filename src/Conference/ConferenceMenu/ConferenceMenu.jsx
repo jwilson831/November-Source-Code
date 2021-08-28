@@ -1,10 +1,10 @@
 import React, {useState,useEffect} from 'react';
 import Map from '../../util/Map';
-import NewsFeed from '../../util/NewsFeed';
 import Poll from '../../util/Poll/Poll';
 import {useParams} from 'react-router-dom';
 import './styles.css'
 import PageLoader from '../../util/Loader';
+import NewsFeed from '../../util/News/NewsFeed';
 
 
 function ConferenceMenu(props){

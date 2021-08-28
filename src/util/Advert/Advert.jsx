@@ -2,7 +2,7 @@ import React from 'react';
 
 function Advert(props){
     return(
-        <div >
+        <div className="ad">
             <img className="advert" src={props.image}></img>
         </div>
     )

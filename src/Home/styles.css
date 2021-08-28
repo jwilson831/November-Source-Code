@@ -1,18 +1,35 @@
 .home-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "feature feature subfeature"
-        "recent recent recent";
+        "feature subfeature"
+        "ad ad"
+        "recent recent";
     padding-left: 1rem;
     padding-right: 1rem;
+}
+@media screen and (max-width: 1200px) {
+    .home-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "feature"
+            "subfeature"
+            "ad"
+            "recent"
+        ;
+    }
 }
 
 .feature{
     border-bottom: 1px solid rgb(0,0,0,0.2);
     grid-area: feature;
     padding-bottom: 3.5rem;
+}
+.ad{
+    grid-area: ad;
+
 }
 
 .subfeature{

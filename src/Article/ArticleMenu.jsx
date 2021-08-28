@@ -2,12 +2,14 @@ import React, {useEffect,useState} from 'react'
 import { useParams } from 'react-router-dom';
 import SideContainer from '../PrimaryMenu/components/SideContainer';
 import PageLoader from '../util/Loader';
-import NewsFeed from '../util/NewsFeed'
+import NewsFeed from '../util/News/NewsFeed';
 import Poll from '../util/Poll/Poll'
 
 function ArticleMenu(props){
     const [category,setCategory]=useState("");
     const [loaded,setLoaded] =useState(false);
+
+    
 
     const {id} = useParams();
     useEffect(() => {        

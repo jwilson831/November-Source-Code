@@ -57,7 +57,7 @@ function Recents (props){
                         <div className="card-body">
                             {window.location.pathname === "/" ? <div className="category"><p className="cat-text">{article.acf.category} </p></div> : ""}
                             <Link to={`/articles/${article.id}`} >
-                                <h5  onClick={() => props.changeActiveCategory(article.acf.category)} className="card-title"><Markup content={article.title.rendered}></Markup></h5>
+                                <h5 className="card-title"><Markup content={article.title.rendered}></Markup></h5>
                             </Link>
                             <div className="byline">
                                 {article.acf.custom_byline ? 

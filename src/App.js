@@ -16,7 +16,6 @@ import {
 } from "react-router-dom";
 import Article from './Article/Article';
 import ConferenceMenu from './Conference/ConferenceMenu/ConferenceMenu';
-import Author from './Author/AuthorContainer';
 import AuthorContainer from './Author/AuthorContainer';
 import AuthorMenu from './Author/AuthorMenu/AuthorMenu';
 import ViewAll from './ViewAll/ViewAll';
@@ -25,7 +24,6 @@ import PageLoader from './util/Loader';
 import ArticleMenu from './Article/ArticleMenu';
 import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
-import { Markup } from 'interweave';
 import Policy from './util/Policy/Policy';
 import Cart from './Cart/Cart';
 
