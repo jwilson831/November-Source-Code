@@ -1,5 +1,4 @@
 .cal-container{
-    /* text-align: center; */
   box-shadow: 1px 2px 2px 4px rgb(0,0,0,0.1);
   padding-left: 2rem;
   padding-right: 2rem;
@@ -7,6 +6,7 @@
   margin: auto;
   margin-top: 2rem;
   border-radius: 5px;
+  margin-top: 8rem;
   
   width: 80%;
 }

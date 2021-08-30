@@ -14,3 +14,6 @@ select{
 .form-select{
     height: fit-content;
 }
+.question-txt{
+    font-size: 25px !important;
+}

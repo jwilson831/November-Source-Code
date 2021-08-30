@@ -8,7 +8,7 @@ function CommentsForm(props){
 
     useEffect(() => {
         const login = async () => {
-            const {data: {token}} = await axios.post('https://skytop-strategies.com/wp-json/jwt-auth/v1/token?username=reidwatsonskytop&password=6zRwKp7w6fd9xWQ')
+            const {data: {token}} = await axios.post(`https://skytop-strategies.com/wp-json/jwt-auth/v1/token?username=${process.env.REACT_APP_WP_USERNAME}&password=${process.env.REACT_APP_WP_PASSWORD}`)
             localStorage.setItem("token", token);
         }
         login();
