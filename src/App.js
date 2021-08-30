@@ -84,7 +84,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header/>
       {loaded ? 
         <div className="main-container">
           <Nav changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/>
@@ -111,7 +111,7 @@ function App() {
 
                 <Route exact path="/investment">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv3NCts2MmcWa-wzX_gUJoMg"} 
+                    video={"https://www.youtube.com/embed/Yq1av-FGwLA"} 
                     articles={articles}
                     ids={[622,583,604,607,197,184]}                    
                     comments={comments}
@@ -129,7 +129,7 @@ function App() {
 
                 <Route exact path="/cyber">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv1cod0xuCi9VUdz7uSqw7uo"} 
+                    video={"https://www.youtube.com/embed/f0Uw9VF_YYk"} 
                     articles={articles}
                     ids={[187,1319,1306,1309,1337]}                    
                     comments={comments}
@@ -138,7 +138,7 @@ function App() {
 
                 <Route exact path="/capital-markets">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv29i9uuPDdJM5WJ8U5nAAd-"} 
+                    video={"https://www.youtube.com/embed/xniPAxEli0M"} 
                     articles={articles}
                     ids={[1303,585,630,612,181,1334]}                    
                     comments={comments}
@@ -147,7 +147,7 @@ function App() {
 
                 <Route exact path="/washington-world">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv10zArc_uH8t0u1kdf-Ds6Q"} 
+                    video={"https://www.youtube.com/embed/4Ia--F6fGVo"} 
                     articles={articles}
                     ids={[624,609,218,215,200,193]}                    
                     comments={comments}

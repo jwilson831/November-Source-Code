@@ -63,7 +63,8 @@ function Recents (props){
                                 {article.acf.custom_byline ? 
                                     <p><Markup content={article.acf.custom_byline}/></p>
                                     :
-                                    <p className="m-0">By <Markup content={renderByLine(article.acf.author)}/> / {moment(article.date).format("MMMM Do, YYYY")}</p>
+                                    <p className="m-0">By <Markup content={renderByLine(article.acf.author)}/> / Tuesday September 7, 2021 </p>
+                                    //                                                                          {moment(article.date).format("MMMM Do, YYYY")}
                                 }
                             </div>
                         </div>

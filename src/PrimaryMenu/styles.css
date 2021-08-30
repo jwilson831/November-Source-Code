@@ -25,6 +25,7 @@
 .poll-container{
     grid-area: poll;
     margin-bottom: 3rem;
+    margin-top: 3rem;
     padding: 2rem;
     margin-left: 1rem;
     padding-left: 2rem;
@@ -34,9 +35,11 @@
 .news-container{
     grid-area: news;
     margin-bottom: 3rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     padding-right: 1rem;
-
+    padding-top: 0.5rem;
+    background: rgb(0,0,0,0.1);
+    color: black !important;
 }
 
 #side-conference-title{

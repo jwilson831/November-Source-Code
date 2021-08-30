@@ -33,7 +33,8 @@ function SubFeatures (props){
                             <p className="sub-article-title"><strong><Markup content={article.title.rendered}></Markup></strong></p>
                         </Link>
                     <div className="byline">
-                        <p className="m-0">By <Link to={`authors/${article.acf.author[0]["ID"]}`}>{article.acf.author[0].post_title}</Link> / {moment(article.date).format("MMMM Do, YYYY")}</p>
+                        <p className="m-0">By <Link to={`authors/${article.acf.author[0]["ID"]}`}>{article.acf.author[0].post_title}</Link> / Tuesday September 7, 2021</p>
+                        {/*                                                                                                                  {moment(article.date).format("MMMM Do, YYYY")} */}
                     </div>
                     <CommentsBox comments={props.comments} id={article.id}/>
                 </div>

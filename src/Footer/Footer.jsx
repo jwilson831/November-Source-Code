@@ -17,7 +17,7 @@ function Footer (props){
                     <Link to="/privacy">
                         <p className="privacy">PRIVACY POLICY</p>
                     </Link>
-                    <p id="address">475 Park Ave South Suite 920 New York, NY 10016</p>
+                    <p id="address">141 West 36th Street, 8th Floor New York, NY 10018</p>
                 </div>
                     <span className="twitter"><i class="fab fa-twitter"></i></span>
                     <span className="linkedin"><i class="fab fa-linkedin-in"></i></span>
