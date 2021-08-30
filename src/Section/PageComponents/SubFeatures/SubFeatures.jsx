@@ -19,6 +19,25 @@ function SubFeatures (props){
         })
         return articles;
     }
+    const renderByLine = (authorArray) => {
+        let byline = ``;
+
+        let position = 'Skytop Contributor';
+        for(let i = 0; i < authorArray.length;i++){
+            if(authorArray[i]["ID"] === 529){
+                position = "Guest Contributor"
+            }else if(authorArray[i]["ID"] === 543){
+                position = "Skytop Associate"
+            }
+
+            if(authorArray[i+1]){
+                byline += `<a href=${`/authors/${authorArray[i]["ID"]}`}>${authorArray[i].post_title}</a>, ${position}, `
+            }else{
+                byline += `<a href=${`/authors/${authorArray[i]["ID"]}`}>${authorArray[i].post_title}</a>, ${position}`
+            }
+        }
+        return byline;
+    }
 
     useEffect(() => {
         setArticles(findArticles(props.ids))
@@ -33,8 +52,8 @@ function SubFeatures (props){
                             <p className="sub-article-title"><strong><Markup content={article.title.rendered}></Markup></strong></p>
                         </Link>
                     <div className="byline">
-                        <p className="m-0">By <Link to={`authors/${article.acf.author[0]["ID"]}`}>{article.acf.author[0].post_title}</Link> / Tuesday September 7, 2021</p>
-                        {/*                                                                                                                  {moment(article.date).format("MMMM Do, YYYY")} */}
+                        <p className="m-0">By <Markup content={renderByLine(article.acf.author)}/> / Tuesday September 7, 2021</p>
+                        {/*                                                                           {moment(article.date).format("MMMM Do, YYYY")} */}
                     </div>
                     <CommentsBox comments={props.comments} id={article.id}/>
                 </div>

@@ -30,6 +30,8 @@ input.search-input {
 }
 .search-img{
     height: 10rem;
+    width: 15rem;
+    object-fit: cover;
 }
 .search-info{
     max-width: 31rem;

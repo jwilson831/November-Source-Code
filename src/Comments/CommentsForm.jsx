@@ -4,6 +4,9 @@ import './styles.css'
 
 function CommentsForm(props){
     const [name,setName] = useState("");
+    const [email,setEmail] = useState("");
+    const [company,setCompany] = useState("");
+    const [jobTitle,setJobTitle] = useState("");
     const [content, setContent] = useState("");
 
     useEffect(() => {
@@ -20,7 +23,8 @@ function CommentsForm(props){
         const data = {
             author_name: name,
             content: content,
-            post: props.data.id
+            post: props.data.id,
+            author_email: email
         }
         
         try{
@@ -32,6 +36,9 @@ function CommentsForm(props){
                 },  
             });
             setName("");
+            setEmail("");
+            setCompany("");
+            setJobTitle("");
             setContent("");
             props.addComment(data);
         }catch (err){
@@ -45,6 +52,12 @@ function CommentsForm(props){
                 <div className="form-group">
                     <label>Name</label>
                     <input onChange={(e) => setName(e.target.value)} value={name} className="form-control"></input>
+                    <label>Email</label>
+                    <input onChange={(e) => setEmail(e.target.value)} value={email} className="form-control"></input>
+                    <label>Company</label>
+                    <input onChange={(e) => setCompany(e.target.value)} value={company} className="form-control"></input>
+                    <label>Job Title</label>
+                    <input onChange={(e) => setJobTitle(e.target.value)} value={jobTitle} className="form-control"></input>
                 </div>
                 <div className="form-group">
                     <label>Comment</label>

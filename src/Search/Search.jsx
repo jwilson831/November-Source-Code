@@ -11,7 +11,7 @@ function Search(props){
 
     const searchResults = async (searchTerm) => {
         try{
-            const {data} = await axios(`https://skytop-strategies.com/wp-json/swp_api/search?s=${searchTerm}i&per_page=100`);
+            const {data} = await axios(`https://skytop-strategies.com/wp-json/swp_api/search?s=${searchTerm}i&per_page=100&_embed=wp:featuredmedia`);
             setSearchData(data);
         }catch(e){
             console.log(e);
@@ -32,6 +32,16 @@ function Search(props){
             return ""
         }
     }
+    const renderImage = (data) => {
+        if(data.acf.image){
+            return <img className={"search-img"} src={data.acf.image}></img> 
+        }else if(data._embedded){
+            console.log(data);
+            return <img className={"search-img"} src={data._embedded["wp:featuredmedia"][0].source_url}></img> 
+        }else{
+            return ""
+        }
+    }
 
     const renderSearchResults = (results) => {
         console.log(results)
@@ -40,10 +50,11 @@ function Search(props){
                 <div className="card result-container">
                     <div className="row">
                         <div className="col-md-4">
-                            {result.acf.image ? <img className={"search-img"}src={result.acf.image}></img> : ""}
+                            {/* {result.acf.image ? <img className={"search-img"}src={result.acf.image}></img> : ""} */}
+                            {renderImage(result)}
                         </div>
                         <div className="search-info col-md-8">
-                            <p> <Markup content={result.title.rendered}></Markup></p>
+                            <h3> <Markup content={result.title.rendered}></Markup></h3>
                             {result.acf.author ? 
                                 <p>By: {result.acf.author[0].post_title}</p>
                                 :    
@@ -59,7 +70,7 @@ function Search(props){
         <div className="search-container">
             <h2>Search</h2>
             <form onSubmit={(e) => submitHandler(e) }>
-                <input onChange={(e) => setInput(e.target.value) } className="search-input" value={input}></input>
+                <input type="search"onChange={(e) => setInput(e.target.value) } className="form-control search-input" value={input}></input>
             </form>
             <hr></hr>
             <div className="search-results">
