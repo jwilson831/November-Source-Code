@@ -83,5 +83,14 @@ optgroup{
   font-size: 40px;
 }
 
+.card-img-top{
+  object-fit: cover;
+}
+
+.video-title > p{
+  /* display: inline-block; */
+  margin: 0px;
+}
+
 
 

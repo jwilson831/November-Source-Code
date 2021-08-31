@@ -10,7 +10,7 @@ function Section (props){
 
     return(
         <div className="">
-            <div className="section-feature"><Feature video={props.video}  comments={props.comments}/></div>
+            <div className="section-feature"><Feature video={props.video}  comments={props.comments} title={props.title}/></div>
             <div className="recent">
                 <Advert image={ad}/>
                 <Recents changeActiveCategory={props.changeActiveCategory} articles={props.articles} ids={props.ids} comments={props.comments}/>

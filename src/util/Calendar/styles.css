@@ -4,20 +4,20 @@
   padding-right: 2rem;
   padding-top: 1rem;
   margin: auto;
-  margin-top: 2rem;
   border-radius: 5px;
-  margin-top: 8rem;
-  
-  width: 80%;
+  margin-top: 2rem;
+  width: 90%;
+  background-color: rgb(0,0,0,0.1);
 }
 
-span > ol > li{
-    padding-left: 3rem;
-    font-size: 20px;
+.wp-block-column > ol > li{
+    font-size: 25px;
+    padding-left: 4rem;
 }
 
 .cal-dates > p > span > p{
     font-size: 20px;
+    padding-left: 1rem;
 }
 
 .cal-dates{

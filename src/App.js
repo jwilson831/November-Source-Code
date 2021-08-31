@@ -93,7 +93,16 @@ function App() {
               <div className="section">
                 <Route exact path="/">
                   <Home 
-                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv1-0euju2O2-keMsHj1mALV"} 
+                    video={"https://www.youtube.com/embed/vhG9PNePKJE"} 
+                    title={
+                      <div className="video-title text-center">
+                        <h3>The Big Debate</h3>
+                        <p>Featuring</p>
+                        <p>David Katz, Partner, Wachtell Lipton Rosen &amp; Katz</p>
+                        <p>&amp;</p>
+                        <p>Eleazer Klein, Partner, Schulte Roth &amp; Zabel </p>
+                      </div>
+                    }
                     articles={articles} 
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
@@ -102,7 +111,13 @@ function App() {
 
                 <Route exact path="/activism">
                   <Section
-                    video={"https://www.youtube.com/embed/uUlqdOlKMEI"}
+                    video={"https://www.youtube.com/embed/VnI4ox-lOEU"}
+                    title={
+                      <div className="video-title text-center">
+                        <h3>Evolving Practices in Shareholder Engagement</h3>
+                        <p>Jeremy Fielding, CEO Kekst CNC</p>
+                      </div>
+                    }
                     articles={articles}
                     ids={[1328,190,1322,627,593,596]}
                     comments={comments}
@@ -111,7 +126,13 @@ function App() {
 
                 <Route exact path="/investment">
                   <Section
-                    video={"https://www.youtube.com/embed/Yq1av-FGwLA"} 
+                    video={"https://www.youtube.com/embed/sIMJfTE2NCM"} 
+                    title={
+                      <div className="video-title text-center">
+                        <h3>ESG Investing, A Portfolio Perspective</h3>
+                        <p>Rodrigo Garcia, CIO and CFO,  Illinois State Treasury</p>
+                      </div>
+                    }
                     articles={articles}
                     ids={[622,583,604,607,197,184]}                    
                     comments={comments}
@@ -120,7 +141,13 @@ function App() {
 
                 <Route exact path="/CSR">
                   <Section
-                    video={"https://www.youtube.com/embed/videoseries?list=PL7NmqcDhuRv3vOIa9xSPbUAv1BT1SPfeG"} 
+                    video={"https://www.youtube.com/embed/WEvUO-l4d7w"} 
+                    title={
+                      <div className="video-title text-center">
+                        <h3>Innovation and CSR Brand Strategy </h3>
+                        <p>Joe Verrengia, Global Director, Corporate Social Responsibility</p>
+                      </div>
+                    }
                     articles={articles}
                     ids={[599,616,601,590,177,580]}                    
                     comments={comments}
@@ -129,16 +156,28 @@ function App() {
 
                 <Route exact path="/cyber">
                   <Section
-                    video={"https://www.youtube.com/embed/f0Uw9VF_YYk"} 
+                    video={"https://www.youtube.com/embed/bcwb-BDxIZo"} 
+                    title={
+                      <div className="video-title text-center">
+                        <h3>The Cognitive Hack</h3>
+                        <p>James Bone, Executive Director and Founder GRC Index</p>
+                      </div>
+                    }
                     articles={articles}
-                    ids={[187,1319,1306,1309,1337]}                    
+                    ids={[187,1306,1309,1337,1319]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}/>
                 </Route>
 
                 <Route exact path="/capital-markets">
                   <Section
-                    video={"https://www.youtube.com/embed/xniPAxEli0M"} 
+                    video={"https://www.youtube.com/embed/0KQJ3n7GgU4"} 
+                    title={
+                      <div className="video-title text-center">
+                        <h3>Activists and Markets</h3>
+                        <p>Rich Thomas, Director, Lazard</p>
+                      </div>
+                    }
                     articles={articles}
                     ids={[1303,585,630,612,181,1334]}                    
                     comments={comments}
@@ -147,7 +186,13 @@ function App() {
 
                 <Route exact path="/washington-world">
                   <Section
-                    video={"https://www.youtube.com/embed/4Ia--F6fGVo"} 
+                    video={"https://www.youtube.com/embed/f8iBhyXnKrg"} 
+                    title={
+                      <div className="video-title text-center">
+                        <h3>Child Labor-- A Global Challenge</h3>
+                        <p>Rachel Phillips, Deputy Division Chief for Research and Policy, Office of Child Labor, US Department of Labor</p>
+                      </div>
+                    }
                     articles={articles}
                     ids={[624,609,218,215,200,193]}                    
                     comments={comments}

@@ -17,7 +17,7 @@ function Attending(props){
 
     return(
         <div>
-            <p className="edit-title">Attending Conferences</p>
+            <p className="edit-title">Speaking At Conferences</p>
             {renderConferences(props.conferences)}
         </div>
     )

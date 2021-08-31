@@ -14,7 +14,7 @@ function Home (props){
         <>
         <div className="home-grid">
             <div className="feature">
-                <Feature video={props.video} />
+                <Feature title={props.title} video={props.video} />
             </div>
             <div className="subfeature"><SubFeatures articles={props.articles} ids={[1316,1325,1322]} comments={props.comments}/></div>
             <Advert image={ad}/>
