@@ -3,8 +3,6 @@ import SideContainer from './components/SideContainer';
 import NewsFeed from '../util/News/NewsFeed';
 import Poll from '../util/Poll/Poll';
 import Editorial from '../util/Editorial/Editorial';
-import Advert from '../util/Advert/Advert';
-import ad from '../util/Advert/CMi2i.png'
 import Publisher from '../util/Publisher/Publisher';
 
 function PrimaryMenu (props){
@@ -28,7 +26,7 @@ function PrimaryMenu (props){
                     <Publisher/>
                     </div>
                 :""}
-                <img className="menu-advert" src={ad}></img>
+                <img className="menu-advert" src={props.ad}></img>
                 <Poll />
                 <NewsFeed />
             </div>

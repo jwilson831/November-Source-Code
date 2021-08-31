@@ -106,6 +106,7 @@ function App() {
                     articles={articles} 
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}
                     calendar={editCalendar}/>
                 </Route>
 
@@ -121,7 +122,8 @@ function App() {
                     articles={articles}
                     ids={[1328,190,1322,627,593,596]}
                     comments={comments}
-                    changeActiveCategory={changeActiveCategory}/>
+                    changeActiveCategory={changeActiveCategory}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
                 </Route>
 
                 <Route exact path="/investment">
@@ -136,7 +138,8 @@ function App() {
                     articles={articles}
                     ids={[622,583,604,607,197,184]}                    
                     comments={comments}
-                    changeActiveCategory={changeActiveCategory}/>
+                    changeActiveCategory={changeActiveCategory}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
                 </Route>
 
                 <Route exact path="/CSR">
@@ -151,7 +154,8 @@ function App() {
                     articles={articles}
                     ids={[599,616,601,590,177,580]}                    
                     comments={comments}
-                    changeActiveCategory={changeActiveCategory}/>
+                    changeActiveCategory={changeActiveCategory}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/image.png"}/>
                 </Route>
 
                 <Route exact path="/cyber">
@@ -166,7 +170,8 @@ function App() {
                     articles={articles}
                     ids={[187,1306,1309,1337,1319]}                    
                     comments={comments}
-                    changeActiveCategory={changeActiveCategory}/>
+                    changeActiveCategory={changeActiveCategory}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
                 </Route>
 
                 <Route exact path="/capital-markets">
@@ -181,7 +186,8 @@ function App() {
                     articles={articles}
                     ids={[1303,585,630,612,181,1334]}                    
                     comments={comments}
-                    changeActiveCategory={changeActiveCategory}/>
+                    changeActiveCategory={changeActiveCategory}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
                 </Route>
 
                 <Route exact path="/washington-world">
@@ -196,7 +202,8 @@ function App() {
                     articles={articles}
                     ids={[624,609,218,215,200,193]}                    
                     comments={comments}
-                    changeActiveCategory={changeActiveCategory}/>
+                    changeActiveCategory={changeActiveCategory}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
                 </Route>
                 
                 <Route exact path="/authors/:id"><AuthorContainer articles={articles} comments={comments}/></Route>
@@ -226,7 +233,7 @@ function App() {
                   <ArticleMenu articles={articles} filterByCategory={filterByCategory} conferences={conferences}/>
                 </Route>
                 <Route path={"*"}>
-                  <PrimaryMenu conferences={filterByCategory(conferences,activeCategory)} editorial={editorial} comments={comments}/>
+                  <PrimaryMenu ad={"https://utcoleca.sirv.com/skytop_ads/CMi2i-2.png"} conferences={filterByCategory(conferences,activeCategory)} editorial={editorial} comments={comments}/>
                 </Route>
               </Switch>
             </div>
