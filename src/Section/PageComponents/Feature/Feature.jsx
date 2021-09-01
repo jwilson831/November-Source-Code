@@ -3,7 +3,6 @@ import moment from 'moment';
 import {Markup} from "interweave";
 
 import './styles.css';
-import {Link} from 'react-router-dom';
 
 function Feature (props){
     return(

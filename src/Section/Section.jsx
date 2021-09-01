@@ -11,7 +11,7 @@ function Section (props){
         <div className="">
             <div className="section-feature"><Feature video={props.video}  comments={props.comments} title={props.title}/></div>
             <div className="recent">
-                <Advert image={props.ad}/>
+                <Advert image={props.ad} link={props.ad_link}/>
                 <Recents changeActiveCategory={props.changeActiveCategory} articles={props.articles} ids={props.ids} comments={props.comments}/>
                 <ViewAllBtn linkTo={"article"}/>
             </div>

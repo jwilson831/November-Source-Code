@@ -26,7 +26,9 @@ function PrimaryMenu (props){
                     <Publisher/>
                     </div>
                 :""}
-                <img className="menu-advert" src={props.ad}></img>
+                <a href={props.ad_link} target="_blank">
+                    <img className="menu-advert" src={props.ad}></img>
+                </a>
                 <Poll />
                 <NewsFeed />
             </div>

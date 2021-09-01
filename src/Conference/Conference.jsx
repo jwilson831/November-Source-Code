@@ -1,20 +1,13 @@
 import React, {useState,useEffect} from 'react';
 import './styles.css';
-import { Markup } from 'interweave';
 import { useParams } from 'react-router';
 import ConfNav from './components/ConfNav';
 import ConfCard from './components/ConfCard';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+
 import About from './components/ConfInfo/About';
 import Agenda from './components/ConfInfo/Agenda';
 import Speakers from './components/ConfInfo/Speakers';
 import Delegates from './components/ConfInfo/Delegates';
-import Sponsors from './components/ConfInfo/Sponsors';
 import PageLoader from '../util/Loader';
 
 

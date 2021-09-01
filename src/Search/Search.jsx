@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Markup } from 'interweave';
 import React,{useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
 import PageLoader from '../util/Loader';
 import './styles.css';
 
