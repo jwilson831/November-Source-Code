@@ -6,9 +6,10 @@
 }
 
 .author-img{
-    height: 38rem;
+    height: 23rem;
     width: auto;
     margin: 2rem; 
+    margin-top: 0rem;
     margin-left: 0px;
     box-shadow: 1px 1px 2px 2px rgb(0,0,0,0.1);
     border-radius: 5px;
