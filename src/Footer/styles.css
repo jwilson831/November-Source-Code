@@ -18,7 +18,7 @@
     grid-template-areas: 
         "brand text twitter linkedin";
 }
-.top-footer > span{
+.top-footer > a > span{
     margin-top: auto;
     margin-bottom: auto;
     padding: 0.5rem;
@@ -50,6 +50,17 @@
 .linkedin{
     grid-area: linkedin;
     margin-left: 1rem;
+}
+.social-link{
+    padding: 16px 12px 11px 12px;
+    border: 2px solid rgb(98,104,147)!important;
+    border-radius: 100%;
+    color: rgb(98,104,147)!important;
+}
+.social-link:hover{
+    color: white !important;
+    border: 2px solid white!important;
+
 }
 
 .footer-text{

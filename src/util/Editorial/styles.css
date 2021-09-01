@@ -2,25 +2,26 @@
     background: rgb(0,0,0,0.1);
     padding: 1rem;
     margin-left: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 .edit-category{
     background: rgba(241, 200, 16, 0.884) !important;
     color: black !important;
 }
 .edit-img{
-    height: 18rem;
-    width: auto;
+    max-width: 100%;
+    height: 12rem;
 }
 .edit-title{
     margin-top: 1rem;
-    font-size: 25px;
+    font-size: 17px;
     font-weight: 800;
 }
 .edit-text{
-    font-size: 21px;
+    font-size: 13px;
 }
 .edit-name{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
 }

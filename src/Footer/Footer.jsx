@@ -19,8 +19,16 @@ function Footer (props){
                     </Link>
                     <p id="address">141 West 36th Street, 8th Floor New York, NY 10018</p>
                 </div>
-                    <span className="twitter"><i class="fab fa-twitter"></i></span>
-                    <span className="linkedin"><i class="fab fa-linkedin-in"></i></span>
+                    <span className="twitter">
+                        <a className="social-link" href="https://twitter.com/skytopstrat" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </span>
+                    <span className="linkedin">
+                        <a className="social-link" href="https://www.linkedin.com/company/skytopstrategies/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </span>
             </div>
             <div className="mt-5">
                 <div className="locations">

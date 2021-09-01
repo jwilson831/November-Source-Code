@@ -1,10 +1,10 @@
 .conf-img{
     width: 100% !important;
-    height: 37rem;
+    height: 27rem;
     padding: 1rem;
 }
 .conf-title{
-    font-size: 45px;
+    font-size: 25px;
     font-weight: 600;
 }
 .conf-nav{
@@ -15,7 +15,7 @@
     overflow-y: scroll;
 }
 .conf-side-data{
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -24,29 +24,31 @@
     margin-left: 3rem;
 }
 .conf-tagline{
-    font-size: 30px;
+    font-size: 18px;
+    padding-right: 2.5rem;
 }
 
 
 .register-button{
-    width: 17rem;
-    height: 4rem;
-    font-size: 25px;
+        width: 12rem;
+    height: 2.5rem;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .countdown{
     margin-top: 2rem;
+    margin-bottom: 1rem;
     font-size: 30px;
+    width: -moz-fit-content;
     width: fit-content;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
     text-align: center;
-    border: 3px dashed white;
+    border: 2px dashed white;
     border-radius: 5px;
-    
 }
 .countdown-text{
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 600;
     margin-left: 2rem;
     margin-right: 2rem;

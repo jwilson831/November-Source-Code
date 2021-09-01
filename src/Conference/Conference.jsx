@@ -62,7 +62,7 @@ function Conference(props){
                     product_id={data.acf.event_ticket[0]["ID"]}
                 />    
                 <ConfNav clickHandler={clickHandler}/>
-                <div className="mt-3 pt-5 pr-5 pl-2 text-left conf-content">
+                <div className="mt-3 text-left conf-content">
                     {info[key]}
                 </div>
             </div>

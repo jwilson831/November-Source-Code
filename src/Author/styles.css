@@ -1,5 +1,5 @@
 .author-text{
-    font-size: 22px;
+    font-size: 16px;
 }
 .author-content{
     width: 90%;
@@ -14,7 +14,7 @@
     border-radius: 5px;
 }
 .author-name{
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 800;
 }
 .author-loader{

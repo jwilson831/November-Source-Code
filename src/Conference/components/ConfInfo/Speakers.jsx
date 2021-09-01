@@ -27,10 +27,10 @@ function Speakers(props){
         return speakers.map(speaker => 
             <div className="speaker">
                 <img className="speaker-img" src={speaker.acf.image}></img>
-                <a href={speaker.acf.url} target="_blank"><h3><u>{speaker.acf.name}</u></h3></a>
-                <h5>{speaker.acf.job_title}</h5>
-                <h5>{speaker.acf.company}</h5>
-                <h5>{speaker.acf.location}</h5>
+                <a href={speaker.acf.url} target="_blank"><h5><u>{speaker.acf.name}</u></h5></a>
+                <p>{speaker.acf.job_title}</p>
+                <p>{speaker.acf.company}</p>
+                <p>{speaker.acf.location}</p>
             </div>
         )
     }

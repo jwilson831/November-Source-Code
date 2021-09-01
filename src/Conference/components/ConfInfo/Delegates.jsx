@@ -24,10 +24,10 @@ function Delegates(props){
     const renderDelegates = (delegates) => {
         return delegates.map(del => 
             <div className="delegate">
-                <h3><u>{del.acf.name}</u></h3>
-                <h5>{del.acf.job_title}</h5>
-                <h5>{del.acf.company}</h5>
-                <h5>{del.acf.location}</h5>
+                <h5><u>{del.acf.name}</u></h5>
+                <p>{del.acf.job_title}</p>
+                <p>{del.acf.company}</p>
+                <p>{del.acf.location}</p>
             </div>
         )
     }

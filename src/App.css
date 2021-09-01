@@ -13,13 +13,13 @@ body{
 }
 
 .main-container{
-  width: 90%;
+  width: 96%;
   margin: auto;
 }
 
 .main-grid{
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 70% 30%;
   grid-row: auto;
   grid-template-areas: 
       "section side-menu";
@@ -46,11 +46,11 @@ body{
 }
 
 .section-title{
-  font-size: 30px;
+  font-size: 20px;
   font-weight:800;
 }
 .section-heading{
-  font-size: 35px;
+  font-size: 25px;
   font-weight:800;
   margin: 2rem 0rem 1rem 3rem;
 
@@ -72,15 +72,15 @@ body{
 }
 
 .menu-advert{
-  height: 19rem;
-  width: auto;
-  margin-left: 1rem;
-  margin-bottom: 3rem;
-  box-shadow: 1px 2px 2px 4px rgb(0,0,0,0.1);
+  height: 13rem;
+    max-width: 100%;
+    object-fit: cover;
+    margin: 1rem;
+    box-shadow: 1px 2px 2px 4px rgb(0 0 0 / 10%);
 
 }
 optgroup{
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .card-img-top{

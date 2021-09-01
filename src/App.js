@@ -96,7 +96,7 @@ function App() {
                     video={"https://www.youtube.com/embed/vhG9PNePKJE"} 
                     title={
                       <div className="video-title text-center">
-                        <h3>The Big Debate</h3>
+                        <h5>The Big Debate</h5>
                         <p>Featuring</p>
                         <p>David Katz, Partner, Wachtell Lipton Rosen &amp; Katz</p>
                         <p>&amp;</p>
@@ -115,7 +115,7 @@ function App() {
                     video={"https://www.youtube.com/embed/VnI4ox-lOEU"}
                     title={
                       <div className="video-title text-center">
-                        <h3>Evolving Practices in Shareholder Engagement</h3>
+                        <h5>Evolving Practices in Shareholder Engagement</h5>
                         <p>Jeremy Fielding, CEO Kekst CNC</p>
                       </div>
                     }
@@ -131,7 +131,7 @@ function App() {
                     video={"https://www.youtube.com/embed/sIMJfTE2NCM"} 
                     title={
                       <div className="video-title text-center">
-                        <h3>ESG Investing, A Portfolio Perspective</h3>
+                        <h5>ESG Investing, A Portfolio Perspective</h5>
                         <p>Rodrigo Garcia, CIO and CFO,  Illinois State Treasury</p>
                       </div>
                     }
@@ -147,7 +147,7 @@ function App() {
                     video={"https://www.youtube.com/embed/WEvUO-l4d7w"} 
                     title={
                       <div className="video-title text-center">
-                        <h3>Innovation and CSR Brand Strategy </h3>
+                        <h5>Innovation and CSR Brand Strategy </h5>
                         <p>Joe Verrengia, Global Director, Corporate Social Responsibility</p>
                       </div>
                     }
@@ -163,7 +163,7 @@ function App() {
                     video={"https://www.youtube.com/embed/bcwb-BDxIZo"} 
                     title={
                       <div className="video-title text-center">
-                        <h3>The Cognitive Hack</h3>
+                        <h5>The Cognitive Hack</h5>
                         <p>James Bone, Executive Director and Founder GRC Index</p>
                       </div>
                     }
@@ -179,7 +179,7 @@ function App() {
                     video={"https://www.youtube.com/embed/0KQJ3n7GgU4"} 
                     title={
                       <div className="video-title text-center">
-                        <h3>Activists and Markets</h3>
+                        <h5>Activists and Markets</h5>
                         <p>Rich Thomas, Director, Lazard</p>
                       </div>
                     }
@@ -195,7 +195,7 @@ function App() {
                     video={"https://www.youtube.com/embed/f8iBhyXnKrg"} 
                     title={
                       <div className="video-title text-center">
-                        <h3>Child Labor-- A Global Challenge</h3>
+                        <h5>Child Labor-- A Global Challenge</h5>
                         <p>Rachel Phillips, Deputy Division Chief for Research and Policy, Office of Child Labor, US Department of Labor</p>
                       </div>
                     }

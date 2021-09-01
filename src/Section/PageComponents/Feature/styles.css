@@ -18,12 +18,12 @@
     padding-top: 0.5rem;
 }
 .cat-text{
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .card-title{
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 19px;
     text-align: left;
     text-transform: uppercase;
 }
@@ -37,19 +37,23 @@
     text-align: left;
     font-weight: 500;
     color: rgb(108,108,107);
-    font-size: 19px;
+    font-size: 13px;
 }
 .feature-container{
     grid-area: feature;
     margin-top: 3rem;
 }
 .video{
-    height: 45rem;
-    width: 100%;
-    padding: 0rem 2rem 2rem 2rem;
+    height: 26rem;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 1rem;
 }
 
 .ytp-title-text {
     font-size: 25px !important;
     font-weight: 600;
+}
+.standby-txt{
+    font-size: 12px;
 }

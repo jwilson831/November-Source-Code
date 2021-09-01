@@ -1,6 +1,6 @@
 /* GENERAL */
 .conf-info-title{
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 400;
 }
 /* ABOUT */
@@ -17,11 +17,11 @@
 }
 .about-title{
     color: rgb(38,136,165);
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 700;
 }
 .about-txt{
-    font-size: 22px;
+    font-size: 13px;
     font: 'Times New Roman';
 }
 /* SPONSORS */
@@ -30,8 +30,7 @@
     margin-top: 6rem;
 }
 .sponsor-type{
-    margin-top: 4rem;
-    margin-bottom: 6rem;
+    margin-top: 2rem;
 }
 
 .sponsor-grid{
@@ -41,12 +40,12 @@
     align-items: center;
 }
 .sponsor-cat-txt{
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 800;
 }
-.wp-block-image{
+.wp-block-image > img{
     height: 100%;
-    width: 25rem;
+    width: 15rem;
 }
 
 /* AGENDA */
@@ -58,13 +57,18 @@ table{
 table td{
     border: 1px solid rgb(186, 186, 186);
     padding: 1rem;
-    font-size: 22px;
+    font-size: 13px;
+}
+.agenda-container{
+    width: 85%;
+    margin: auto;
+
 }
 
 /* DELEGATES */
 .delegates{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
 }
 .delegate{
@@ -73,18 +77,16 @@ table td{
 
 /* SPEAKERS */
 .speaker-img{
-    height: 15rem;
-    width: 15rem;
+    height: 10rem;
+    width: 10rem;
     object-fit: cover;
-    /* border-radius: 100%; */
 }
 .speakers{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    max-width: 60rem;
 }
 .speaker{
-    padding: 3rem;
+    padding: 1rem;
     padding-right: 1rem;
 }
