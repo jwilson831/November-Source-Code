@@ -18,12 +18,24 @@ function PrimaryMenu (props){
                 <div>
                     <Editorial
                         id={props.editorial.id}
+                        category={"Editor's Note"}
                         title={props.editorial.title.rendered}
                         img={props.editorial.acf.image}
+                        author={props.editorial.acf.author}
                         excerpt={props.editorial.excerpt.rendered}
+                        link={"/editorial"}
                         comments={props.comments}
                     />
-                    <Publisher/>
+                    <Editorial
+                        id={props.publisher.id}
+                        category={"Publisher's Note"}
+                        title={props.publisher.title.rendered}
+                        img={props.publisher.acf.image}
+                        author={props.publisher.acf.author}
+                        excerpt={props.publisher.excerpt.rendered}
+                        link={"/publisher"}
+                        comments={props.comments}
+                    />
                     </div>
                 :""}
                 <a href={props.ad_link} target="_blank">

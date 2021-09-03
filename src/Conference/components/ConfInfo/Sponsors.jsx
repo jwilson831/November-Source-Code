@@ -4,14 +4,28 @@ import './styles.css';
 
 function Sponsors(props){
     const renderSponsors = (sponsors) => {
-        return sponsors.map(sponsor => 
-            <Markup content={sponsor.post_content}></Markup>
-        )
+        console.log(sponsors)
+        return sponsors.map(sponsor =>{ 
+            if(sponsor.post_content){
+
+                return <Markup content={sponsor.post_content}></Markup>
+            }else{
+                return sponsor.content.rendered
+            }
+        })
     }
     return(
         <div className="sponsors-container">
             <p className="conf-info-title">WE THANK OUR SPONSORS FOR SUPPORTING THIS PROGRAM!</p>
             <div className="sponsors">
+            {props.all ?
+                    <div>
+                        <hr></hr>
+                        <div className="sponsor-grid">
+                            {renderSponsors(props.all)}
+                        </div>
+                    </div> : ""
+                } 
                 {props.lead ?
                     <div>
                         <p className="sponsor-cat-txt">Lead Sponsors</p>

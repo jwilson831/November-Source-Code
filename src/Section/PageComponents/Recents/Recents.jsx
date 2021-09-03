@@ -22,10 +22,8 @@ function Recents (props){
 
         let position = 'Skytop Contributor';
         for(let i = 0; i < authorArray.length;i++){
-            if(authorArray[i]["ID"] === 529){
+            if(authorArray[i]["ID"] === 529 || authorArray[i]["ID"] === 543){
                 position = "Guest Contributor"
-            }else if(authorArray[i]["ID"] === 543){
-                position = "Skytop Associate"
             }
 
             if(authorArray[i+1]){

@@ -33,6 +33,7 @@ function App() {
   const [conferences, setConferences] = useState([]);
   const [comments,setComments] = useState([]);
   const [editorial, setEditorial] = useState("");
+  const [publisher,setPublisher] = useState("");
   const [editCalendar,setCal] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [activeCategory, setActiveCategory] = useState("Headlines");
@@ -43,14 +44,15 @@ function App() {
         const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=date&_fields[]=id&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
         const conferences = await axios("https://skytop-strategies.com/wp-json/wp/v2/conferences?_fields[]=id&_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
         const comments = await axios("https://skytop-strategies.com/wp-json/wp/v2/comments?per_page=100");
-        const editorials = await axios("https://skytop-strategies.com/wp-json/wp/v2/editorials?_embed=wp:featuredmedia")
+        const editorials = await axios("https://skytop-strategies.com/wp-json/wp/v2/editorials?_embed=wp:featuredmedia");
         
         
         setArticles(articles.data);
         setConferences(orderByDate(conferences))
         setComments(comments.data);
-        setEditorial(editorials.data[1]);
-        setCal(editorials.data[0])
+        setPublisher(editorials.data[0])
+        setCal(editorials.data[1])
+        setEditorial(editorials.data[2]);
       }catch (err){
         console.error(err);
       }
@@ -93,10 +95,10 @@ function App() {
               <div className="section">
                 <Route exact path="/">
                   <Home 
-                    video={"https://www.youtube.com/embed/vhG9PNePKJE"} 
+                    video={"https://www.youtube.com/embed/vhG9PNePKJE?rel=0"} 
                     title={
                       <div className="video-title text-center">
-                        <h5>The Big Debate</h5>
+                        <h5>The Big Debate On Shareholder Activism</h5>
                         <p>Featuring</p>
                         <p>David Katz, Partner, Wachtell Lipton Rosen &amp; Katz</p>
                         <p>&amp;</p>
@@ -130,7 +132,7 @@ function App() {
 
                 <Route exact path="/investment">
                   <Section
-                    video={"https://www.youtube.com/embed/sIMJfTE2NCM"} 
+                    video={"https://www.youtube.com/embed/sIMJfTE2NCM?rel=0"} 
                     title={
                       <div className="video-title text-center">
                         <h5>ESG Investing, A Portfolio Perspective</h5>
@@ -147,7 +149,7 @@ function App() {
 
                 <Route exact path="/CSR">
                   <Section
-                    video={"https://www.youtube.com/embed/WEvUO-l4d7w"} 
+                    video={"https://www.youtube.com/embed/WEvUO-l4d7w?rel=0"} 
                     title={
                       <div className="video-title text-center">
                         <h5>Innovation and CSR Brand Strategy </h5>
@@ -164,7 +166,7 @@ function App() {
 
                 <Route exact path="/cyber">
                   <Section
-                    video={"https://www.youtube.com/embed/bcwb-BDxIZo"} 
+                    video={"https://www.youtube.com/embed/bcwb-BDxIZo?rel=0"} 
                     title={
                       <div className="video-title text-center">
                         <h5>The Cognitive Hack</h5>
@@ -181,7 +183,7 @@ function App() {
 
                 <Route exact path="/capital-markets">
                   <Section
-                    video={"https://www.youtube.com/embed/0KQJ3n7GgU4"} 
+                    video={"https://www.youtube.com/embed/0KQJ3n7GgU4?rel=0"} 
                     title={
                       <div className="video-title text-center">
                         <h5>Activists and Markets</h5>
@@ -198,7 +200,7 @@ function App() {
 
                 <Route exact path="/washington-world">
                   <Section
-                    video={"https://www.youtube.com/embed/f8iBhyXnKrg"} 
+                    video={"https://www.youtube.com/embed/f8iBhyXnKrg?rel=0"} 
                     title={
                       <div className="video-title text-center">
                         <h5>Child Labor-- A Global Challenge</h5>
@@ -216,6 +218,9 @@ function App() {
                 <Route exact path="/authors/:id"><AuthorContainer articles={articles} comments={comments}/></Route>
                 <Route exact path="/articles/:id"><Article articles={articles} comments={comments}/></Route>
                 <Route exact path="/editorial"><Article articles={editorial}/></Route>
+                <Route exact path="/publisher"><Article articles={publisher}/></Route>
+
+
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
                 <Route exact path="/index/conferences"><ViewAll conferences={conferences} comments={comments}/></Route>
                 <Route exact path="/index/articles"><ViewAll articles={articles} comments={comments}/></Route>
@@ -240,7 +245,14 @@ function App() {
                   <ArticleMenu articles={articles} filterByCategory={filterByCategory} conferences={conferences}/>
                 </Route>
                 <Route path={"*"}>
-                  <PrimaryMenu ad_link={"https://cmi2i.com/"} ad={"https://utcoleca.sirv.com/skytop_ads/CMi2i-2.png"} conferences={filterByCategory(conferences,activeCategory)} editorial={editorial} comments={comments}/>
+                  <PrimaryMenu 
+                    ad_link={"https://cmi2i.com/"} 
+                    ad={"https://utcoleca.sirv.com/skytop_ads/CMi2i-2.png"} 
+                    conferences={filterByCategory(conferences,activeCategory)} 
+                    editorial={editorial}
+                    publisher = {publisher} 
+                    comments={comments}
+                  />
                 </Route>
               </Switch>
             </div>

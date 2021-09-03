@@ -8,15 +8,15 @@ function Editorial(props){
     return(
         <div className="edit-container">
             <div className="category edit-category">
-                <p className="cat-text">Editor's Note</p>
+                <p className="cat-text">{props.category}</p>
             </div>
             <img className="edit-img" src={props.img}></img>
             <p className="edit-title"><Markup content={props.title}></Markup></p>
             <p className="edit-text"><Markup content={props.excerpt}></Markup><span></span></p>
-            <Link to="/editorial">
+            <Link to={props.link}>
                 <button className="btn sky-submit mb-3">See More</button>
             </Link>
-            <p className="edit-name">By Christopher P. Skroupa, Editor in Chief</p>
+            <p className="edit-name">By {props.author}</p>
             <div className="pl-3 recents-comments ">
                 <CommentsBox comments={props.comments} id={props.id}/>
             </div>

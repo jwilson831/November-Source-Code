@@ -22,6 +22,9 @@ function Home (props){
                 <ViewAllBtn linkTo={"article"}/>
             </div>
         </div>
+        <div className="mt-4">
+            <Advert image={"https://utcoleca.sirv.com/skytop_ads/image.png"} link={"https://esg.moodys.io/"}/>
+        </div>
         <hr></hr>
         <div className="text-left">
             <Calendar calendar={props.calendar}/>

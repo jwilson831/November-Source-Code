@@ -8,7 +8,7 @@ function ViewAllBtn(props){
                 {props.linkTo === "article" ?
                     <Link to="/index/articles"><p className="com-text text-light">View All</p></Link>
                     :
-                    <Link to="/index/conferences"><p className="com-text text-light">View All</p></Link>
+                    <Link to="/index/conferences"><p className="com-text text-light">Conference Calendar</p></Link>
                 }
             </div>
         </div>
