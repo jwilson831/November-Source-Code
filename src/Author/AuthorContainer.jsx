@@ -26,8 +26,9 @@ function AuthorContainer(props){
     }, [id]);
 
     const filterByAuthor = (articles, authorId) => {
-        return articles.filter(art => art.acf.author[0]["ID"] === parseInt(authorId))
+        return articles.filter(art => art.acf.author.find(a => a["ID"] === parseInt(authorId) ))
     }
+    
     return(
         <>
                 <div className="section-grid">
@@ -47,8 +48,6 @@ function AuthorContainer(props){
             }
                     <div className="recent"><Recents articles={filterByAuthor(props.articles, id)} comments={props.comments}/></div>
                 </div>
-                
-                
         </>
     )
 }

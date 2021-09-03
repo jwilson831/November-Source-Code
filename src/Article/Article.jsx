@@ -22,14 +22,21 @@ function Article(props){
         setData(selectCurrentArticle(props.articles));
         setLoaded(true);
     },[])
-
     return(
         <>
         {loaded ?
             <div>
                 <div className="article-container p-5 mt-3" >
                     <div>
-                        <h1><Markup content={data.title.rendered}></Markup></h1>
+                        {props.editorial_title? 
+                            <div className="category edit-category">
+                                <p className="cat-text">{props.editorial_title}</p>
+                            </div>
+                        : ""}
+    
+                        {!id ? "": 
+                            <h1><Markup content={data.title.rendered}></Markup></h1>
+                        }
             
                         <img className="card-img-top art-img" src={data.acf.image} alt="Card image cap"></img>
                         <div className="article-text text-left">

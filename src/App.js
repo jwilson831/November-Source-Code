@@ -160,8 +160,8 @@ function App() {
                     ids={[599,616,601,590,177,580]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
-                    ad_link={"https://bit.ly/3zpB4rR"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/image.png"}/>
+                    ad_link={"https://crisisconsultant.com/"}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/ICM.jpg"}/>
                 </Route>
 
                 <Route exact path="/cyber">
@@ -177,8 +177,8 @@ function App() {
                     ids={[187,1306,1309,1337,1319]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
-                    ad_link={"https://www.boardroomalpha.com/"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
+                    ad_link={"https://crisisconsultant.com/"}
+                    ad={"https://utcoleca.sirv.com/skytop_ads/ICM.jpg"}/>
                 </Route>
 
                 <Route exact path="/capital-markets">
@@ -217,8 +217,8 @@ function App() {
                 
                 <Route exact path="/authors/:id"><AuthorContainer articles={articles} comments={comments}/></Route>
                 <Route exact path="/articles/:id"><Article articles={articles} comments={comments}/></Route>
-                <Route exact path="/editorial"><Article articles={editorial}/></Route>
-                <Route exact path="/publisher"><Article articles={publisher}/></Route>
+                <Route exact path="/editorial"><Article articles={editorial} editorial_title={"Editor's Note"}/></Route>
+                <Route exact path="/publisher"><Article articles={publisher} editorial_title={"Publisher's Note"}/></Route>
 
 
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>

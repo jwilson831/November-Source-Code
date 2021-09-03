@@ -37,17 +37,17 @@
     margin-bottom: 2rem;
 }
 
-.wp-block-table table td{
+#edit-cal table td{
     border: none;
     text-align: left;
     padding: 0.25rem;
     padding-left: 3rem;
 }
 
-.wp-block-table table{
+#edit-cal table{
     margin: auto;
 }
-.wp-block-table{
+#edit-cal{
     text-align: center;
     width: 95%;
     margin: auto;

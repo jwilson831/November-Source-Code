@@ -11,10 +11,9 @@ function Editorial(props){
                 <p className="cat-text">{props.category}</p>
             </div>
             <img className="edit-img" src={props.img}></img>
-            <p className="edit-title"><Markup content={props.title}></Markup></p>
-            <p className="edit-text"><Markup content={props.excerpt}></Markup><span></span></p>
+            <p className="edit-text mt-4"><Markup content={props.excerpt}></Markup><span></span></p>
             <Link to={props.link}>
-                <button className="btn sky-submit mb-3">See More</button>
+                <button className="btn sky-submit mb-3">Read Full Note</button>
             </Link>
             <p className="edit-name">By {props.author}</p>
             <div className="pl-3 recents-comments ">
