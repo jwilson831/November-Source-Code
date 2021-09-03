@@ -3,7 +3,6 @@ import SideContainer from './components/SideContainer';
 import NewsFeed from '../util/News/NewsFeed';
 import Poll from '../util/Poll/Poll';
 import Editorial from '../util/Editorial/Editorial';
-import Publisher from '../util/Publisher/Publisher';
 
 function PrimaryMenu (props){
     const [currentWindow, setCurrentWindow] = useState(window.location.pathname);
