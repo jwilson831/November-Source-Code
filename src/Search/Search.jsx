@@ -22,11 +22,13 @@ function Search(props){
     }
     const renderLink = (data) => {
         if(data.type=== "people"){
-            return `/authors/${data.id}`
+            return `/authors/${data.id}`;
         }else if(data.type === "articles" || data.type === "conferences"){
-            return `/${data.type}/${data.id}`
+            return `/${data.type}/${data.id}`;
+        }else if(data.type=== "sponsors"){
+            return data.acf.link;
         }else{
-            return ""
+            return "";
         }
     }
     const renderImage = (data) => {
@@ -34,7 +36,10 @@ function Search(props){
             return <img className={"search-img"} src={data.acf.image}></img> 
         }else if(data._embedded){
             return <img className={"search-img"} src={data._embedded["wp:featuredmedia"][0].source_url}></img> 
-        }else{
+        }else if(data.type === "sponsors"){
+            return <Markup content={data.content.rendered}></Markup>
+        }
+        else{
             return ""
         }
     }
@@ -60,7 +65,7 @@ function Search(props){
             </a>
         )
     }
-
+    console.log(searchData)
     return(
         <div className="search-container">
             <h2>Search</h2>

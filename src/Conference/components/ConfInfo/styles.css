@@ -45,7 +45,14 @@
 }
 .wp-block-image > img{
     height: 100%;
-    width: 15rem;
+    width: 17rem;
+    margin: 0.5rem;
+    
+}
+.wp-block-image > a > img{
+    height: 100%;
+    width: 17rem;
+    margin: 0.5rem;
 }
 
 /* AGENDA */
