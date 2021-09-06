@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import {Markup} from "interweave";
 import CommentsBox from '../../../util/CommentsBox/CommentsBox';
 import { findById } from '../../../util/findById';
+import { renderByLine } from '../../../util/renderByLine';
 
 function Recents (props){
     const [articles,setArticles] = useState([]);
@@ -17,25 +18,6 @@ function Recents (props){
         })
         return articles;
     }
-    const renderByLine = (authorArray) => {
-        let byline = ``;
-
-        let position = 'Skytop Contributor';
-        for(let i = 0; i < authorArray.length;i++){
-            if(authorArray[i]["ID"] === 529 || authorArray[i]["ID"] === 543){
-                position = "Guest Contributor"
-            }
-
-            if(authorArray[i+1]){
-                byline += `<a href=${`/authors/${authorArray[i]["ID"]}`}>${authorArray[i].post_title}</a>, ${position}, `
-            }else{
-                byline += `<a href=${`/authors/${authorArray[i]["ID"]}`}>${authorArray[i].post_title}</a>, ${position}`
-            }
-        }
-        return byline;
-    }
-   
-
     useEffect(() => {
         if(props.ids){
             setArticles(findArticles(props.ids))
@@ -61,8 +43,7 @@ function Recents (props){
                                 {article.acf.custom_byline ? 
                                     <p><Markup content={article.acf.custom_byline}/></p>
                                     :
-                                    <p className="m-0">By <Markup content={renderByLine(article.acf.author)}/> / Tuesday September 7, 2021 </p>
-                                    //                                                                          {moment(article.date).format("MMMM Do, YYYY")}
+                                    <p className="m-0">By <Markup content={renderByLine(article.acf.author)}/> / {moment(article.acf.date).format("MMMM Do, YYYY")} </p>
                                 }
                             </div>
                         </div>

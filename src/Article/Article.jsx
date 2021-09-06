@@ -4,6 +4,8 @@ import {Markup} from "interweave";
 import { useParams } from 'react-router';
 import CommentsContainer from '../Comments/CommentsContainer';
 import PageLoader from '../util/Loader';
+import { renderByLine } from '../util/renderByLine';
+import moment from 'moment';
 
 
 function Article(props){
@@ -22,6 +24,9 @@ function Article(props){
         setData(selectCurrentArticle(props.articles));
         setLoaded(true);
     },[])
+
+    
+
     return(
         <>
         {loaded ?
@@ -39,6 +44,16 @@ function Article(props){
                         }
             
                         <img className="card-img-top art-img" src={data.acf.image} alt="Card image cap"></img>
+                        <div className="text-left">
+                            {data.acf.custom_byline ? 
+                                <p><strong><Markup content={data.acf.custom_byline}/></strong></p>
+                                :
+                                <>
+                                    <p className="m-0"><strong>By <Markup content={renderByLine(data.acf.author)}/> / {moment(data.acf.date).format("MMMM Do, YYYY")}</strong></p>
+                                    <br></br>
+                                </>
+                            }
+                        </div>
                         <div className="article-text text-left">
                             <p className="article-text"><Markup content={data.content.rendered}></Markup></p>
                         </div>
