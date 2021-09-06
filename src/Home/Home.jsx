@@ -8,7 +8,6 @@ import Advert from '../util/Advert/Advert';
 import Calendar from '../util/Calendar/Calendar';
 
 function Home (props){
-    console.log(props)
     return(
         <>
         <div className="home-grid">

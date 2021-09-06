@@ -17,7 +17,7 @@ function Policy(props){
                     setPolicy(data[1])
                 }
             }catch(e){
-                console.log(e);
+                console.error(e);
             }
         }
         fetchPolicy();

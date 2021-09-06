@@ -4,7 +4,6 @@ import './styles.css';
 
 function Sponsors(props){
     const renderSponsors = (sponsors) => {
-        console.log(sponsors)
         return sponsors.map(sponsor =>{ 
             if(sponsor.post_content){
 

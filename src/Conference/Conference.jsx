@@ -32,7 +32,7 @@ function Conference(props){
                 ])
 
             }catch(err){
-                console.log("No conference found");
+                console.error("No conference found");
             }
             setLoaded(true);
         }

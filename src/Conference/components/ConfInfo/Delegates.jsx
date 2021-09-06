@@ -15,7 +15,7 @@ function Delegates(props){
                     setDelegates(data);
                     setLoaded(true);
                 }catch(err){
-                    console.log(err);
+                    console.error(err);
                 }
             }
             fetch()

@@ -9,7 +9,7 @@ function PageLoader(){
             color="rgb(38,136,165)"
             height={100}
             width={100}
-            timeout={10000} //3 secs
+            timeout={10000}
         />
     )
 }

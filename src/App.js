@@ -26,7 +26,6 @@ import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
 import Policy from './util/Policy/Policy';
 import Cart from './Cart/Cart';
-import PageNotFound from './util/PageNotFound/PageNotFound';
 
 
 function App() {
@@ -221,7 +220,6 @@ function App() {
                 <Route exact path="/editorial"><Article articles={editorial} editorial_title={"Editor's Note"}/></Route>
                 <Route exact path="/publisher"><Article articles={publisher} editorial_title={"Publisher's Note"}/></Route>
 
-
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
                 <Route exact path="/index/conferences"><ViewAll conferences={conferences} comments={comments}/></Route>
                 <Route exact path="/index/articles"><ViewAll articles={articles} comments={comments}/></Route>
@@ -229,22 +227,19 @@ function App() {
                 <Route exact path="/privacy"><Policy policy="Privacy"/></Route>
                 <Route exact path="/cancel"><Policy policy="Cancel"/></Route>
                 <Route exact path="/cart"><Cart/></Route>
-                <Route component={PageNotFound}/>
-
-
               </div>
             </Switch>
 
             <div className="side-menu">
               <Switch>
-                <Route path={"/conferences/:id"}>
-                  <ConferenceMenu conferences={conferences}/>
-                </Route>
-                <Route path={["/authors/:id","/editorial"]}>
-                  <AuthorMenu conferences={conferences}/>
-                </Route>
+                <Route path={"/conferences/:id"}><ConferenceMenu conferences={conferences}/></Route>
+                <Route path={["/authors/:id","/editorial"]}><AuthorMenu conferences={conferences}/></Route>
                 <Route path={"/articles/:id"}>
-                  <ArticleMenu articles={articles} filterByCategory={filterByCategory} conferences={conferences}/>
+                  <ArticleMenu 
+                    articles={articles} 
+                    filterByCategory={filterByCategory} 
+                    conferences={conferences}
+                  />
                 </Route>
                 <Route path={"*"}>
                   <PrimaryMenu 

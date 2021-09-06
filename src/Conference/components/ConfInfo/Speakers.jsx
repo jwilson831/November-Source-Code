@@ -16,7 +16,7 @@ function Speakers(props){
                     setSpeakers(data);
                     setLoaded(true);
                 }catch(err){
-                    console.log(err);
+                    console.error(err);
                 }
             }
             fetch()

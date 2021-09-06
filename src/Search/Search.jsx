@@ -13,11 +13,9 @@ function Search(props){
             const {data} = await axios(`https://skytop-strategies.com/wp-json/swp_api/search?s=${searchTerm}i&per_page=100&_embed=wp:featuredmedia`);
             setSearchData(data);
         }catch(e){
-            console.log(e);
+            console.error(e);
         }
     }
-    console.log(searchData);
-
     const submitHandler = (e) => {
         e.preventDefault();
         searchResults(input);
@@ -35,7 +33,6 @@ function Search(props){
         if(data.acf.image){
             return <img className={"search-img"} src={data.acf.image}></img> 
         }else if(data._embedded){
-            console.log(data);
             return <img className={"search-img"} src={data._embedded["wp:featuredmedia"][0].source_url}></img> 
         }else{
             return ""
@@ -43,7 +40,6 @@ function Search(props){
     }
 
     const renderSearchResults = (results) => {
-        console.log(results)
         return results.map(result => 
             <a href={renderLink(result)}>
                 <div className="card result-container">
