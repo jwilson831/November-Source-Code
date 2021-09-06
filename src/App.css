@@ -71,20 +71,14 @@ body{
 
 }
 
-.menu-advert{
-  height: 13rem;
-    max-width: 100%;
-    object-fit: cover;
-    margin: 1rem;
-    box-shadow: 1px 2px 2px 4px rgb(0 0 0 / 10%);
-
+.menu-advert {
+  height: 18rem;
+  max-width: 100%;
+  box-shadow: 1px 2px 2px 4px rgb(0 0 0 / 10%);
 }
+
 optgroup{
   font-size: 30px;
-}
-
-.card-img-top{
-  object-fit: cover;
 }
 
 .video-title > p{

@@ -13,6 +13,7 @@
 
 .recent-img{
     height: 17rem;
+    object-fit: cover;
 }
 .recent-container{
     padding-right:2rem ;
