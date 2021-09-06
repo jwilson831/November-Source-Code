@@ -26,6 +26,7 @@ import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
 import Policy from './util/Policy/Policy';
 import Cart from './Cart/Cart';
+import PageNotFound from './util/PageNotFound/PageNotFound';
 
 
 function App() {
@@ -228,6 +229,7 @@ function App() {
                 <Route exact path="/privacy"><Policy policy="Privacy"/></Route>
                 <Route exact path="/cancel"><Policy policy="Cancel"/></Route>
                 <Route exact path="/cart"><Cart/></Route>
+                <Route component={PageNotFound}/>
 
 
               </div>
