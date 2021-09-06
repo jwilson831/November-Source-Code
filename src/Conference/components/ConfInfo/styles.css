@@ -31,13 +31,21 @@
 }
 .sponsor-type{
     margin-top: 2rem;
+    margin-bottom: 3.5rem;
 }
 
-.sponsor-grid{
+.sponsor-grid-2{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     align-items: center;
+}
+.sponsor-grid-1{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
 }
 .sponsor-cat-txt{
     font-size: 15px;
@@ -45,13 +53,13 @@
 }
 .wp-block-image > img{
     height: 100%;
-    width: 17rem;
+    width: 21rem;
     margin: 0.5rem;
     
 }
 .wp-block-image > a > img{
     height: 100%;
-    width: 17rem;
+    width: 21rem;
     margin: 0.5rem;
 }
 
