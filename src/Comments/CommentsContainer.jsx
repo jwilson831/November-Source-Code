@@ -17,6 +17,8 @@ function CommentsContainer(props){
         const fetchComments = async () => {
             try{
                 const { data } = await axios(`https://skytop-strategies.com/wp-json/wp/v2/comments?post=${props.article.id}`);
+                
+                console.log(data)
                 setComments(data);
             }catch(err){
                 console.error(err);
@@ -48,7 +50,8 @@ function CommentsContainer(props){
                         articleId={props.article.id} 
                         data={props.article} 
                         clickHandler={clickHandler}/>
-                    : <LeaveAComment clickHandler={clickHandler}/>}
+                    : <LeaveAComment clickHandler={clickHandler}/>
+                    }
                     
                     <CommentsDisplay 
                         comments={comments} 

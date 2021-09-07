@@ -36,21 +36,20 @@ function CommentsDisplay(props){
         let finalComments = [];
         for(const comm in comments){
             const current = comments[comm];
-            if(current.replies){
-                finalComments.push(
-                <Comment
-                    id={current.id}
-                    addComment={props.addComment}
-                    data={current} 
-                    replies={current.replies ? current.replies : null} 
-                    isReply={false}
-                    articleId={props.articleId}
-                />)
-            }
+            finalComments.push(
+            <Comment
+                id={current.id}
+                addComment={props.addComment}
+                data={current} 
+                replies={current.replies ? current.replies : null} 
+                isReply={false}
+                articleId={props.articleId}
+            />)
         }
         props.setCommentNumber(finalComments.length)
         return finalComments;
     }
+    console.log(props.comments)
     return(
         <div className="comments-outer-container">
             {props.submitted ? 
