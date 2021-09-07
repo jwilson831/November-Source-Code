@@ -27,7 +27,7 @@ function Speakers(props){
         return speakers.map(speaker => 
             <div className="speaker">
                 <img className="speaker-img" src={speaker.acf.image}></img>
-                <a href={speaker.acf.url} target="_blank"><h5><u>{speaker.acf.name}</u></h5></a>
+                <h5><u>{speaker.acf.name}</u></h5>
                 <p>{speaker.acf.job_title}</p>
                 <p>{speaker.acf.company}</p>
                 <p>{speaker.acf.location}</p>
