@@ -36,3 +36,6 @@ input.search-input {
 .search-info{
     max-width: 31rem;
 }
+.search-exit:hover{
+    cursor: pointer;
+}
