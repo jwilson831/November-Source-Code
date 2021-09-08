@@ -49,7 +49,6 @@ function CommentsDisplay(props){
         props.setCommentNumber(finalComments.length)
         return finalComments;
     }
-    console.log(props.comments)
     return(
         <div className="comments-outer-container">
             {props.submitted ? 

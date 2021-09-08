@@ -18,7 +18,6 @@ function CommentsContainer(props){
             try{
                 const { data } = await axios(`https://skytop-strategies.com/wp-json/wp/v2/comments?post=${props.article.id}`);
                 
-                console.log(data)
                 setComments(data);
             }catch(err){
                 console.error(err);
