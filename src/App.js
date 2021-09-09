@@ -26,6 +26,8 @@ import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
 import Policy from './util/Policy/Policy';
 import Cart from './Cart/Cart';
+import ReactGA from 'react-ga';
+
 
 
 function App() {
@@ -39,6 +41,10 @@ function App() {
   const [activeCategory, setActiveCategory] = useState("Headlines");
 
   useEffect(() => {
+    //GOOGLE ANALYTICS
+    ReactGA.initialize(process.env.REACT_APP_GA_TRACKING);
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname});
+    
     const fetchData = async () => {
       try{
         const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=date&_fields[]=id&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
