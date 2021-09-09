@@ -33,6 +33,12 @@
     margin-top: 2rem;
     margin-bottom: 3.5rem;
 }
+.sponsor-grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+}
 
 .sponsor-grid-2{
     display: grid;

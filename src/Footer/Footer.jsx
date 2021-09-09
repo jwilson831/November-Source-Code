@@ -8,14 +8,17 @@ function Footer (props){
             <div className="top-footer">
                 <img className="footer-brand" src="https://utcoleca.sirv.com/skytop%20logo%20KO%20FINAL.png" alt="" />
                 <div className="footer-text">
-                    <Link to="/about-us">
-                        <p onClick={() => props.changeActiveCategory("About Us")} className="about">ABOUT US</p>
+                    <Link className="foot-grid-item" to="/about-us">
+                        <p className="foot-item about">ABOUT US</p>
                     </Link>
-                    <Link to="/cancel">
-                        <p className="cancel">CANCELLATION POLICY</p>
+                    <Link className="foot-grid-item" to="/cancel">
+                        <p className="foot-item cancel">CANCELLATION POLICY</p>
                     </Link>
-                    <Link to="/privacy">
-                        <p className="privacy">PRIVACY POLICY</p>
+                    <Link className="foot-grid-item" to="/privacy">
+                        <p className="foot-item privacy">PRIVACY POLICY</p>
+                    </Link>
+                    <Link className="foot-grid-item" to="/sponsors-partners">
+                        <p className="foot-item footer-sponsors">SPONSORS &amp; PARTNERS</p>
                     </Link>
                     <p id="address">141 West 36th Street, 8th Floor New York, NY 10018</p>
                 </div>

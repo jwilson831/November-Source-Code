@@ -8,7 +8,7 @@ function Nav (props){
   }
     return(
       
-      <div className="nav navbar-expand-md">
+      <div className="nav navbar-expand-lg">
         <div className="nav-menu-container">
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span><p>Menu <i className="fas fa-caret-down"></i></p></span>

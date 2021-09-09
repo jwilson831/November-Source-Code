@@ -1,0 +1,16 @@
+
+.sponsor-partner-container{
+    height: 2250px;
+    overflow-y: scroll;
+}
+.sponsor-grid-3 span > figure>  a>img{
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width:992px) {
+    .sponsor-grid-3{
+        grid-template-columns: 1fr;
+    }
+}
+

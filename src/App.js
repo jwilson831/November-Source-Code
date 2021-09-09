@@ -27,6 +27,7 @@ import AboutUs from './Footer/About/AboutUs';
 import Policy from './util/Policy/Policy';
 import Cart from './Cart/Cart';
 import ReactGA from 'react-ga4';
+import SponsorsAndPartners from './SponsorPage/SponsorsAndPartners';
 
 
 
@@ -231,6 +232,7 @@ function App() {
                 <Route exact path="/index/articles"><ViewAll articles={articles} comments={comments}/></Route>
                 <Route exact path="/about-us"><AboutUs changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/></Route>
                 <Route exact path="/privacy"><Policy policy="Privacy"/></Route>
+                <Route exact path="/sponsors-partners"><SponsorsAndPartners/></Route>
                 <Route exact path="/cancel"><Policy policy="Cancel"/></Route>
                 <Route exact path="/cart"><Cart/></Route>
               </div>
