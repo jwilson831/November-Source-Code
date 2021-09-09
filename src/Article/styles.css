@@ -1,6 +1,9 @@
 .article-text{
     font-size: 17px;
 }
+.article-text > span > .wp-block-image > img {
+    width: 100% !important;
+}
 .article-container{
     overflow-y: scroll;
     height: 1400px;
