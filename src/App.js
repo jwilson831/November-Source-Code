@@ -26,7 +26,7 @@ import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
 import Policy from './util/Policy/Policy';
 import Cart from './Cart/Cart';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 
 
