@@ -1,3 +1,4 @@
+
 .header-container {
     margin: auto;
     margin-top: 3rem;
@@ -15,7 +16,6 @@
     padding-right: 2rem;
     padding-left: 3rem;
     grid-area: brand;
-
 }
 .tagline{
     margin-right: auto;
@@ -26,6 +26,7 @@
     font-weight: 400;
     justify-self: left;
 }
+
 .header-icon{
     height: 3rem;
     width: auto;
@@ -42,6 +43,36 @@
 }
 .search{
     grid-area: search;
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 970px){
+    .skytop-brand{
+        border: none;
+        padding: 0.25rem;
+        height: 5rem;
+    }
+    .tagline{
+        margin: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 1.5rem;
+    }
+    .header-icon{
+        margin-top: 0px;
+    }
+
+    .header-container{
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        display: grid;
+        grid-template-columns: 5fr 1fr 1fr;
+        grid-template-areas: 
+            "brand cart search"
+            "tagline tagline tagline"
+        ;
+    }
 }
 
 

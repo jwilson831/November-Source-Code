@@ -8,7 +8,7 @@ function Cart(){
     useEffect(() => {
         const fetchProducts = async () => {
             try{
-                const { data }= await axios(`https://skytop-strategies.com/wp-json/wc/v3/products?consumer_key=${process.env.REACT_APP_WOO_CK}&consumer_secret=${process.env.REACT_APP_WOO_CS}&_fields[]=id&_fields[]=price&_fields[]=name&_fields[]=images&per_page=100`);
+                const { data }= await axios(`https://skytop-strategies.com/wp-json/wc/v3/products?consumer_key=${process.env.REACT_APP_WOO_CK}&consumer_secret=${process.env.REACT_APP_WOO_CS}&_fields[]=id&_fields[]=price&_fields[]=name&_fields[]=images&per_page=100&order=asc`);
                 setProducts(data);
             }catch(e){
                 console.error(e)
@@ -21,7 +21,9 @@ function Cart(){
         return products.map(prod => 
             <div className="card mb-3 product-card">
                 <div className="row">
-                    <img className="product-img card-img-top col-md-5" src={prod.images[0].src}></img>    
+                    {prod.images[0] ? 
+                        <img className="product-img card-img-top col-md-5" src={prod.images[0].src}></img>    
+                    :""}
                     <div className="card-body col-md-7 prod-body">
                         <h3>{prod.name}</h3>
                         <p className="edit-text">Price: ${prod.price}</p>

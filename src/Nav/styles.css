@@ -25,10 +25,44 @@ a{
      font-weight: bold;
      font-size: 15px;
  }
+ 
+ .navbar-toggler{
+     font-weight: 600;
+ }
  .active {
     background: rgb(38,136,165);
     padding-left: 1rem;
     padding-right: 1rem;
     color: white;
     border-radius: 5px;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 970px){
+    .nav{
+        margin-top: 0px;
+        border: none;
+        border-top: 1px solid rgb(0,0,0,0.2);
+    }
+    .navbar-collapse{
+        position: absolute;
+        z-index: 99;
+        background-color: white;
+        width: 90%;
+        margin-top: 3rem;
+        text-align: left;
+        padding-top: 0.5rem;
+        padding-left: 2rem;
+        box-shadow: 1px 2px 2px 2px rgb(0 0 0 / 10%);
+    }
+    
+}
+@media only screen and (max-width: 991px){
+    .nav-menu-container{
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .nav{
+        margin-top: 0px;
+    }
 }

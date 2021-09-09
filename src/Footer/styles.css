@@ -17,6 +17,7 @@
     grid-template-columns: 2fr 5fr 3fr 1fr;
     grid-template-areas: 
         "brand text twitter linkedin";
+    background:#151A40;
 }
 .top-footer > a > span{
     margin-top: auto;
@@ -30,6 +31,7 @@
 .fab{
     font-size: 1.6rem;
     padding-top: 3px;
+    margin-top: 0.5rem;
 }
 
 .footer-brand{
@@ -127,5 +129,6 @@
 .end-item{
     border: none !important;
 }
+
 
 
