@@ -28,8 +28,14 @@ function ConferenceMenu(props){
                 <div>
                     <Map address={data.acf.street_address}/>
                     <div className="map-text">
-                        <p className="convene-address">{data.acf.street_address}</p>
-                        <p className="convene-address">{data.acf.city}</p>
+                        {data.acf.street_address === data.acf.city ? 
+                            <p className="convene-address">{data.acf.city}</p>
+                        
+                    :   <>
+                            <p className="convene-address">{data.acf.street_address}</p>
+                            <p className="convene-address">{data.acf.city}</p>
+                        </>
+                    }   
                     </div>
                 </div>
                 <Register products={data.acf.event_ticket}/>
