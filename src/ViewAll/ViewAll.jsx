@@ -23,6 +23,7 @@ function ViewAll(props){
                             tagline={conf.acf.tagline}
                             city={conf.acf.city}
                             date={conf.acf.date}
+                            custom_date={conf.acf.custom_date}
                         />
                     )}
                 </>

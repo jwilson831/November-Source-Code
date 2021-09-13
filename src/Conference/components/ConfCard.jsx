@@ -23,7 +23,11 @@ function ConfCard(props){
                 
                 <div className="conf-date-locale text-right mr-5">
                     <p className="conf-side-data">{props.city}</p>
-                    <p className="conf-side-data">{props.date}</p>
+                    {props.custom_date ? 
+                        <p className="conf-side-data">{props.custom_date}</p>
+                    :
+                        <p className="conf-side-data">{props.date}</p>
+                    }
                 </div>
             </div>
         </div>

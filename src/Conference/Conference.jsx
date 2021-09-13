@@ -52,6 +52,7 @@ function Conference(props){
                     tagline={data.acf.tagline}
                     city={data.acf.city}
                     date={data.acf.date}
+                    custom_date={data.acf.custom_date}
                     product_id={data.acf.event_ticket[0]["ID"]}
                 />    
                 <ConfNav clickHandler={clickHandler}/>
