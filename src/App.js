@@ -210,7 +210,7 @@ function App() {
                     video={"https://www.youtube.com/embed/f8iBhyXnKrg?rel=0"} 
                     title={
                       <div className="video-title text-center">
-                        <h5>Child Labor-- A Global Challenge</h5>
+                        <h5>Forced Labor-- A Global Challenge</h5>
                         <p>Rachel Phillips, Deputy Division Chief for Research and Policy, Office of Child Labor, US Department of Labor</p>
                       </div>
                     }
