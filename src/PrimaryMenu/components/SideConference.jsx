@@ -16,7 +16,11 @@ function SideConference(props){
                 </div>
                 <div className="side-data-container text-right">
                     <p className="side-data m-0">{props.city}</p>
-                    <p id="side-date" className="side-data">{props.date}</p>
+                    {props.custom_date ? 
+                        <p id="side-date" className="side-data">{props.custom_date}</p>
+                    :
+                        <p id="side-date" className="side-data">{props.date}</p>
+                    }
                 </div>
             </div>
         </div>

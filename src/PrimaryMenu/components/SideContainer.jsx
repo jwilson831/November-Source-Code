@@ -13,6 +13,7 @@ function SideContainer(props){
                 imgUrl={conference._embedded ? conference._embedded["wp:featuredmedia"][0].source_url : null}
                 city={conference.acf.city}
                 date={conference.acf.date}
+                custom_date={conference.acf.custom_date}
             />    
         )
     }
