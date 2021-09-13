@@ -64,7 +64,7 @@ body{
 }
 
 .menu-advert {
-  height: 18rem;
+  height: auto;
   max-width: 100%;
   margin-top: 2rem;
   box-shadow: 1px 2px 2px 4px rgb(0 0 0 / 10%);

@@ -15,6 +15,9 @@ function PrimaryMenu (props){
                 <SideContainer conferences={props.conferences}/>
                 {window.location.pathname === "/" ?
                 <div>
+                    <a href={"https://www.spglobal.com/en/"} target="_blank">
+                        <img className="menu-advert" src={"https://utcoleca.sirv.com/S_P%20Global%20S1%20Climate%20Week-Event%20Collaterals-01_Climate%20Week%20Event%20Page-800x800%202.png"}></img>
+                    </a>
                     <Editorial
                         id={props.editorial.id}
                         category={"Editor's Note"}
