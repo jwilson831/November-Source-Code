@@ -29,13 +29,6 @@ a{
  .navbar-toggler{
      font-weight: 600;
  }
- .active {
-    background: rgb(38,136,165);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: white;
-    border-radius: 5px;
-}
 
 /* MOBILE */
 @media only screen and (max-width: 992px){

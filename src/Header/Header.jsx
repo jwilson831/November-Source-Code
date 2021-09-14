@@ -14,13 +14,13 @@ function Header (){
         <div>
             <div className="header-container">
                 <Link to="/">
-                    <img className="skytop-brand" src="https://utcoleca.sirv.com/skytop%20logo%20FINAL.png" alt="" />
+                    <img className="skytop-brand" src="https://utcoleca.sirv.com/SKYTOP/skytop%20logo%20FINAL.png" alt="" />
                 </Link>
                 <h5 className="tagline">Where Corporate Insight and Disruptive Ideas Converge</h5>
                 <Link to="/cart">
-                    <img className="cart header-icon" src="https://utcoleca.sirv.com/shopping-cart.png" />
+                    <img className="cart header-icon" src="https://utcoleca.sirv.com/SKYTOP/shopping-cart.png" />
                 </Link>
-                <img onClick={() => clickHandler()} className="search header-icon" src="https://utcoleca.sirv.com/search.png" width="512" />
+                <img onClick={() => clickHandler()} className="search header-icon" src="https://utcoleca.sirv.com/SKYTOP/search.png" width="512" />
                 {searchClicked ? <Search clickHandler={clickHandler}/> : ""}
 
             </div>

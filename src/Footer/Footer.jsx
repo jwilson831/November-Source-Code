@@ -6,7 +6,7 @@ function Footer (props){
     return(
         <div className="footer">
             <div className="top-footer">
-                <img className="footer-brand" src="https://utcoleca.sirv.com/skytop%20logo%20KO%20FINAL.png" alt="" />
+                <img className="footer-brand" src="https://utcoleca.sirv.com/SKYTOP/skytop%20logo%20KO%20FINAL.png" alt="" />
                 <div className="footer-text">
                     <Link className="foot-grid-item" to="/about-us">
                         <p className="foot-item about">ABOUT US</p>
