@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import { sendGAPageView } from '../../util/GoogleAnalytics';
 import './styles.css';
 
 function AboutUs(props){
+    useEffect(() => {
+        sendGAPageView(window.location.pathname);
+    },[])
     const handleClick = (e) => {
         props.changeActiveCategory(e.target.innerHTML);        
     }

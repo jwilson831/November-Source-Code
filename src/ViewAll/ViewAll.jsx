@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ConfCard from '../Conference/components/ConfCard';
 import Recents from '../Section/PageComponents/Recents/Recents';
+import { sendGAPageView } from '../util/GoogleAnalytics';
 import './styles.css';
 
 function ViewAll(props){
+    useEffect(() => {
+        sendGAPageView(window.location.pathname);
+    },[])
 
     const renderData = () => {
         if (props.articles){

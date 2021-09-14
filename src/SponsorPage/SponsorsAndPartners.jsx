@@ -1,12 +1,14 @@
 import axios from 'axios';
 import { Markup } from 'interweave';
 import React,{useState,useEffect} from 'react';
+import { sendGAPageView } from '../util/GoogleAnalytics';
 import PageLoader from '../util/Loader';
 import './styles.css';
 
 function SponsorsAndPartners(){
     const [sponsors,setSponsors] = useState(null);
     useEffect(() => {
+        sendGAPageView(window.location.pathname);
 
         const fetchAllSponsors = async () => {
             try{

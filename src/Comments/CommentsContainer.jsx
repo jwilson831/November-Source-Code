@@ -36,7 +36,6 @@ function CommentsContainer(props){
     const setCommentNumber = (number) => {
         setNum(number);
     }
-    console.log("running")
     return(
         <>
         {loaded ? 

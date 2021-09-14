@@ -7,7 +7,6 @@ function Register(props){
     const [viewLater, setViewLater] = useState(null);
 
     useEffect(() => {
-        console.log(props.products)
         renderRegisterButtons(props.products);
     },[])
 
@@ -23,35 +22,34 @@ function Register(props){
             }
         })
     }
-    console.log(liveStream);
     return(
         <>
         <div className="category">
             <p className="cat-text">Register</p>
         </div>
-        <div id="registrationCarousel" className="carousel slide" data-interval="false">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img src="https://utcoleca.sirv.com/SKYTOP/Skytop%20Register/live.jpg" alt="First slide"></img>
-                    <div>
-                        <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${mainProduct}`} target="_blank">
-                            <button className="btn btn-primary comment-btn register-button">Join Us Live</button>
-                        </a>
-                    </div>
-                </div>
-                <div className="carousel-item">
-                    <img src="https://utcoleca.sirv.com/SKYTOP/Skytop%20Register/streamed.jpg" alt="Second slide"></img>
-                    <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${liveStream}`} target="_blank">
-                        <button className="btn btn-primary comment-btn register-button">Virtual Live Stream</button>
-                    </a>
-                </div>
-                <div className="carousel-item">
-                    <img src="https://utcoleca.sirv.com/SKYTOP/Skytop%20Register/later.jpg" alt="Third slide"></img>
-                    <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${viewLater}`} target="_blank">
-                        <button className="btn btn-primary comment-btn register-button">View Later</button>
+        <div>
+            <div className="register-box">
+                <img src="https://utcoleca.sirv.com/SKYTOP/Skytop%20Register/live.jpg" alt="First slide"></img>
+                <div>
+                    <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${mainProduct}`} target="_blank">
+                        <button className="btn btn-primary comment-btn register-button">Join Us Live</button>
                     </a>
                 </div>
             </div>
+            <div className="register-box">
+                <img src="https://utcoleca.sirv.com/SKYTOP/Skytop%20Register/streamed.jpg" alt="Second slide"></img>
+                <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${liveStream}`} target="_blank">
+                    <button className="btn btn-primary comment-btn register-button">Virtual Live Stream</button>
+                </a>
+            </div>
+            <div id="watch-later" className="register-box">
+                <img src="https://utcoleca.sirv.com/SKYTOP/Skytop%20Register/watch-later-3262402-2730130.png" alt="Third slide"></img>
+                <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${viewLater}`} target="_blank">
+                    <button className="btn btn-primary comment-btn register-button">View Later</button>
+                </a>
+            </div>
+        </div>
+        {/* <div id="registrationCarousel" className="carousel slide" data-interval="false">
                 <ol class="carousel-indicators">
                     <li data-target="#registrationCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#registrationCarousel" data-slide-to="1"></li>
@@ -65,7 +63,7 @@ function Register(props){
                 <i class="fas fa-chevron-circle-right"></i>
                 <span className="sr-only">Next</span>
             </a>
-        </div>
+        </div> */}
         </>
     )
 }

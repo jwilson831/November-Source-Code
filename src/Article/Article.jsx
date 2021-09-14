@@ -6,6 +6,7 @@ import CommentsContainer from '../Comments/CommentsContainer';
 import PageLoader from '../util/Loader';
 import { renderByLine } from '../util/renderByLine';
 import moment from 'moment';
+import { sendGAPageView } from '../util/GoogleAnalytics';
 
 
 function Article(props){
@@ -13,7 +14,9 @@ function Article(props){
     const [loaded,setLoaded] = useState(false);
     const {id} = useParams();
 
-    useEffect(() => {        
+    useEffect(() => {  
+        sendGAPageView(window.location.pathname);
+
         const selectCurrentArticle = (data) => {
             if(Array.isArray(data)){
                 return (data.find(article => article.id === parseInt(id)));

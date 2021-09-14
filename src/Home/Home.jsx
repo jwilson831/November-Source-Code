@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './styles.css';
 import Feature from '../Section/PageComponents/Feature/Feature';
 import Recents from '../Section/PageComponents/Recents/Recents';
@@ -6,8 +6,12 @@ import SubFeatures from '../Section/PageComponents/SubFeatures/SubFeatures';
 import ViewAllBtn from '../ViewAll/ViewAllBtn';
 import Advert from '../util/Advert/Advert';
 import Calendar from '../util/Calendar/Calendar';
+import { sendGAPageView } from '../util/GoogleAnalytics';
 
 function Home (props){
+    useEffect(() => {
+        sendGAPageView("/headlines");
+    },[])
     return(
         <>
         <div className="home-grid">
@@ -22,7 +26,7 @@ function Home (props){
             </div>
         </div>
         <div className="mt-4">
-            <Advert image={"https://utcoleca.sirv.com/skytop_ads/image.png"} link={"https://esg.moodys.io/"}/>
+            <Advert image={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/image.png"} link={"https://esg.moodys.io/"}/>
         </div>
         <hr></hr>
         <div className="text-left">

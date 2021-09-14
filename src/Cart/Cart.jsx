@@ -1,21 +1,24 @@
 import axios from 'axios';
 import React, {useState,useEffect} from 'react';
+import { sendGAPageView } from '../util/GoogleAnalytics';
 import PageLoader from '../util/Loader';
 import './styles.css';
 
 function Cart(){
     const [products,setProducts] = useState(null);
     useEffect(() => {
+        sendGAPageView(window.location.pathname);
+
         const fetchProducts = async () => {
             try{
                 const { data }= await axios(`https://skytop-strategies.com/wp-json/wc/v3/products?consumer_key=${process.env.REACT_APP_WOO_CK}&consumer_secret=${process.env.REACT_APP_WOO_CS}&_fields[]=id&_fields[]=price&_fields[]=name&_fields[]=images&per_page=100&order=asc`);
                 setProducts(data);
             }catch(e){
-                console.error(e)
+                console.error(e);
             }
         }
         fetchProducts();
-    })
+    },[])
 
     const renderProducts = (products) => {
         return products.map(prod => 

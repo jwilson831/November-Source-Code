@@ -26,7 +26,6 @@ import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
 import Policy from './util/Policy/Policy';
 import Cart from './Cart/Cart';
-import ReactGA from 'react-ga4';
 import SponsorsAndPartners from './SponsorPage/SponsorsAndPartners';
 
 
@@ -42,10 +41,6 @@ function App() {
   const [activeCategory, setActiveCategory] = useState("Headlines");
 
   useEffect(() => {
-    //GOOGLE ANALYTICS
-    ReactGA.initialize(process.env.REACT_APP_GA_TRACKING);
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname});
-    
     const fetchData = async () => {
       try{
         const articles = await axios("https://skytop-strategies.com/wp-json/wp/v2/articles?_fields[]=title&_fields[]=acf&_fields[]=content&_fields[]=date&_fields[]=id&_fields[]=_links&_embed=wp:featuredmedia&per_page=100");
@@ -116,7 +111,7 @@ function App() {
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/cyberad.png"}
                     calendar={editCalendar}/>
                 </Route>
 
@@ -134,7 +129,7 @@ function App() {
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/cyberad.png"}/>
                 </Route>
 
                 <Route exact path="/investment">
@@ -151,7 +146,7 @@ function App() {
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/cyberad.png"}/>
                 </Route>
 
                 <Route exact path="/CSR">
@@ -168,7 +163,7 @@ function App() {
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://crisisconsultant.com/"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/ICM.jpg"}/>
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/ICM.jpg"}/>
                 </Route>
 
                 <Route exact path="/cyber">
@@ -185,7 +180,7 @@ function App() {
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://crisisconsultant.com/"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/ICM.jpg"}/>
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/ICM.jpg"}/>
                 </Route>
 
                 <Route exact path="/capital-markets">
@@ -202,7 +197,7 @@ function App() {
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/cyberad.png"}/>
                 </Route>
 
                 <Route exact path="/washington-world">
@@ -219,7 +214,7 @@ function App() {
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}
-                    ad={"https://utcoleca.sirv.com/skytop_ads/cyberad.png"}/>
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/cyberad.png"}/>
                 </Route>
                 
                 <Route exact path="/authors/:id"><AuthorContainer articles={articles} comments={comments}/></Route>
@@ -252,7 +247,7 @@ function App() {
                 <Route path={"*"}>
                   <PrimaryMenu 
                     ad_link={"https://cmi2i.com/"} 
-                    ad={"https://utcoleca.sirv.com/skytop_ads/CMi2i-2.png"} 
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/CMi2i-2.png"} 
                     conferences={filterByCategory(conferences,activeCategory)} 
                     editorial={editorial}
                     publisher = {publisher} 

@@ -9,6 +9,7 @@ import Agenda from './components/ConfInfo/Agenda';
 import Speakers from './components/ConfInfo/Speakers';
 import Delegates from './components/ConfInfo/Delegates';
 import PageLoader from '../util/Loader';
+import { sendGAPageView } from '../util/GoogleAnalytics';
 
 
 function Conference(props){
@@ -18,7 +19,8 @@ function Conference(props){
     const [key,setKey] = useState(0);
     const { id } = useParams();
 
-    useEffect(() => {    
+    useEffect(() => {
+        sendGAPageView(window.location.pathname);    
         const selectCurrentConference = (conferences) => {
             try{
                 const data = (conferences.find(conf => conf.id === parseInt(id)));

@@ -41,8 +41,6 @@ function CommentsForm(props){
                 link: company 
             }
         }
-        console.log(data);
-
         try{
             const post = await axios.post('https://skytop-strategies.com/wp-json/wp/v2/comments', data,{
                 headers: {
