@@ -40,7 +40,7 @@ function Search(props){
         if(data.acf.image){
             return <img className={"search-img"} src={data.acf.image}></img> 
         }else if(data._embedded){
-            return <img className={"search-img"} src={data._embedded["wp:featuredmedia"][0].source_url}></img> 
+            return <img className={"search-img"} src={data.acf.location_image ? data.acf.location_image : data._embedded["wp:featuredmedia"][0].source_url}></img> 
         }else if(data.type === "sponsors"){
             return <Markup content={data.content.rendered}></Markup>;
         }

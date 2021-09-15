@@ -10,7 +10,7 @@ function SideContainer(props){
                 id={conference.id}
                 title={conference.title.rendered}
                 tagline={conference.acf.tagline}
-                imgUrl={conference._embedded ? conference._embedded["wp:featuredmedia"][0].source_url : null}
+                imgUrl={conference.acf.location_image ? conference.acf.location_image:  conference._embedded["wp:featuredmedia"][0].source_url}
                 city={conference.acf.city}
                 date={conference.acf.date}
                 custom_date={conference.acf.custom_date}

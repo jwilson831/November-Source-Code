@@ -49,7 +49,7 @@ function Conference(props){
             {loaded ?
             <div className="conference-container" >
                 <ConfCard 
-                    imgUrl={data.acf.location_image !== "" ? data.acf.location_image : data._embedded["wp:featuredmedia"][0].source_url}
+                    imgUrl={data.acf.location_image  ? data.acf.location_image : data._embedded["wp:featuredmedia"][0].source_url}
                     title={data.title.rendered}
                     tagline={data.acf.tagline}
                     city={data.acf.city}
