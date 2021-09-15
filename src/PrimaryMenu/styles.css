@@ -83,8 +83,5 @@ select{
 .conf-info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-left: 0.3rem;
-    color: white;
 
 }
