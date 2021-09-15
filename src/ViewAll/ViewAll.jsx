@@ -22,7 +22,7 @@ function ViewAll(props){
                     {props.conferences.map(conf => 
                         <ConfCard
                             id={conf.id} 
-                            imgUrl={conf._embedded["wp:featuredmedia"][0].source_url}
+                            imgUrl={conf.acf.location_image ? conf.acf.location_image : conf._embedded["wp:featuredmedia"][0].source_url}
                             title={conf.title.rendered}
                             tagline={conf.acf.tagline}
                             city={conf.acf.city}
