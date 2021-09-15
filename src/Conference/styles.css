@@ -1,11 +1,12 @@
 .conf-img{
     width: 100% !important;
-    height: 27rem;
+    height: auto;
     padding: 1rem;
 }
 .conf-title{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
+    margin-bottom: 0px;
 }
 .conf-nav{
     z-index: 5;
@@ -15,7 +16,7 @@
     overflow-y: scroll;
 }
 .conf-side-data{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -24,8 +25,15 @@
     margin-left: 3rem;
 }
 .conf-tagline{
-    font-size: 18px;
+    font-size: 20px;
     padding-right: 2.5rem;
+}
+.conf-date-locale{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
 }
 
 .register-container{
@@ -87,8 +95,7 @@
 
 
 .countdown{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     font-size: 30px;
     width: -moz-fit-content;
     width: fit-content;
@@ -97,8 +104,13 @@
     border: 2px dashed white;
     border-radius: 5px;
 }
+@media screen and (max-width: 690px){
+    .countdown{
+        visibility: hidden;
+    }
+}
 .countdown-text{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     margin-left: 2rem;
     margin-right: 2rem;
