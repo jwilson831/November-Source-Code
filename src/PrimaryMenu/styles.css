@@ -77,6 +77,9 @@ select{
     font-weight: 600;
     color: white;
 }
+.side-data-container {
+    color: white;
+}
 .side-data-container > a:hover{
     color: white !important;
 }
