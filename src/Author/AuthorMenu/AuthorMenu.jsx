@@ -26,7 +26,7 @@ function AuthorMenu(props){
         setLoaded(true);
     },[])
     return(
-        <div className=" pl-3 text-left">
+        <div className="pl-3 text-left">
             {loaded ? 
             <>
                 {id && conferences.length > 0 ? <Attending conferences={conferences}/> : <SideContainer conferences={props.conferences}/>}

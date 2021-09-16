@@ -1,7 +1,8 @@
 .conf-img{
-    width: 100% !important;
-    height: auto;
+    width: 100%;
+    height: 30rem;
     padding: 1rem;
+    object-fit: cover;
 }
 .conf-title{
     font-size: 30px;

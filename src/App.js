@@ -27,6 +27,8 @@ import AboutUs from './Footer/About/AboutUs';
 import Policy from './util/Policy/Policy';
 import Cart from './Cart/Cart';
 import SponsorsAndPartners from './SponsorPage/SponsorsAndPartners';
+import Poll from './util/Poll/Poll';
+import NewsFeed from './util/News/NewsFeed';
 
 
 
@@ -83,8 +85,6 @@ function App() {
   const changeActiveCategory = (category) => {
     setActiveCategory(category);
   }
-
-  
 
   return (
     <div className="App">
@@ -237,6 +237,12 @@ function App() {
               <Switch>
                 <Route path={"/conferences/:id"}><ConferenceMenu conferences={conferences}/></Route>
                 <Route path={["/authors/:id","/editorial"]}><AuthorMenu conferences={conferences}/></Route>
+                <Route path="/index/conferences">
+                  <div className="pl-3">
+                    <Poll/>
+                    <NewsFeed/>
+                  </div>
+                </Route>
                 <Route path={"/articles/:id"}>
                   <ArticleMenu 
                     articles={articles} 
