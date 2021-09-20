@@ -253,7 +253,7 @@ function App() {
                 <Route path={"*"}>
                   <PrimaryMenu 
                     ad_link={"https://cmi2i.com/"} 
-                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/CMi2i-2.png"} 
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/CMi2i.png"} 
                     conferences={filterByCategory(conferences,activeCategory)} 
                     editorial={editorial}
                     publisher = {publisher} 
