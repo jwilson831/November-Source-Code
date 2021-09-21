@@ -11,7 +11,7 @@ function PageLoader(props){
                 color="rgb(38,136,165)"
                 height={props.search ? 50 : 100}
                 width={props.search ? 50 : 100}
-                timeout={1000000}
+                timeout={10000}
             />
         </div>
     )
