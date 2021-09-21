@@ -33,7 +33,6 @@ function Delegates(props){
     }
     return(
         <div>
-            <p className="category conf-info-title poll-title">Delegates</p>
             <div className="delegates mt-5 mb-5">
                 {loaded ? renderDelegates(delegates) : <PageLoader/>}
             </div>

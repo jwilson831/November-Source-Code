@@ -19,9 +19,9 @@ function Sponsors(props){
     }
     return(
         <div className="sponsors-container">
-            <p className="conf-info-title">WE THANK OUR SPONSORS FOR SUPPORTING THIS PROGRAM!</p>
+            <p>WE THANK OUR SPONSORS FOR SUPPORTING THIS PROGRAM!</p>
             <div className="sponsors">
-            {props.all ?
+                {props.all ?
                     <div>
                         <hr></hr>
                         {renderSponsors(props.all)}

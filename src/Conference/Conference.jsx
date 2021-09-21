@@ -10,6 +10,7 @@ import Speakers from './components/ConfInfo/Speakers';
 import Delegates from './components/ConfInfo/Delegates';
 import PageLoader from '../util/Loader';
 import { sendGAPageView } from '../util/GoogleAnalytics';
+import Venue from './components/ConfInfo/Venue';
 
 
 function Conference(props){
@@ -26,11 +27,21 @@ function Conference(props){
                 const data = (conferences.find(conf => conf.id === parseInt(id)));
                 setData(data);
                 setInfo([
-                    <About data={data} engage={data.acf.engage} discover={data.acf.discover} apply={data.acf.apply}/>,
-                    <Agenda agenda={data.content.rendered}/>,
-                    <Speakers speakers={data.acf.speakers}/>,
-                    <Delegates delegates={data.acf.delegates}/>,
-                    
+                    <About key={0} name="ABOUT" data={data} engage={data.acf.engage} discover={data.acf.discover} apply={data.acf.apply}/>,
+                    <Agenda key={1} name="AGENDA" agenda={data.content.rendered}/>,
+                    <Speakers key={2} name="SPEAKERS"speakers={data.acf.speakers}/>,
+                    <Delegates key={3} name="DELEGATES" delegates={data.acf.delegates}/>,
+                    <Venue 
+                        key={4}
+                        name="VENUE"
+                        venue={data.acf.venue}
+                        venue_image={data.acf.venue_image}
+                        venue_image_2={data.acf.venue_image_2}
+                        venue_image_3={data.acf.venue_image_3}
+                        venue_description = {data.acf.venue_description}
+                        venue_link={data.acf.venue_link}
+                        venue_video={data.acf.venue_video} 
+                    />
                 ])
 
             }catch(err){
@@ -44,25 +55,25 @@ function Conference(props){
     const clickHandler = (key) => {
         setKey(key);
     }
+
     return(
         <>
             {loaded ?
-            <div className="conference-container" >
-                <ConfCard 
-                    imgUrl={data.acf.location_image  ? data.acf.location_image : data._embedded["wp:featuredmedia"][0].source_url}
-                    title={data.title.rendered}
-                    tagline={data.acf.tagline}
-                    city={data.acf.city}
-                    date={data.acf.date}
-                    custom_date={data.acf.custom_date}
-                    product_id={data.acf.event_ticket[0]["ID"]}
-                />    
-                <ConfNav clickHandler={clickHandler}/>
-                <div className="mt-3 text-left conf-content">
-                    {info[key]}
+                <div className="conference-container" >
+                    <ConfCard 
+                        imgUrl={data.acf.location_image  ? data.acf.location_image : data._embedded["wp:featuredmedia"][0].source_url}
+                        title={data.title.rendered}
+                        tagline={data.acf.tagline}
+                        city={data.acf.city}
+                        date={data.acf.date}
+                        custom_date={data.acf.custom_date}
+                        product_id={data.acf.event_ticket[0]["ID"]}
+                    />    
+                    <ConfNav clickHandler={clickHandler} active={key} info={info}/>
+                    <div className="mt-3 text-left conf-content">
+                        {info[key]}
+                    </div>
                 </div>
-            </div>
-
             : <PageLoader/>}
         </>
     )

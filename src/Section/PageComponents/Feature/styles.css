@@ -10,6 +10,9 @@
     padding-left: 10px;
     line-height: 1.7rem;
 }
+.category > a{
+    color: white!important;
+}
 .card{
     border: none !important;
 }
@@ -45,14 +48,15 @@
 }
 
 .video{
-    height: 26rem;
-    width: 95%;
+    height: 30rem;
+    width: 90%;
     margin: auto;
     margin-bottom: 1rem;
 }
-@media screen and (min-width:2000px) {
+@media screen and (min-width:1800px) {
     .video{
-        height: 33rem;
+        width: 80%;
+        height: 38rem;
     }
 }
 

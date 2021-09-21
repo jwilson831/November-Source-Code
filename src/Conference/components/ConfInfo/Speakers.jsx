@@ -36,7 +36,6 @@ function Speakers(props){
     }
     return(
         <div>
-            <p className="category conf-info-title poll-title">speakers</p>
             <div className="speakers mt-5 mb-5">
                 {loaded ? renderSpeakers(speakers) : <PageLoader/>}
             </div>

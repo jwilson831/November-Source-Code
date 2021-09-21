@@ -1,12 +1,16 @@
 import React from 'react';
 
 function ConfNav(props){
+    const renderNavs = () => {
+        return props.info.map(item => 
+            <div className={`nav-item conf-nav-item ${parseInt(item.key) === props.active ? "category edit-category" : ""}`}> 
+                <a onClick={() => props.clickHandler(parseInt(item.key))}>{item.props.name}</a>
+            </div>   
+        )
+    }
     return(
         <div className="nav conf-nav">
-            <div className="nav-item"> <a onClick={() => props.clickHandler(0)}>ABOUT</a></div>
-            <div className="nav-item"> <a onClick={() => props.clickHandler(1)}>AGENDA</a></div>
-            <div className="nav-item"> <a onClick={() => props.clickHandler(2)}>SPEAKERS</a></div>
-            <div className="nav-item"> <a onClick={() => props.clickHandler(3)}>DELEGATES</a></div>
+            {renderNavs()}
         </div>
     )
 }

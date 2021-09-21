@@ -11,6 +11,14 @@
 }
 .conf-nav{
     z-index: 5;
+    margin-bottom: 1.5rem;
+    margin-top: 0rem;
+}
+.conf-nav-item {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .conf-content{
@@ -73,26 +81,16 @@
     height: auto;
 }
 
-/* .carousel{
-    background-color: rgb(0,0,0,0.2);
-    padding: 0.5rem;
-    border-radius: 5px;
-} */
-
-/* .carousel-indicators{
+.carousel-indicators{
     position: relative;
 }
-.carousel-item > img{
-    height: auto;
-    width: 100%;
-    padding: 0.5rem;
-}
+    
 .fa-chevron-circle-left, .fa-chevron-circle-right{
     color: rgb(38,136,165);
     background-color: white;
     border-radius: 100%;
     font-size: 2rem;
-} */
+}
 
 
 .countdown{

@@ -41,8 +41,6 @@ function ConferenceMenu(props){
                 <Register products={data.acf.event_ticket}/>
             </>
             : <PageLoader/>}
-            <Poll />
-            <NewsFeed/>
         </div>
         )
 }
