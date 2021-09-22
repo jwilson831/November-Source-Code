@@ -43,7 +43,7 @@ function Register(props){
                 </a>
             </div>
             <div id="watch-later" className="register-box">
-                <img src="https://utcoleca.sirv.com/SKYTOP/Skytop%20Register/watch-later-3262402-2730130.png" alt="Third slide"></img>
+                <img src="https://utcoleca.sirv.com/SKYTOP/Skytop%20Register/later.png" alt="Third slide"></img>
                 <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${viewLater}`} target="_blank">
                     <button className="btn btn-primary comment-btn register-button">Later</button>
                 </a>
