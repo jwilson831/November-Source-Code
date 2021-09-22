@@ -30,18 +30,7 @@ function Conference(props){
                     <About key={0} name="ABOUT" data={data} engage={data.acf.engage} discover={data.acf.discover} apply={data.acf.apply}/>,
                     <Agenda key={1} name="AGENDA" agenda={data.content.rendered}/>,
                     <Speakers key={2} name="SPEAKERS"speakers={data.acf.speakers}/>,
-                    <Delegates key={3} name="DELEGATES" delegates={data.acf.delegates}/>,
-                    <Venue 
-                        key={4}
-                        name="VENUE"
-                        venue={data.acf.venue}
-                        venue_image={data.acf.venue_image}
-                        venue_image_2={data.acf.venue_image_2}
-                        venue_image_3={data.acf.venue_image_3}
-                        venue_description = {data.acf.venue_description}
-                        venue_link={data.acf.venue_link}
-                        venue_video={data.acf.venue_video} 
-                    />
+                    <Delegates key={3} name="DELEGATES" delegates={data.acf.delegates}/>
                 ])
 
             }catch(err){
