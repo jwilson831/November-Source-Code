@@ -1,11 +1,10 @@
 import React, {useState,useEffect} from 'react';
 import Map from '../../util/Map';
-import Poll from '../../util/Poll/Poll';
 import {useParams} from 'react-router-dom';
 import './styles.css'
 import PageLoader from '../../util/Loader';
-import NewsFeed from '../../util/News/NewsFeed';
 import Register from '../components/Register';
+import VenueMenu from './VenueMenu';
 
 
 function ConferenceMenu(props){
@@ -38,6 +37,15 @@ function ConferenceMenu(props){
                     }   
                     </div>
                 </div>
+                {data.acf.venue ? 
+                    <VenueMenu
+                        id={id} 
+                        venue={data.acf.venue}
+                        venue_image={data.acf.venue_image_4}
+                        venue_description = {data.acf.venue_description}
+                    />
+                    : ""
+                }
                 <Register products={data.acf.event_ticket}/>
             </>
             : <PageLoader/>}

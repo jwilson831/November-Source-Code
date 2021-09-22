@@ -29,6 +29,8 @@ import Cart from './Cart/Cart';
 import SponsorsAndPartners from './SponsorPage/SponsorsAndPartners';
 import Poll from './util/Poll/Poll';
 import NewsFeed from './util/News/NewsFeed';
+import VenueMenu from './Conference/ConferenceMenu/VenueMenu';
+import Venue from './Conference/components/ConfInfo/Venue';
 
 
 
@@ -223,6 +225,7 @@ function App() {
                 <Route exact path="/publisher"><Article articles={publisher} editorial_title={"Publisher's Note"}/></Route>
 
                 <Route exact path="/conferences/:id"><Conference conferences={conferences}/></Route>
+                <Route exact path="/conferences/:id/venue"><Venue conferences={conferences}/></Route>
                 <Route exact path="/index/conferences"><ViewAll conferences={conferences} comments={comments}/></Route>
                 <Route exact path="/index/articles"><ViewAll articles={articles} comments={comments}/></Route>
                 <Route exact path="/about-us"><AboutUs changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/></Route>
