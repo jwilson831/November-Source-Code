@@ -31,7 +31,7 @@ function Venue(props){
                         <button className="btn btn-primary comment-btn"><i class="fas fa-chevron-left"></i> Back</button>
                     </Link>
                 </div>
-                    <strong><h2 className="font-italic">{data.acf.venue}</h2></strong>
+                    <strong><h2>{data.acf.venue}</h2></strong>
                     <div id="registrationCarousel" className="carousel slide" data-interval="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">

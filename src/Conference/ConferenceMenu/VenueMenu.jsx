@@ -9,7 +9,7 @@ function VenueMenu(props){
                 <p className="cat-text">Venue</p>
             </div>
             <div className="register-box">
-                <strong><h4 className="font-italic">{props.venue}</h4></strong>
+                <strong><h4>{props.venue}</h4></strong>
                 <img className="venue-img" src={props.venue_image}></img>
                 <Link to={`/conferences/${props.id}/venue`}>
                     <button className="btn btn-primary comment-btn">Learn More</button>
