@@ -34,7 +34,7 @@ function Article(props){
         <>
         {loaded ?
             <div>
-                <div className="article-container p-5 mt-3" >
+                <div className="article-container p-2 mt-3" >
                     <div>
                         {props.editorial_title? 
                             <div className="category edit-category">

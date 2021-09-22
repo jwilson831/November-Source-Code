@@ -8,6 +8,12 @@
     overflow-y: scroll;
     height: 1400px;
 }
+@media screen and (max-width: 990px) {
+    .article-container{
+        width: 100vw;
+        text-align: center;
+    }
+}
 
 .art-img{
     max-width: 90%;
