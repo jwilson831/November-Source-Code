@@ -54,13 +54,10 @@ body{
 }
 
 .advert{
-  max-height: 100%;
-  max-width: 100%;
-  width: fit-content;
+  width: 95%;
   margin-top: 1rem;
   margin-bottom: 2rem;
   padding-right: 1rem;
-
 }
 
 .menu-advert {

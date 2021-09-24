@@ -181,8 +181,8 @@ function App() {
                     ids={[187,1306,1309,1337,1319]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
-                    ad_link={"https://crisisconsultant.com/"}
-                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/ICM.jpg"}/>
+                    ad_link={"https://www.extrahop.com/"}
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/extraHop.gif"}/>
                 </Route>
 
                 <Route exact path="/capital-markets">
