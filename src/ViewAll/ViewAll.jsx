@@ -34,7 +34,6 @@ function ViewAll(props){
             )
         }
     }
-    console.log(props.conferences)
     return (
         <div class="view-all-container">
             {renderData()}
