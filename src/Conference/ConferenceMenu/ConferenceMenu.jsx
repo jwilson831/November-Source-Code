@@ -40,7 +40,7 @@ function ConferenceMenu(props){
                 {data.acf.venue_info ? 
                     <VenueMenu
                         conf_id={id}
-                        venue_id={data.acf.venue_info} 
+                        venue_id={data.acf.venue_info["ID"]} 
                         venue_image={data.acf.venue_image}
                         venue_name={data.acf.venue_info.post_title}
                     />

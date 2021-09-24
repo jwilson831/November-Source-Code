@@ -24,6 +24,7 @@ function Venue(){
         }
         fetchVenue();
     },[])
+    console.log(id,confId);
 
     return(
         <>
