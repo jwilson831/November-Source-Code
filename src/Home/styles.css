@@ -25,11 +25,10 @@
 .feature{
     border-bottom: 1px solid rgb(0,0,0,0.2);
     grid-area: feature;
-    padding-bottom: 3.5rem;
 }
+
 .ad{
     grid-area: ad;
-
 }
 
 .subfeature{

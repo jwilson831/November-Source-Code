@@ -3,6 +3,7 @@ import './styles.css';
 import { Markup } from 'interweave';
 import { Link } from 'react-router-dom';
 import CommentsBox from '../CommentsBox/CommentsBox';
+import { scrollToTop } from '../scrollToTop';
 
 function Editorial(props){
     return(
@@ -13,7 +14,7 @@ function Editorial(props){
             <img className="edit-img" src={props.img}></img>
             <p className="edit-text mt-4"><Markup content={props.excerpt}></Markup><span></span></p>
             <Link to={props.link}>
-                <button className="btn sky-submit mb-3">Read Full Note</button>
+                <button onClick={() => scrollToTop()}className="btn sky-submit mb-3">Read Full Note</button>
             </Link>
             <p className="edit-name">By {props.author}</p>
             <div className="pl-3 recents-comments ">
