@@ -10,7 +10,6 @@ import Speakers from './components/ConfInfo/Speakers';
 import Delegates from './components/ConfInfo/Delegates';
 import PageLoader from '../util/Loader';
 import { sendGAPageView } from '../util/GoogleAnalytics';
-import Venue from './components/ConfInfo/Venue';
 
 
 function Conference(props){

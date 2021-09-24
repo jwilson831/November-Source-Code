@@ -37,12 +37,12 @@ function ConferenceMenu(props){
                     }   
                     </div>
                 </div>
-                {data.acf.venue ? 
+                {data.acf.venue_info ? 
                     <VenueMenu
-                        id={id} 
-                        venue={data.acf.venue}
-                        venue_image={data.acf.venue_image_4}
-                        venue_description = {data.acf.venue_description}
+                        conf_id={id}
+                        venue_id={data.acf.venue_info} 
+                        venue_image={data.acf.venue_image}
+                        venue_name={data.acf.venue_info.post_title}
                     />
                     : ""
                 }

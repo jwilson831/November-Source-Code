@@ -115,6 +115,10 @@ table td{
     margin-bottom: 1rem;
     border-radius: 5px;
 }
+.amen-img{
+    width: 100%;
+    height: auto;
+}
 .venue-desc{
     width: 85%;
     font-size: 18px;
