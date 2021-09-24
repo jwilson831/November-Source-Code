@@ -11,7 +11,7 @@ function Amenities(props){
                 <div className="col-lg-6 col-sm-12 ">
                     <img className="amen-img" src={amen.image}></img>
                 </div>
-                <div className="col-lg-6 col-sm-12 pt-4">
+                <div className="col-lg-6 col-sm-12 pt-1">
                     <h4>{amen.title}</h4>
                     <p>{amen.description}</p>
                 </div>
