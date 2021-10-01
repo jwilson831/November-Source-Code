@@ -112,8 +112,8 @@ function App() {
                     articles={articles} 
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
-                    ad_link={"https://www.boardroomalpha.com/"}
-                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/cyberad.png"}
+                    ad_link={"https://www.extrahop.com/"}
+                    ad={"https://utcoleca.sirv.com/SKYTOP/skytop_ads/extraHop.gif"}
                     calendar={editCalendar}/>
                 </Route>
 
