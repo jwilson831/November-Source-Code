@@ -127,7 +127,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[1328,190,1322,627,593,596]}
+                    ids={[1284,1328,190,1322,627,593]}
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}
@@ -144,7 +144,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[622,583,604,607,197,184]}                    
+                    ids={[203,622,583,604,607,197]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}
@@ -161,7 +161,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[599,616,601,590,177,580]}                    
+                    ids={[1325,599,616,601,590,177]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://crisisconsultant.com/"}
@@ -212,7 +212,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[624,609,218,215,200,193]}                    
+                    ids={[1316,624,609,218,215,200]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}

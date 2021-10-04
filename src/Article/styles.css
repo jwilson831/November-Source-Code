@@ -7,6 +7,8 @@
 .article-container{
     overflow-y: scroll;
     height: 1400px;
+    padding-right: 3.5rem;
+    padding-left: 2.5rem;
 }
 @media screen and (max-width: 990px) {
     .article-container{
@@ -16,8 +18,10 @@
 }
 
 .art-img{
-    max-width: 90%;
-    height: 25rem;
-    width: auto;
+    height: auto;
+    width: 85%;
     margin: 2rem;
+}
+hr.wp-block-separator.is-style-wide {
+    border-top: 1px solid rgba(0,0,0);
 }
