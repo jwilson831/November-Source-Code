@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './styles.css'
 import PageLoader from '../../../util/Loader';
-
+import PastInfoMenu from '../../util/PastConferences/PastInfoMenu';
 
 function Speakers(props){
     const [speakers,setSpeakers] = useState('');

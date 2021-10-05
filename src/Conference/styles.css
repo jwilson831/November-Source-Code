@@ -111,4 +111,16 @@
     margin-right: 2rem;
     font-family: 'IBM Plex Mono', monospace;
 }
+.show-past-btn{
+    margin: 1rem;
+    margin-top: 0rem;
+}
+
+.show-past-btn:hover{
+    background-color: rgba(200, 160, 5, 1) !important;
+}
+.modal-body > .text-left > span > ol > li{
+    margin: 1rem;
+}
+
 

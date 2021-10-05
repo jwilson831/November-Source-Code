@@ -10,12 +10,17 @@ import Speakers from './components/ConfInfo/Speakers';
 import Delegates from './components/ConfInfo/Delegates';
 import PageLoader from '../util/Loader';
 import { sendGAPageView } from '../util/GoogleAnalytics';
+import PastInfoMenu from './util/PastConferences/PastInfoMenu';
+import { Markup } from 'interweave';
+import PastInfo from './util/PastConferences/PastInfo';
 
 
 function Conference(props){
     const [data, setData] = useState(null);
     const [loaded,setLoaded] = useState(false);
     const [info,setInfo] = useState(null);
+    const [pastTitle,setPastTitle] = useState("");
+    const [pastContent,setPastContent] = useState("");
     const [key,setKey] = useState(0);
     const { id } = useParams();
 
@@ -26,10 +31,10 @@ function Conference(props){
                 const data = (conferences.find(conf => conf.id === parseInt(id)));
                 setData(data);
                 setInfo([
-                    <About key={0} name="ABOUT" data={data} engage={data.acf.engage} discover={data.acf.discover} apply={data.acf.apply}/>,
-                    <Agenda key={1} name="AGENDA" agenda={data.content.rendered}/>,
-                    <Speakers key={2} name="SPEAKERS"speakers={data.acf.speakers}/>,
-                    <Delegates key={3} name="DELEGATES" delegates={data.acf.delegates}/>
+                    <About key={0} name="about" data={data} engage={data.acf.engage} discover={data.acf.discover} apply={data.acf.apply}/>,
+                    <Agenda key={1} name="agenda" pastConf={data.acf.past_conferences} agenda={data.content.rendered}/>,
+                    <Speakers key={2} name="speakers" pastConf={data.acf.past_conferences} speakers={data.acf.speakers}/>,
+                    <Delegates key={3} name="delegates" pastConf={data.acf.past_conferences} delegates={data.acf.delegates}/>
                 ])
 
             }catch(err){
@@ -44,6 +49,10 @@ function Conference(props){
         setKey(key);
     }
 
+    const pastInfoClickHandler = (title,content) => {
+        setPastTitle(title);
+        setPastContent(content);
+    }
     return(
         <>
             {loaded ?
@@ -59,8 +68,18 @@ function Conference(props){
                     />    
                     <ConfNav clickHandler={clickHandler} active={key} info={info}/>
                     <div className="mt-3 text-left conf-content">
+                        {key !== 0 ? 
+                            <div className="text-right">
+                                <PastInfoMenu 
+                                    info={info[key].props.name} 
+                                    pastConf={data.acf.past_conferences}
+                                    pastInfoClickHandler={pastInfoClickHandler}
+                                />
+                            </div> 
+                        :"" }
                         {info[key]}
                     </div>
+                    {<PastInfo title={pastTitle} content={pastContent}/>}
                 </div>
             : <PageLoader/>}
         </>
