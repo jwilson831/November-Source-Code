@@ -12,7 +12,7 @@
 .conf-nav{
     z-index: 5;
     margin-bottom: 1.5rem;
-    margin-top: 0rem;
+    margin-top: 1rem;
 }
 .conf-nav-item {
     font-size: 16px;
@@ -114,6 +114,7 @@
 .show-past-btn{
     margin: 1rem;
     margin-top: 0rem;
+    font-size: 14px;
 }
 
 .show-past-btn:hover{

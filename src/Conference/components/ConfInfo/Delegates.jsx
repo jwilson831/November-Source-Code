@@ -2,9 +2,6 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import PageLoader from '../../../util/Loader';
 
-import PastInfoMenu from '../../util/PastConferences/PastInfoMenu';
-
-
 function Delegates(props){
     const [delegates,setDelegates] = useState('');
     const [loaded, setLoaded] = useState(false);
@@ -35,7 +32,7 @@ function Delegates(props){
     }
     return(
         <div>
-            <div className="delegates mt-5 mb-5">
+            <div className="delegates mt-1 mb-2">
                 {loaded ? renderDelegates(delegates) : <PageLoader/>}
             </div>
         </div>

@@ -29,52 +29,66 @@ function Sponsors(props){
                 } 
                 {props.lead ?
                     <div>
-                        <p className="sponsor-cat-txt">Lead Sponsors</p>
-                        <hr></hr>
+                        <p className="sponsor-cat-txt">
+                            Lead Sponsors
+                            <hr></hr>
+                        </p>
                         {renderSponsors(props.lead)}
                     </div> : ""
                 } 
                 {props.co_lead ?
                     <div className="sponsor-type">
-                        <p className="sponsor-cat-txt">Co-Lead Sponsors</p>
-                        <hr></hr>
+                        <p className="sponsor-cat-txt">
+                            Co-Lead Sponsors
+                            <hr></hr>
+                        </p>
                         {renderSponsors(props.co_lead)}
                     </div> : ""
                 } 
                 {props.title_sponsors ?
                     <div className="sponsor-type">
-                        <p className="sponsor-cat-txt">Title Sponsors</p>
-                        <hr></hr>
+                        <p className="sponsor-cat-txt">
+                            Title Sponsors
+                            <hr></hr>
+                        </p>
                         {renderSponsors(props.title_sponsors)}
 
                     </div> : ""
                 } 
                 {props.program ?
                     <div className="sponsor-type">
-                        <p className="sponsor-cat-txt">Program Sponsors</p>
-                        <hr></hr>
+                        <p className="sponsor-cat-txt">
+                            Program Sponsors
+                            <hr></hr>
+                        </p>
                         {renderSponsors(props.program)}
                     </div> : ""
                 } 
                 {props.strategic ?
                     <div className="sponsor-type">
-                        <p className="sponsor-cat-txt">Strategic Partners</p>
-                        <hr></hr>
+                        <p className="sponsor-cat-txt">
+                            Strategic Partners
+                            <hr></hr>
+                        </p>
                         {renderSponsors(props.strategic)}
 
                     </div> : ""
                 } 
                 {props.network ?
                     <div className="sponsor-type">
-                        <p className="sponsor-cat-txt">Networking Partners</p>
-                        <hr></hr>                        
+                        <p className="sponsor-cat-txt">
+                            Networking Partners
+                            <hr></hr>                        
+                        </p>
                             {renderSponsors(props.network)}
                     </div> : ""
                 } 
                 {props.amb ?
                     <div className="sponsor-type">
-                        <p className="sponsor-cat-txt">Ambassador Sponsors</p>
-                        <hr></hr>
+                        <p className="sponsor-cat-txt">
+                            Ambassador Sponsors
+                            <hr></hr>
+                        </p>
                             {renderSponsors(props.amb)}
                     </div> : ""
                 } 

@@ -16,17 +16,20 @@
     font-weight: 700;
 }
 .about-txt{
-    font-size: 15px;
-    font: 'Times New Roman';
+    font-size: 17px;
 }
 /* SPONSORS */
+.sponsors{
+    margin-top: 2rem;
+}
 .sponsors-container{
     text-align: center;
-    margin-top: 6rem;
+    font-size: 20px;
+    margin-top: 4rem;
 }
 .sponsor-type{
-    margin-top: 2rem;
-    margin-bottom: 3.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 6.5rem;
 }
 .sponsor-grid-3{
     display: grid;
@@ -49,8 +52,10 @@
     justify-content: center;
 }
 .sponsor-cat-txt{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 800;
+    width: 45%;
+    margin: auto;
 }
 .wp-block-image > img{
     height: 100%;
