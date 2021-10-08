@@ -127,7 +127,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[643,1284,1328,190,1322,627]}
+                    ids={[1322,643,1284,1328,190,627]}
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}

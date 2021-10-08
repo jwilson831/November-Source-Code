@@ -18,10 +18,10 @@ function Home (props){
             <div className="feature">
                 <Feature title={props.title} video={props.video} />
             </div>
-            <div className="subfeature"><SubFeatures articles={props.articles} ids={[1815,1804,1322]} comments={props.comments}/></div>
+            <div className="subfeature"><SubFeatures articles={props.articles} ids={[1815,1804,1947]} comments={props.comments}/></div>
             <Advert image={props.ad} link={props.ad_link}/>
             <div className="recent">
-                <Recents changeActiveCategory={props.changeActiveCategory} articles={props.articles} ids={[1838,1862,1808,1812,1800,1319]} comments={props.comments}/>
+                <Recents changeActiveCategory={props.changeActiveCategory} articles={props.articles} ids={[1838,1862,1808,1812,1800]} comments={props.comments}/>
                 <ViewAllBtn linkTo={"article"}/>
             </div>
         </div>
