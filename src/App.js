@@ -29,7 +29,6 @@ import Cart from './Cart/Cart';
 import SponsorsAndPartners from './SponsorPage/SponsorsAndPartners';
 import Poll from './util/Poll/Poll';
 import NewsFeed from './util/News/NewsFeed';
-import VenueMenu from './Conference/ConferenceMenu/VenueMenu';
 import Venue from './Conference/components/ConfInfo/Venue/Venue';
 
 
