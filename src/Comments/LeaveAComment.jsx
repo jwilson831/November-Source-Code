@@ -5,7 +5,7 @@ function LeaveAComment(props){
 
     return(
         <div>
-            <button className="comment-btn btn btn-primary" onClick={() => props.clickHandler()}>Leave A Comment + </button>
+            <button className="comment-btn btn btn-primary" onClick={() => props.clickHandler()}>Share Your Comments + </button>
         </div>
     )
 }

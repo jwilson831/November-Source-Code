@@ -66,7 +66,7 @@ function CommentsForm(props){
                 <div className="form-group">
                     {props.clickHandler ? <div onClick={() => props.clickHandler()}className="text-right search-exit">✖️</div>:""}
                     
-                    <p className="section-title">{props.isReplyForm===true? "Leave a Reply" : "Leave a Comment"}</p>
+                    <p className="section-title">{props.isReplyForm===true? "Leave a Reply" : "Share Your Comments"}</p>
                     <div className="d-flex align-items-center comment-data-container">
                         <label className="comment-data-label">Name: </label>
                         <input className="comment-data-input"onChange={(e) => setName(e.target.value)} value={name} className="form-control"></input>
