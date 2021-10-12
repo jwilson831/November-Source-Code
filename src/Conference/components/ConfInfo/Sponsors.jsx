@@ -44,7 +44,16 @@ function Sponsors(props){
                         </p>
                         {renderSponsors(props.co_lead)}
                     </div> : ""
-                } 
+                }
+                {props.amb ?
+                    <div className="sponsor-type">
+                        <p className="sponsor-cat-txt">
+                            Ambassador Sponsors
+                            <hr></hr>
+                        </p>
+                            {renderSponsors(props.amb)}
+                    </div> : ""
+                }  
                 {props.title_sponsors ?
                     <div className="sponsor-type">
                         <p className="sponsor-cat-txt">
@@ -83,15 +92,7 @@ function Sponsors(props){
                             {renderSponsors(props.network)}
                     </div> : ""
                 } 
-                {props.amb ?
-                    <div className="sponsor-type">
-                        <p className="sponsor-cat-txt">
-                            Ambassador Sponsors
-                            <hr></hr>
-                        </p>
-                            {renderSponsors(props.amb)}
-                    </div> : ""
-                } 
+                
             </div>
         </div>
     )
