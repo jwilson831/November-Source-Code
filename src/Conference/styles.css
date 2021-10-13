@@ -124,4 +124,9 @@
     margin: 1rem;
 }
 
+/* PAST CONFERENCES - NAME SPACING */
+.modal-body > .text-left > span > div {
+    margin-bottom: 2.5rem;
+}
+
 
