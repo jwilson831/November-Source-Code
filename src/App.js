@@ -160,7 +160,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[2105,2103,1800,1325,599,616]}                    
+                    ids={[2103,2105,1800,1325,599,616]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://crisisconsultant.com/"}
