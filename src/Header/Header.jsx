@@ -17,6 +17,12 @@ function Header (){
                     <img className="skytop-brand" src="https://utcoleca.sirv.com/SKYTOP/skytop%20logo%20FINAL.png" alt="" />
                 </Link>
                 <h5 className="tagline">Where Corporate Insight and Disruptive Ideas Converge</h5>
+                
+                    <div className="invest-button view-all comments-box">
+                    <Link to="/invest-in-us">
+                        <p className="m-0 p-0">Invest Now</p>
+                    </Link>
+                    </div>
                 <Link to="/cart">
                     <img className="cart header-icon" src="https://utcoleca.sirv.com/SKYTOP/shopping-cart.png" />
                 </Link>

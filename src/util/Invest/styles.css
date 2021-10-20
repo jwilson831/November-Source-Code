@@ -1,0 +1,23 @@
+.invest-main-container{
+    width: 80%;
+    margin: auto;
+}
+
+.invest-card{
+    border: 1px solid black !important;
+}
+
+.invest-card-body{
+    background: rgba(0,0,0,0.1);
+    border-left: 1px solid black;
+    height: 100%;
+}
+
+.invest-col{
+    display: flex;
+    align-items: center;
+}
+
+.invest-img{
+    padding: 1rem;
+}

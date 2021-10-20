@@ -30,6 +30,7 @@ import SponsorsAndPartners from './SponsorPage/SponsorsAndPartners';
 import Poll from './util/Poll/Poll';
 import NewsFeed from './util/News/NewsFeed';
 import Venue from './Conference/components/ConfInfo/Venue/Venue';
+import Invest from './util/Invest/Invest';
 
 
 
@@ -232,6 +233,7 @@ function App() {
                 <Route exact path="/sponsors-partners"><SponsorsAndPartners/></Route>
                 <Route exact path="/cancel"><Policy policy="Cancel"/></Route>
                 <Route exact path="/cart"><Cart/></Route>
+                <Route exact path="/invest-in-us"><Invest/></Route>
               </div>
             </Switch>
 
