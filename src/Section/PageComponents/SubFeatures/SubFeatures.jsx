@@ -52,7 +52,11 @@ function SubFeatures (props){
                             <p className="sub-article-title"><strong><Markup content={article.title.rendered}></Markup></strong></p>
                         </Link>
                     <div className="byline">
-                        <p className="m-0">By <Markup content={renderByLine(article.acf.author)}/> / {moment(article.acf.date).format("MMMM Do, YYYY")}</p>
+                        {article.acf.custom_byline ? 
+                            <p><Markup content={article.acf.custom_byline}/></p>
+                            :
+                            <p className="m-0">By <Markup content={renderByLine(article.acf.author)}/> / {moment(article.acf.date).format("MMMM Do, YYYY")}</p>
+                        }
                     </div>
                     <CommentsBox comments={props.comments} id={article.id}/>
                 </div>

@@ -63,7 +63,7 @@ function Invest(){
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
-                            <h5 className="card-title">Investor with Benefits $ 10,000  </h5>
+                            <h5 className="card-title">Investor with Benefits $10,000  </h5>
                             <p className="card-text">Investors with Benefits are well documented. They are rarely hands-off and nearly always interested in seeing the companies they invest in grow and expand. Be that voice. </p>
                             <p className="card-text">Benefit: </p>
                             <p className="card-text">One (1) published article on Skytop Online News Portal</p>
@@ -84,7 +84,7 @@ function Invest(){
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
-                            <h5 className="card-title">Advisory Angel $ 15,000 </h5>
+                            <h5 className="card-title">Advisory Angel $15,000 </h5>
                             <p className="card-text">This is not your first investing rodeo and you have complete confidence in sussing out the “going places” companies from the stalled ideas. Skytop Strategies has legs and is poised to run and you get that. </p>
                             <p className="card-text">Benefit: </p>
                             <p className="card-text">Participate in quarterly calls on the advancement of the Skytop Online News Portal</p>
@@ -108,7 +108,7 @@ function Invest(){
                             <h5 className="card-title">Confident CEO $50,000 </h5>
                             <p className="card-text">Benefit: </p>
                             <p className="card-text">Financial debt instruments designed to provide return.  Each investment debt instrument is crafted with your involvement with the terms and conditions as a starting point for your true investment in Skytop. Please connect with Rebecca Dukes, Partner Investor Relations, to begin the conversation on debt and convertible notes.</p>
-                            
+
                         </div>
                         </div>
                     </div>

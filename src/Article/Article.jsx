@@ -47,6 +47,7 @@ function Article(props){
                         }
             
                         <img className="card-img-top art-img" src={data.acf.image} alt="Card image cap"></img>
+                        
                         <div className="text-left">
                             {data.acf.custom_byline || !id ? 
                                 <p><strong><Markup content={data.acf.custom_byline}/></strong></p>
