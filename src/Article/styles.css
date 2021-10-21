@@ -32,6 +32,6 @@
     width: 85%;
     margin: 2rem;
 }
-hr.wp-block-separator.is-style-wide {
+hr.wp-block-separator {
     border-top: 1px solid rgba(0,0,0);
 }

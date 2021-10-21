@@ -20,7 +20,7 @@ function Header (){
                 
                     <div className="invest-button view-all comments-box">
                     <Link to="/invest-in-us">
-                        <p className="m-0 p-0">Invest Now</p>
+                        <p className="m-0 p-0">Invest In Skytop</p>
                     </Link>
                     </div>
                 <Link to="/cart">

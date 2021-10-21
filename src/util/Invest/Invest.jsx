@@ -107,7 +107,8 @@ function Invest(){
                         <div className="invest-card-body card-body text-left">
                             <h5 className="card-title">Confident CEO $50,000 </h5>
                             <p className="card-text">Benefit: </p>
-                            <p className="card-text">Financial debt instruments designed to provide return.  Each investment debt instrument is crafted with your involvement with the terms and conditions as a starting point for your true investment in Skytop. Please connect with Rebecca Dukes to begin the conversation on debt and convertible notes.</p>
+                            <p className="card-text">Financial debt instruments designed to provide return.  Each investment debt instrument is crafted with your involvement with the terms and conditions as a starting point for your true investment in Skytop. Please connect with Rebecca Dukes, Partner Investor Relations, to begin the conversation on debt and convertible notes.</p>
+                            
                         </div>
                         </div>
                     </div>
