@@ -45,8 +45,14 @@ function Article(props){
                         {!id ? "": 
                             <h1><Markup content={data.title.rendered}></Markup></h1>
                         }
-            
-                        <img className="card-img-top art-img" src={data.acf.image} alt="Card image cap"></img>
+                        
+                        {props.editorial_title ?
+                            <div className="text-left">
+                                <img className="edit-display-image" src={data.acf.image} alt="Card image cap"></img>
+                            </div> 
+                            :
+                            <img className="card-img-top art-img" src={data.acf.image} alt="Card image cap"></img>
+                        }
                         
                         <div className="text-left">
                             {data.acf.custom_byline || !id ? 

@@ -35,3 +35,9 @@
 hr.wp-block-separator {
     border-top: 1px solid rgba(0,0,0);
 }
+
+.edit-display-image{
+    border-radius: 5px;
+    height: 30vw;
+    width: auto;
+}
