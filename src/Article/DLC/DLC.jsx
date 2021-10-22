@@ -4,7 +4,7 @@ import './styles.css';
 function DLC(props){
 
     return (
-        <div className="poll-container mt-0 text-center">
+        <div className="dlc-box poll-container mt-0 text-center">
             <p className="section-title mb-0">{props.title}</p>
             <img className="card-img"src={props.image}></img>
             <a href={props.file} download>

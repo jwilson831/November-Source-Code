@@ -1,7 +1,6 @@
 .edit-container{
     background: rgb(0,0,0,0.1);
     padding: 1rem;
-    margin-left: 1rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
@@ -19,7 +18,7 @@
     font-weight: 800;
 }
 .edit-text{
-    font-size: 13px;
+    font-size: 15px;
 }
 .edit-name{
     font-size: 15px;

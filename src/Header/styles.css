@@ -60,6 +60,21 @@
 
 
 /* MOBILE */
+.mobile-header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.mob-header-subgrid{
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100vw;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+}
+
 @media only screen and (max-width: 992px){
     .skytop-brand{
         border: none;

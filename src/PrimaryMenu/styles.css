@@ -61,10 +61,14 @@ select{
 }
 
 .side-img{
-    height: 15rem;
-    margin-bottom: 2rem;
-    padding-left: 0.5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    height: 17rem;
+    object-fit: cover;
+    width: 95%;
+
 }
+
 .side-data{
     font-weight: 600;
     font-size: 14px;
@@ -87,5 +91,18 @@ select{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    right: 5%;
+    left: 5%;
+}
 
+/* MOBILE */
+@media only screen and (max-width: 992px) {
+    .conf-info{
+        right: 10%;
+        left: 10%;
+    }
+    .side-img{
+        width: 85%;
+        height: 20rem;
+    }
 }

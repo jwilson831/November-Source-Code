@@ -19,7 +19,7 @@ function SideContainer(props){
     }
     return(
         <div className="conference-container">
-            <p className="section-title">Upcoming Conferences</p>
+            <p className="section-title">{props.article ? "Related Conferences" : "Upcoming Conferences"}</p>
             <div className="side-conference-overflow">
                 {props.conferences ? renderConferences(props.conferences) : ""}
             </div>

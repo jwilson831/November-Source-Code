@@ -20,8 +20,7 @@ function Footer (props){
                     <Link className="foot-grid-item" to="/sponsors-partners">
                         <p className="foot-item footer-sponsors">SPONSORS &amp; PARTNERS</p>
                     </Link>
-                    <p id="address">141 West 36th Street, 8th Floor New York, NY 10018</p>
-                </div>
+                    <p className="foot-grid-item" id="address">141 West 36th Street, 8th Floor New York, NY 10018</p>
                     <span className="twitter">
                         <a className="social-link" href="https://twitter.com/skytopstrat" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-twitter"></i>
@@ -32,6 +31,7 @@ function Footer (props){
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </span>
+                </div>
             </div>
             <div className="mt-5">
                 <div className="locations">

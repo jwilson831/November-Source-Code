@@ -21,3 +21,7 @@
 .invest-img{
     padding: 1rem;
 }
+.invest-price{
+    display: flex;
+    justify-content: space-between;
+}

@@ -18,7 +18,7 @@ function Home (props){
             <div className="feature">
                 <Feature title={props.title} video={props.video} />
             </div>
-            <div className="subfeature"><SubFeatures articles={props.articles} ids={[2121,1804,2136]} comments={props.comments}/></div>
+            <div className="subfeature"><SubFeatures articles={props.articles} ids={[2121,2150,2145]} comments={props.comments}/></div>
             <Advert image={props.ad} link={props.ad_link}/>
             <div className="recent">
                 <Recents changeActiveCategory={props.changeActiveCategory} articles={props.articles} ids={[1947,1815,1838,1862]} comments={props.comments}/>

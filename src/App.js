@@ -127,7 +127,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[1322,643,1284,1328,190,627]}
+                    ids={[2136,1322,643,1284,1328,190]}
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}
@@ -144,7 +144,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[203,622,583,604,607,197]}                    
+                    ids={[1804,203,622,583,604,607]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}

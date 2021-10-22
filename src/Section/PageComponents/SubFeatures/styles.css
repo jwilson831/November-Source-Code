@@ -3,6 +3,14 @@
     text-transform: uppercase;
     font-weight: 600;
 }
+@media screen and (max-width:360px) {
+    .sub-article-title{
+        width: 90vw;
+        margin: 0px!important;
+        margin-right: 0px;
+    }
+}
+
 
 .sub-feature-card{
     padding-bottom: 3rem;

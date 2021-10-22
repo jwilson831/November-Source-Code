@@ -17,7 +17,7 @@ function Invest(){
                 <p>For a modest investment to an even deeper support level, you may choose your level of involvement with some benefits at various levels.  Please be advised that this is not an investment product, vehicle, private equity allocation or share of any type.  Your investment in Skytop is purely voluntary on your part and the benefits received will be indicated in the dollar level of your investment which may from time to time be expanded or eliminated.</p>
 
             </div>
-            <div className="invest-grid mt-5">
+            <div className="container invest-grid mt-5 p-0">
                 <div className="card invest-card mb-3">
                     <div className="row no-gutters">
                         <div className="invest-col col-md-4">
@@ -25,9 +25,12 @@ function Invest(){
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
-                            <h5 className="card-title">Early Adopter Investment $2,500 </h5>
+                            <div className="invest-price">
+                                <h5 className="card-title">Early Adopter Investment</h5>
+                                <span className="card-title">$2,500</span>
+                            </div>
                             <p className="card-text">You are not new to investing in startups. Like so many, you are eager to do more. Let’s do this! </p>
-                            <p className="card-text">Benefit: </p>
+                            <u><p className="card-text">Benefits: </p></u>
                             <p className="card-text">One (1) gratis online conference (a $1395 value!) </p>
                             <ul className="card-text">
                                 <li>One streamed conference delegate registration.</li>
@@ -44,9 +47,12 @@ function Invest(){
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
-                            <h5 className="card-title">Onboard Investor $5000 </h5>
+                            <div className="invest-price">
+                                <h5 className="card-title">Onboard Investor</h5>
+                                <span className="card-title">$5000</span>
+                            </div>
                             <p className="card-text">You are the type of investor that sees benefits from not only the association with others in a field of interest, but in promoting your own efforts as well.</p>
-                            <p className="card-text">Benefit: </p>
+                            <u><p className="card-text">Benefits: </p></u>
                             <p className="card-text">One (1) gratis online conference (a $1395 value!) </p>
                             <ul className="card-text">
                                 <li>One live conference registration</li>
@@ -63,9 +69,12 @@ function Invest(){
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
-                            <h5 className="card-title">Investor with Benefits $10,000  </h5>
+                            <div className="invest-price">
+                                <h5 className="card-title">Investor with Benefits</h5>
+                                <span className="card-title">$10,000</span>
+                            </div>
                             <p className="card-text">Investors with Benefits are well documented. They are rarely hands-off and nearly always interested in seeing the companies they invest in grow and expand. Be that voice. </p>
-                            <p className="card-text">Benefit: </p>
+                            <u><p className="card-text">Benefits: </p></u>
                             <p className="card-text">One (1) published article on Skytop Online News Portal</p>
                             <ul className="card-text">
                                 <li>Editor’s Letter on a topic of interest to the investor</li>
@@ -84,9 +93,12 @@ function Invest(){
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
-                            <h5 className="card-title">Advisory Angel $15,000 </h5>
+                            <div className="invest-price">
+                                <h5 className="card-title">Advisory Angel</h5>
+                                <span className="card-title">$15,000</span>
+                            </div>
                             <p className="card-text">This is not your first investing rodeo and you have complete confidence in sussing out the “going places” companies from the stalled ideas. Skytop Strategies has legs and is poised to run and you get that. </p>
-                            <p className="card-text">Benefit: </p>
+                            <u><p className="card-text">Benefits: </p></u>
                             <p className="card-text">Participate in quarterly calls on the advancement of the Skytop Online News Portal</p>
                             <ul className="card-text">
                                 <li>Publish a three question Q&amp;A between you and EIC Skroupa on a topic of interest and value to you and our stakeholders.</li>
@@ -105,8 +117,11 @@ function Invest(){
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
-                            <h5 className="card-title">Confident CEO $50,000 </h5>
-                            <p className="card-text">Benefit: </p>
+                            <div className="invest-price">
+                                <h5 className="card-title">Confident CEO</h5>
+                                <span className="card-title">$50,000</span>
+                            </div>
+                            <u><p className="card-text">Benefits: </p></u>
                             <p className="card-text">Financial debt instruments designed to provide return.  Each investment debt instrument is crafted with your involvement with the terms and conditions as a starting point for your true investment in Skytop. Please connect with Rebecca Dukes, Partner Investor Relations, to begin the conversation on debt and convertible notes.</p>
 
                         </div>

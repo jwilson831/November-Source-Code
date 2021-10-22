@@ -35,6 +35,7 @@ body{
 }
 .side-menu{
   grid-area: side-menu;
+  padding-right: 0px;
 }
 
 .section-title{
@@ -90,14 +91,14 @@ optgroup{
     border: none !important;
     padding: 0px !important;
   }
-  .side-menu{
-    padding-right: 0px;
-  }
   .recent-container{
     padding-right: 0px !important;
   }
   .conference-container{
     margin-top: 2rem;
+  }
+  .side-menu{
+    width: 90vw;
   }
 }
 

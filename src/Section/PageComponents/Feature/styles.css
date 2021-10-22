@@ -59,6 +59,12 @@
         height: 38rem;
     }
 }
+@media screen and (max-width:360px) {
+    .video{
+        width: 90vw;
+        height: auto;
+    }
+}
 
 .ytp-title-text {
     font-size: 25px !important;
