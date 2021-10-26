@@ -3,3 +3,8 @@
         margin-top: 3rem !important;
     }
 }
+
+.dlc-img{
+    width: 75%;
+    border-radius: calc(.25rem - 1px);
+}

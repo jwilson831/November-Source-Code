@@ -161,7 +161,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[2103,2105,1800,1325,599,616]}                    
+                    ids={[1862,1838,2103,2105,1800,1325]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://crisisconsultant.com/"}
@@ -178,7 +178,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[1947,187,1306,1309,1337]}                    
+                    ids={[187,1306,1309,1337]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.extrahop.com/"}
@@ -212,7 +212,7 @@ function App() {
                       </div>
                     }
                     articles={articles}
-                    ids={[1812,1316,624,609,218,215]}                    
+                    ids={[1815,1812,1316,624,609,218,215]}                    
                     comments={comments}
                     changeActiveCategory={changeActiveCategory}
                     ad_link={"https://www.boardroomalpha.com/"}

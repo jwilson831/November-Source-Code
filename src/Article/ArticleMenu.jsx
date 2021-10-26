@@ -31,17 +31,18 @@ function ArticleMenu(props){
         <div className="text-left pl-3">
             {loaded ? 
                 <>
-                {currentArticle.acf.dlc && currentArticle.acf.dlc.dlc_title !== "" &&
+                
+                    <SideContainer 
+                        conferences={props.filterByCategory(props.conferences,category)}
+                        article={true}
+                    />
+                    {currentArticle.acf.dlc && currentArticle.acf.dlc.dlc_title !== "" &&
                     <DLC 
                         title={currentArticle.acf.dlc.dlc_title}
                         image={currentArticle.acf.dlc.dlc_image}
                         file={currentArticle.acf.dlc.dlc_file}
                     />
                 }
-                    <SideContainer 
-                        conferences={props.filterByCategory(props.conferences,category)}
-                        article={true}
-                    />
                     <div className="mt-5">
                         <NewsFeed/>
                     </div>
