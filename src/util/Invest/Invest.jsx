@@ -6,7 +6,7 @@ function Invest(){
         <div className="invest-main-container">
             <h2 className="mb-3">Invest Now</h2>
             <div className="mb-3">
-                <img className="invest-img" src="https://utcoleca.sirv.com/SKYTOP/pexels-lukas-669615.jpg" width="4928" height="2904" alt="" />
+                <img style={{borderRadius:"19px"}} className="invest-img" src="https://utcoleca.sirv.com/SKYTOP/pexels-lukas-669615.jpg" width="4928" height="2904" alt="" />
             </div>
 
             <h4>Why Invest in Skytop?</h4>
@@ -15,7 +15,6 @@ function Invest(){
                 <p>Few people have either the opportunity or resources to invest in a start up company without having connections. Skytop Strategies is all about connecting in the B2B world both in-person and online. Join in the seed stage success and watch us grow with your investment. </p>
                 <p>Investing in Skytop allows you to become an even more engaged member of our growing network of people, programs and places.</p>
                 <p>For a modest investment to an even deeper support level, you may choose your level of involvement with some benefits at various levels.  Please be advised that this is not an investment product, vehicle, private equity allocation or share of any type.  Your investment in Skytop is purely voluntary on your part and the benefits received will be indicated in the dollar level of your investment which may from time to time be expanded or eliminated.</p>
-
             </div>
             <div className="container invest-grid mt-5 p-0">
                 <div className="card invest-card mb-3">
@@ -35,6 +34,11 @@ function Invest(){
                             <ul className="card-text">
                                 <li>One streamed conference delegate registration.</li>
                             </ul>
+                            <div className="text-center mt-5 mb-3">
+                                <div class="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-early-adopter/"><p class="m-0 p-0">Invest Now</p></a>
+                                </div>
+                            </div>
                         </div>
                         </div>
                     </div>
@@ -58,6 +62,11 @@ function Invest(){
                                 <li>One live conference registration</li>
                                 <li>Two streamed conference registration</li>
                             </ul>
+                            <div className="text-center mt-5 mb-3">
+                                <div class="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-onboard-investor/"><p class="m-0 p-0">Invest Now</p></a>
+                                </div>
+                            </div>
                         </div>
                         </div>
                     </div>
@@ -82,6 +91,11 @@ function Invest(){
                                 <li>Two stream conference registrations, three view later registrations </li>
                                 <li>Four View Later conference delegate registrations</li>
                             </ul>
+                            <div className="text-center mt-5 mb-3">
+                                <div class="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-investor-with-benefits/"><p class="m-0 p-0">Invest Now</p></a>
+                                </div>
+                            </div>
                         </div>
                         </div>
                     </div>
@@ -106,6 +120,11 @@ function Invest(){
                                 <li>If appropriate, a digital interview between you and a related expert on a subject of interest for placement onto the appropriate section page of Skytop.</li>
                                 <li>A sponsored interactive survey, with your brand or your personal recognition, including a short synopsis or the finding to be published after two weeks of response gathering.</li>
                             </ul>
+                            <div className="text-center mt-5 mb-3">
+                                <div class="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-advisory-angel/"><p class="m-0 p-0">Invest Now</p></a>
+                                </div>
+                            </div>
                         </div>
                         </div>
                     </div>
@@ -123,7 +142,11 @@ function Invest(){
                             </div>
                             <u><p className="card-text">Benefits: </p></u>
                             <p className="card-text">Financial debt instruments designed to provide return.  Each investment debt instrument is crafted with your involvement with the terms and conditions as a starting point for your true investment in Skytop. Please connect with Rebecca Dukes, Partner Investor Relations, to begin the conversation on debt and convertible notes.</p>
-
+                            <div className="text-center mt-5 mb-3">
+                                <div class="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-confident-ceo/"><p class="m-0 p-0">Invest Now</p></a>
+                                </div>
+                            </div>
                         </div>
                         </div>
                     </div>

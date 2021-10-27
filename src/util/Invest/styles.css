@@ -25,3 +25,6 @@
     display: flex;
     justify-content: space-between;
 }
+.invest-submit :hover{
+    color: white!important;
+}

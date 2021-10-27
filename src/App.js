@@ -240,7 +240,7 @@ function App() {
             <div className="side-menu">
               <Switch>
                 <Route path={"/conferences/:id"}><ConferenceMenu conferences={conferences}/></Route>
-                <Route path={["/authors/:id","/editorial"]}><AuthorMenu conferences={conferences}/></Route>
+                <Route path={["/authors/:id","/editorial","/publisher","/invest-in-us"]}><AuthorMenu conferences={conferences}/></Route>
                 <Route path="/index/conferences">
                   <div className="pl-3">
                     <Poll/>
