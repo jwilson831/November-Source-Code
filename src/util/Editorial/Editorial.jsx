@@ -17,6 +17,7 @@ function Editorial(props){
                 <button onClick={() => scrollToTop()}className="btn sky-submit mb-3">Read Full Note</button>
             </Link>
             <p className="edit-name">By {props.author}</p>
+            <a className="text-primary" href={`mailto:${props.email}`}>{props.email}</a>
             <div className="pl-3 recents-comments ">
                 <CommentsBox comments={props.comments} id={props.id}/>
             </div>

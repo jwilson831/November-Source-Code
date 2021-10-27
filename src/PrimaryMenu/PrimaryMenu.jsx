@@ -27,6 +27,7 @@ function PrimaryMenu (props){
                         excerpt={props.editorial.excerpt.rendered}
                         link={"/editorial"}
                         comments={props.comments}
+                        email={"cskroupa@skytopstrategies.com"}
                     />
                     <Editorial
                         id={props.publisher.id}
@@ -37,6 +38,7 @@ function PrimaryMenu (props){
                         excerpt={props.publisher.excerpt.rendered}
                         link={"/publisher"}
                         comments={props.comments}
+                        email={"asullivan@skytopstrategies.com"}
                     />
                     </div>
                 :""}
