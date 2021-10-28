@@ -12,13 +12,13 @@ function Invest(){
             <h4>Why Invest in Skytop?</h4>
             <hr></hr>
             <div className="text-left">
-                <p>Few people have either the opportunity or resources to invest in a start up company without having connections. Skytop Strategies is all about connecting in the B2B world both in-person and online. Join in the seed stage success and watch us grow with your investment. </p>
-                <p>Investing in Skytop allows you to become an even more engaged member of our growing network of people, programs and places.</p>
-                <p>For a modest investment to an even deeper support level, you may choose your level of involvement with some benefits at various levels.  Please be advised that this is not an investment product, vehicle, private equity allocation or share of any type.  Your investment in Skytop is purely voluntary on your part and the benefits received will be indicated in the dollar level of your investment which may from time to time be expanded or eliminated.</p>
+                <p>Skytop Strategies is about connecting in the B2B world both in-person and online.  Very few people have the the resources or inside connections to invest in a growth start up business.</p>
+                <p>Join others investing in Skytop's seed stage capital raise and watch us grow with your investment!  Choose your investment comfort level and know that you can add to it over time. </p>
+                <i><p>Please be advised this is not an investment product, vehicle private equity allocation or share of any type.  Your investment in Skytop is purely voluntary on your part and the benefits received are those listed in each category below which from time to time may be expanded, changed, or eliminated.</p></i>
             </div>
             <div className="container invest-grid mt-5 p-0">
                 <div className="card invest-card mb-3">
-                    <div className="row no-gutters">
+                    <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
                             <img className="invest-img card-img"src="https://utcoleca.sirv.com/SKYTOP/1538336.png"/>
                         </div>
@@ -44,7 +44,7 @@ function Invest(){
                     </div>
                 </div>
                 <div className="card invest-card mb-3">
-                    <div className="row no-gutters">
+                    <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
                         <img className="invest-img card-img" src="https://utcoleca.sirv.com/SKYTOP/2050461.png"/>
 
@@ -72,7 +72,7 @@ function Invest(){
                     </div>
                 </div>
                 <div className="card invest-card mb-3">
-                    <div className="row no-gutters">
+                    <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
                             <img className="invest-img card-img" src="https://utcoleca.sirv.com/SKYTOP/investor_benefits.png" alt="investor with benefits" />
                         </div>
@@ -101,7 +101,7 @@ function Invest(){
                     </div>
                 </div>
                 <div className="card invest-card mb-3">
-                    <div className="row no-gutters">
+                    <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
                         <img className="invest-img card-img" src="https://utcoleca.sirv.com/SKYTOP/2183026.png"  />
                         </div>
@@ -130,7 +130,7 @@ function Invest(){
                     </div>
                 </div>
                 <div className="card invest-card mb-3">
-                    <div className="row no-gutters">
+                    <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
                             <img className="invest-img card-img"src="https://utcoleca.sirv.com/SKYTOP/4766980.png"/>
                         </div>

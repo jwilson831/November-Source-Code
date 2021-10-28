@@ -4,7 +4,7 @@
 }
 
 .invest-card{
-    border: 1px solid black !important;
+    border: 3px solid black !important;
 }
 
 .invest-card-body{
@@ -16,6 +16,9 @@
 .invest-col{
     display: flex;
     align-items: center;
+}
+.invest-row{
+    margin: -1px !important;
 }
 
 .invest-img{
