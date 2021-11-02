@@ -31,6 +31,7 @@ import Poll from './util/Poll/Poll';
 import NewsFeed from './util/News/NewsFeed';
 import Venue from './Conference/components/ConfInfo/Venue/Venue';
 import Invest from './util/Invest/Invest';
+import InvestMenu from './util/Invest/InvestMenu';
 
 
 
@@ -240,7 +241,8 @@ function App() {
             <div className="side-menu">
               <Switch>
                 <Route path={"/conferences/:id"}><ConferenceMenu conferences={conferences}/></Route>
-                <Route path={["/authors/:id","/editorial","/publisher","/invest-in-us"]}><AuthorMenu conferences={conferences}/></Route>
+                <Route path={["/authors/:id","/editorial","/publisher"]}><AuthorMenu conferences={conferences}/></Route>
+                <Route path="/invest-in-us"><InvestMenu/></Route>
                 <Route path="/index/conferences">
                   <div className="pl-3">
                     <Poll/>

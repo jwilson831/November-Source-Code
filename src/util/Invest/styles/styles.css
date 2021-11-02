@@ -31,3 +31,9 @@
 .invest-submit :hover{
     color: white!important;
 }
+
+.invest-sponsors-list{
+    font-size: 20px;
+    font-weight: 600;
+}
+

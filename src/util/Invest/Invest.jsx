@@ -1,12 +1,12 @@
 import React from 'react';
-import './styles.css';
+import './styles/styles.css';
 
 function Invest(){
     return(
         <div className="invest-main-container">
             <h2 className="mb-3">Invest Now</h2>
             <div className="mb-3">
-                <img style={{borderRadius:"19px"}} className="invest-img" src="https://utcoleca.sirv.com/SKYTOP/pexels-lukas-669615.jpg" width="4928" height="2904" alt="" />
+                <img style={{borderRadius:"19px"}} className="invest-img" src="https://utcoleca.sirv.com/SKYTOP/formal.png" width="4928" height="2904" alt="" />
             </div>
 
             <h4>Why Invest in Skytop?</h4>
