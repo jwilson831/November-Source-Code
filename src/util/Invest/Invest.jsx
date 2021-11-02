@@ -142,6 +142,7 @@ function Invest(){
                             </div>
                             <u><p className="card-text">Benefits: </p></u>
                             <p className="card-text">Financial debt instruments designed to provide return.  Each investment debt instrument is crafted with your involvement with the terms and conditions as a starting point for your true investment in Skytop. Please connect with Rebecca Dukes, Partner Investor Relations, to begin the conversation on debt and convertible notes.</p>
+                            <p>For more details, contact Rebecca at <a className="text-primary" href="mailto:rdukes@skytopstrategies.com">rdukes@skytopstrategies.com</a></p>
                             <div className="text-center mt-5 mb-3">
                                 <div class="m-auto invest-button view-all comments-box">
                                     <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-confident-ceo/"><p class="m-0 p-0">Invest Now</p></a>

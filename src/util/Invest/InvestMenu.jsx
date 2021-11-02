@@ -22,8 +22,9 @@ function InvestMenu(){
 
     return(
         <>
+
             <p className="section-title">Select Sponsors &amp; Partners</p>
-            <div className="ticker-wrap invest-sponsors-list">
+            <div className="invest-sponsors-list">
                     {renderSponsorTitles(sponsorNames)}
             </div>
         </>

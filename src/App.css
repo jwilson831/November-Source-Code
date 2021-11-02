@@ -80,12 +80,10 @@ optgroup{
 /* MOBILE */
 @media only screen and (max-width: 992px) {
   .main-grid{
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "section"
-    "side-menu";
-    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .section{
     border: none !important;
