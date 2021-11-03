@@ -11,7 +11,6 @@ import Delegates from './components/ConfInfo/Delegates';
 import PageLoader from '../util/Loader';
 import { sendGAPageView } from '../util/GoogleAnalytics';
 import PastInfoMenu from './util/PastConferences/PastInfoMenu';
-import { Markup } from 'interweave';
 import PastInfo from './util/PastConferences/PastInfo';
 import Sponsors from './components/ConfInfo/Sponsors';
 
@@ -55,7 +54,7 @@ function Conference(props){
             setLoaded(true);
         }
         selectCurrentConference(props.conferences);
-    },[])
+    },[id,props.conferences])
 
     const clickHandler = (key) => {
         setKey(key);

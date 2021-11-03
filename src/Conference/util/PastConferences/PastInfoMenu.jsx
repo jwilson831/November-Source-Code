@@ -11,13 +11,12 @@ function PastInfoMenu(props){
                 const ids = props.pastConf.map(conf => conf["ID"]);
                 const { data } = await axios(`https://skytop-strategies.com/wp-json/wp/v2/past_conferences?include=${ids}`);
                 setData(data);
-                console.log(data);
             }catch(e){
                 console.error(e);
             }
         }
         fetchInfo();
-    },[])
+    },[props.pastConf])
 
     const renderOptions = (confs) => {
         return confs.map(conf =>
@@ -38,11 +37,11 @@ function PastInfoMenu(props){
         <>
         {props.pastConf &&
             <div className="text-right">
-                <div class="dropdown">
-                    <button class="btn edit-category show-past-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="dropdown">
+                    <button className="btn edit-category show-past-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span className="text-capitalize">See Past {props.info}</span>
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         {data ? renderOptions(data) : ""}
                     </div>
                 </div>

@@ -11,14 +11,7 @@ import { findById } from '../../../util/findById';
 function SubFeatures (props){
     const [articles,setArticles] = useState([]);
 
-    const findArticles = (idArray) => {
-        const articles = [];
-        idArray.forEach(id => {
-            const art = findById(id, props.articles);
-            articles.push(art);
-        })
-        return articles;
-    }
+    
     const renderByLine = (authorArray) => {
         let byline = ``;
 
@@ -40,8 +33,16 @@ function SubFeatures (props){
     }
 
     useEffect(() => {
+        const findArticles = (idArray) => {
+            const articles = [];
+            idArray.forEach(id => {
+                const art = findById(id, props.articles);
+                articles.push(art);
+            })
+            return articles;
+        }
         setArticles(findArticles(props.ids))
-    },[])
+    },[props.ids,props.articles])
 
     const renderArticles = (articles) => {    
         return articles.map( article => 

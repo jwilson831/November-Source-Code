@@ -23,7 +23,7 @@ function Venue(){
             }
         }
         fetchVenue();
-    },[])
+    },[id])
 
     return(
         <>
@@ -31,7 +31,7 @@ function Venue(){
             <div className="text-center mb-5">
                 <div className="text-left">
                     <Link to={`/conferences/${confId}`}>
-                        <button className="btn btn-primary comment-btn"><i class="fas fa-chevron-left"></i> Back</button>
+                        <button className="btn btn-primary comment-btn"><i className="fas fa-chevron-left"></i> Back</button>
                     </Link>
                 </div>
                     <strong><h2>{data.name}</h2></strong>
@@ -40,7 +40,7 @@ function Venue(){
                     <hr></hr>
                     <div>
                         {data.video_link ? 
-                            <iframe height="600" width="800" className="video" src={data.video_link} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe title="venue" height="600" width="800" className="video" src={data.video_link} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         :''}
                     </div>
                     <Amenities amenities={data.amenities}/>

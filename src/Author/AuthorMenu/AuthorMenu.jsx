@@ -15,16 +15,13 @@ function AuthorMenu(props){
 
     useEffect(()=> {
         const filterByAuthor = (conferences) => {
-            return conferences.filter(conf => {
-                if(conf.acf.speakers){
-                    return conf.acf.speakers.includes(parseInt(id)) 
-                }
-            }
+            return conferences.filter(conf => 
+                conf.acf.speakers && conf.acf.speakers.includes(parseInt(id))
             )
         }
         setConferences(filterByAuthor(props.conferences));
         setLoaded(true);
-    },[])
+    },[id,props.conferences])
     return(
         <div className="pl-3 text-left">
             {loaded ? 

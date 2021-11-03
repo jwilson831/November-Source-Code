@@ -10,28 +10,28 @@ import { renderByLine } from '../../../util/renderByLine';
 function Recents (props){
     const [articles,setArticles] = useState([]);
 
-    const findArticles = (idArray) => {
-        const articles = [];
-        idArray.forEach(id => {
-            const art = findById(id, props.articles);
-            articles.push(art);
-        })
-        return articles;
-    }
     useEffect(() => {
+        const findArticles = (idArray) => {
+            const articles = [];
+            idArray.forEach(id => {
+                const art = findById(id, props.articles);
+                articles.push(art);
+            })
+            return articles;
+        }
         if(props.ids){
             setArticles(findArticles(props.ids))
         }else{
             setArticles(props.articles)
         }
-    },[])
+    },[props.articles, props.ids])
 
     const renderArticles = (articles) => {    
         return articles.map( article => 
             <div className="card mb-5">
                 <div className="row no-gutters">
                     <div className="col-md-6 text-left">
-                        <img className="card-img-top recent-img" src={article.acf.image} alt="Card image cap"></img>
+                        <img className="card-img-top recent-img" src={article.acf.image} alt="article"></img>
                     </div>
                     <div className="col-md-6 card-body-column">
                         <div className="card-body">

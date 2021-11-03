@@ -21,7 +21,7 @@ function Policy(props){
             }
         }
         fetchPolicy();
-    },[])
+    },[props.policy])
     return(
         <div className="text-left">
             {policy ?

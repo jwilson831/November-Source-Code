@@ -12,7 +12,7 @@ function VenueMenu(props){
             </div>
             <div className="register-box">
                 <strong><h4>{props.venue_name}</h4></strong>
-                <img className="venue-img" src={props.venue_image}></img>
+                <img alt="venue" className="venue-img" src={props.venue_image}></img>
                 <Link to={`/conferences/${props.conf_id}/venues/${props.venue_id}`}>
                     <button onClick={() => scrollToTop()}className="btn btn-primary comment-btn">Learn More</button>
                 </Link>

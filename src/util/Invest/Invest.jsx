@@ -6,7 +6,7 @@ function Invest(){
         <div className="invest-main-container">
             <h2 className="mb-3">Invest Now</h2>
             <div className="mb-3">
-                <img style={{borderRadius:"19px"}} className="invest-img" src="https://utcoleca.sirv.com/SKYTOP/formal.png" width="4928" height="2904" alt="" />
+                <img alt="invest" style={{borderRadius:"19px"}} className="invest-img" src="https://utcoleca.sirv.com/SKYTOP/formal.png" width="4928" height="2904"/>
             </div>
 
             <h4>Why Invest in Skytop?</h4>
@@ -20,7 +20,7 @@ function Invest(){
                 <div className="card invest-card mb-3">
                     <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
-                            <img className="invest-img card-img"src="https://utcoleca.sirv.com/SKYTOP/1538336.png"/>
+                            <img alt="invest" className="invest-img card-img"src="https://utcoleca.sirv.com/SKYTOP/1538336.png"/>
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
@@ -35,8 +35,8 @@ function Invest(){
                                 <li>One streamed conference delegate registration.</li>
                             </ul>
                             <div className="text-center mt-5 mb-3">
-                                <div class="m-auto invest-button view-all comments-box">
-                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-early-adopter/"><p class="m-0 p-0">Invest Now</p></a>
+                                <div className="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-early-adopter/"><p className="m-0 p-0">Invest Now</p></a>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ function Invest(){
                 <div className="card invest-card mb-3">
                     <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
-                        <img className="invest-img card-img" src="https://utcoleca.sirv.com/SKYTOP/2050461.png"/>
+                        <img alt="invest" className="invest-img card-img" src="https://utcoleca.sirv.com/SKYTOP/2050461.png"/>
 
                         </div>
                         <div className="col-md-8">
@@ -63,8 +63,8 @@ function Invest(){
                                 <li>Two streamed conference registration</li>
                             </ul>
                             <div className="text-center mt-5 mb-3">
-                                <div class="m-auto invest-button view-all comments-box">
-                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-onboard-investor/"><p class="m-0 p-0">Invest Now</p></a>
+                                <div className="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-onboard-investor/"><p className="m-0 p-0">Invest Now</p></a>
                                 </div>
                             </div>
                         </div>
@@ -92,8 +92,8 @@ function Invest(){
                                 <li>Four View Later conference delegate registrations</li>
                             </ul>
                             <div className="text-center mt-5 mb-3">
-                                <div class="m-auto invest-button view-all comments-box">
-                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-investor-with-benefits/"><p class="m-0 p-0">Invest Now</p></a>
+                                <div className="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-investor-with-benefits/"><p className="m-0 p-0">Invest Now</p></a>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@ function Invest(){
                 <div className="card invest-card mb-3">
                     <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
-                        <img className="invest-img card-img" src="https://utcoleca.sirv.com/SKYTOP/2183026.png"  />
+                            <img alt="invest" className="invest-img card-img" src="https://utcoleca.sirv.com/SKYTOP/2183026.png"  />
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
@@ -121,8 +121,8 @@ function Invest(){
                                 <li>A sponsored interactive survey, with your brand or your personal recognition, including a short synopsis or the finding to be published after two weeks of response gathering.</li>
                             </ul>
                             <div className="text-center mt-5 mb-3">
-                                <div class="m-auto invest-button view-all comments-box">
-                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-advisory-angel/"><p class="m-0 p-0">Invest Now</p></a>
+                                <div className="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-advisory-angel/"><p className="m-0 p-0">Invest Now</p></a>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@ function Invest(){
                 <div className="card invest-card mb-3">
                     <div className="row invest-row no-gutters">
                         <div className="invest-col col-md-4">
-                            <img className="invest-img card-img"src="https://utcoleca.sirv.com/SKYTOP/4766980.png"/>
+                            <img alt="invest" className="invest-img card-img"src="https://utcoleca.sirv.com/SKYTOP/4766980.png"/>
                         </div>
                         <div className="col-md-8">
                         <div className="invest-card-body card-body text-left">
@@ -144,8 +144,8 @@ function Invest(){
                             <p className="card-text">Financial debt instruments designed to provide return.  Each investment debt instrument is crafted with your involvement with the terms and conditions as a starting point for your true investment in Skytop. Please connect with Rebecca Dukes, Partner Investor Relations, to begin the conversation on debt and convertible notes.</p>
                             <p>For more details, contact Rebecca at <a className="text-primary" href="mailto:rdukes@skytopstrategies.com">rdukes@skytopstrategies.com</a></p>
                             <div className="text-center mt-5 mb-3">
-                                <div class="m-auto invest-button view-all comments-box">
-                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-confident-ceo/"><p class="m-0 p-0">Invest Now</p></a>
+                                <div className="m-auto invest-button view-all comments-box">
+                                    <a target="_blank" rel="noreferrer" href="https://skytop-strategies.com/product/invest-in-skytop-confident-ceo/"><p className="m-0 p-0">Invest Now</p></a>
                                 </div>
                             </div>
                         </div>

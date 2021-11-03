@@ -5,18 +5,19 @@ import Poll from '../util/Poll/Poll';
 import Editorial from '../util/Editorial/Editorial';
 
 function PrimaryMenu (props){
+    // eslint-disable-next-line
     const [currentWindow, setCurrentWindow] = useState(window.location.pathname);
     useEffect(() => {
         setCurrentWindow(window.location.pathname)
-    },[window.location.pathname])
+    },[])
     return(
         <>
             <div className="side-menu-container text-left">
                 <SideContainer conferences={props.conferences}/>
                 {window.location.pathname === "/" ?
                 <div>
-                    <a href={"https://www.spglobal.com/en/"} target="_blank">
-                        <img className="menu-advert" src={"https://utcoleca.sirv.com/SKYTOP/S_P%20Global%20S1%20Climate%20Week-Event%20Collaterals-01_Climate%20Week%20Event%20Page-800x800%202.png"}></img>
+                    <a href={"https://www.spglobal.com/en/"} target="_blank" rel="noreferrer">
+                        <img className="menu-advert" alt="ad" src={"https://utcoleca.sirv.com/SKYTOP/S_P%20Global%20S1%20Climate%20Week-Event%20Collaterals-01_Climate%20Week%20Event%20Page-800x800%202.png"}></img>
                     </a>
                     <Editorial
                         id={props.editorial.id}
@@ -42,8 +43,8 @@ function PrimaryMenu (props){
                     />
                     </div>
                 :""}
-                <a href={props.ad_link} target="_blank">
-                    <img className="menu-advert" src={props.ad}></img>
+                <a href={props.ad_link} target="_blank" rel="noreferrer">
+                    <img className="menu-advert" alt="ad" src={props.ad}></img>
                 </a>
                 <Poll />
                 <NewsFeed />

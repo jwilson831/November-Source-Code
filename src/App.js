@@ -8,12 +8,7 @@ import Footer from './Footer/Footer';
 import PrimaryMenu from './PrimaryMenu/PrimaryMenu';
 import Conference from './Conference/Conference';
 import axios from 'axios';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import {Switch,Route} from "react-router-dom";
 import Article from './Article/Article';
 import ConferenceMenu from './Conference/ConferenceMenu/ConferenceMenu';
 import AuthorContainer from './Author/AuthorContainer';

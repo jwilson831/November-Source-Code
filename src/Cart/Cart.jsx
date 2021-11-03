@@ -25,12 +25,12 @@ function Cart(){
             <div className="card mb-3 product-card">
                 <div className="row">
                     {prod.images[0] ? 
-                        <img className="product-img card-img-top col-md-5" src={prod.images[0].src}></img>    
+                        <img className="product-img card-img-top col-md-5" src={prod.images[0].src} alt="product"></img>    
                     :""}
                     <div className="card-body col-md-7 prod-body">
                         <h3>{prod.name}</h3>
                         <p className="edit-text">Price: ${prod.price}</p>
-                        <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${prod.id}`} target="_blank">
+                        <a className="text-light" href={`https://skytop-strategies.com/cart/?add-to-cart=${prod.id}`} target="_blank" rel="noreferrer">
                             <button className="btn btn-primary register-button">Register</button>
                         </a>
                     </div>

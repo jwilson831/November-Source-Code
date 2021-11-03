@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 function SideConference(props){
     return(
         <div className="side-conference card">
-            <img className="card-img side-img" src={props.imgUrl}></img>
+            <img className="card-img side-img" src={props.imgUrl} alt="side conference"></img>
             <div className="conf-info card-img-overlay">
                 <div className="side-data-container text-left">
                     <Link to={`/conferences/${props.id}`}>

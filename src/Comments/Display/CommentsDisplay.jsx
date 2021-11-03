@@ -1,8 +1,5 @@
 import React, {useEffect,useState} from 'react';
 import '../styles.css';
-import {Markup} from 'interweave';
-import moment from 'moment';
-import PageLoader from '../../util/Loader';
 import Comment from './Comment';
 
 function CommentsDisplay(props){
@@ -30,7 +27,7 @@ function CommentsDisplay(props){
 
     useEffect(() => {
         generateComments(props.comments);
-    },[])
+    },[props.comments])
 
     const renderComments = (comments) => {
         let finalComments = [];
@@ -44,6 +41,7 @@ function CommentsDisplay(props){
                 replies={current.replies ? current.replies : null} 
                 isReply={false}
                 articleId={props.articleId}
+                token={props.token}
             />)
         }
         props.setCommentNumber(finalComments.length)

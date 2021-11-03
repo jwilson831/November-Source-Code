@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 function ConfCard(props){
     return (
         <div className="card mr-3">
-            <img className="card-img-top conf-img" src={props.imgUrl} alt="Card image cap"></img>
+            <img className="card-img-top conf-img" src={props.imgUrl} alt="conference"></img>
             <div className="card-img-overlay text-light text-left conf-text">
                 <div>
                     {props.id ?

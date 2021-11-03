@@ -35,7 +35,7 @@ function ViewAll(props){
         }
     }
     return (
-        <div class="view-all-container">
+        <div className="view-all-container">
             {renderData()}
         </div>
     )

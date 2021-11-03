@@ -9,7 +9,7 @@ function Amenities(props){
         return amenArray.map(amen =>
             <div className="row mb-4">
                 <div className="col-lg-6 col-sm-12 ">
-                    <img className="amen-img" src={amen.image}></img>
+                    <img alt="amenities" className="amen-img" src={amen.image}></img>
                 </div>
                 <div className="col-lg-6 col-sm-12 pt-1">
                     <h4>{amen.title}</h4>

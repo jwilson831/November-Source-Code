@@ -26,7 +26,7 @@ function Article(props){
         }
         setData(selectCurrentArticle(props.articles));
         setLoaded(true);
-    },[])
+    },[id,props.articles])
 
     
 
@@ -48,10 +48,10 @@ function Article(props){
                         
                         {props.editorial_title ?
                             <div className="text-left">
-                                <img className="edit-display-image" src={data.acf.image} alt="Card image cap"></img>
+                                <img className="edit-display-image" src={data.acf.image} alt="editorial"></img>
                             </div> 
                             :
-                            <img className="card-img-top art-img" src={data.acf.image} alt="Card image cap"></img>
+                            <img className="card-img-top art-img" src={data.acf.image} alt="editorial"></img>
                         }
                         
                         <div className="text-left">

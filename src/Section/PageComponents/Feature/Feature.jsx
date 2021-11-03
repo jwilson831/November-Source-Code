@@ -1,7 +1,4 @@
 import React from 'react';
-import moment from 'moment';
-import {Markup} from "interweave";
-
 import './styles.css';
 
 function Feature (props){

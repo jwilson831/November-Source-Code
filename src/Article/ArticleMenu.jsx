@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import SideContainer from '../PrimaryMenu/components/SideContainer';
 import PageLoader from '../util/Loader';
 import NewsFeed from '../util/News/NewsFeed';
-import Poll from '../util/Poll/Poll'
 import DLC from './DLC/DLC';
 
 function ArticleMenu(props){
@@ -25,8 +24,8 @@ function ArticleMenu(props){
         setCurrentArticle(selectCurrentArticle(props.articles));
         setCategory(selectCurrentArticle(props.articles).acf.category);
         setLoaded(true);
-    },[])
-    console.log(currentArticle);
+    },[id,props.articles])
+    
     return(
         <div className="text-left pl-3">
             {loaded ? 

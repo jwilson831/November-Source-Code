@@ -18,7 +18,7 @@ function ConferenceMenu(props){
         }
         setData(selectCurrentConference(props.conferences));
         setLoaded(true);
-    },[])
+    },[id,props.conferences])
     return(
     
         <div className="conf-menu-container">

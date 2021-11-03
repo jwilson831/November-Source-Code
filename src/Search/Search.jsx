@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Markup } from 'interweave';
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import PageLoader from '../util/Loader';
 import './styles.css';
 
@@ -38,9 +38,9 @@ function Search(props){
     }
     const renderImage = (data) => {
         if(data.acf.image){
-            return <img className={"search-img"} src={data.acf.image}></img> 
+            return <img className={"search-img"} src={data.acf.image} alt="search"></img> 
         }else if(data._embedded){
-            return <img className={"search-img"} src={data.acf.location_image ? data.acf.location_image : data._embedded["wp:featuredmedia"][0].source_url}></img> 
+            return <img className={"search-img"} src={data.acf.location_image ? data.acf.location_image : data._embedded["wp:featuredmedia"][0].source_url} alt="search"></img> 
         }else if(data.type === "sponsors"){
             return <Markup content={data.content.rendered}></Markup>;
         }

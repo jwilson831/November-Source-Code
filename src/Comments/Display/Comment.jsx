@@ -19,11 +19,11 @@ function Comment(props){
         if(props.replies){
             constructReplies(props.replies)
         }
-    },[])
+    },[props.replies])
 
     return(
-        <>
-            <div className={`comment-container` + ` ${props.isReply ? 'reply' : ''}`}>
+        <> 
+            <div className={props.isReply ? "comment-container reply" : "comment-container"}>
                 <div className="d-flex justify-content-between">
                     <p className="comment-name">{props.data.author_name}</p>
                     <p className="comment-date">{moment(props.data.date).format("MMMM Do, YYYY")}</p>
@@ -39,7 +39,7 @@ function Comment(props){
                         {!props.isReply===true ? <i onClick={() => setReplyClick(!replyClick)}className="fas fa-reply"></i> : ""}
                         
                         {replies.length > 0 ? 
-                            <p onClick={() => setSeeReplies(!seeReplies)} className="see-replies">{seeReplies ? "Hide" : "See Replies"}</p> 
+                            <p onClick={() => setSeeReplies(!seeReplies)} className="text-primary see-replies">{seeReplies ? "Hide" : "See Replies"}</p> 
                         : ""}
                     </div>
                     
@@ -51,6 +51,7 @@ function Comment(props){
                     isReplyForm={true}
                     articleId={props.articleId}
                     parentId={props.id}
+                    token={props.token}
                 />
             :""} 
             {seeReplies ? replies : ""}

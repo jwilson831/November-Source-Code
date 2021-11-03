@@ -1,6 +1,5 @@
 import React from 'react';
 import {Markup} from 'interweave';
-import Sponsors from './Sponsors';
 
 function About(props){
     return(

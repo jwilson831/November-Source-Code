@@ -42,15 +42,15 @@
 }
 .see-replies{
     text-decoration: underline;
-    font-size: 13px;
+    font-size: 15px;
     cursor: pointer;
     margin-bottom: -5px;
 }
 .see-replies:hover{
-    color: #007bff;
+    color: rgb(0, 80, 190)!important;
 }
 .fa-reply{
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(0,0,0,0.35);
 }
 .fa-reply:hover{

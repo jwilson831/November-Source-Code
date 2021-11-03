@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './styles.css'
 import PageLoader from '../../../util/Loader';
-import PastInfoMenu from '../../util/PastConferences/PastInfoMenu';
 
 function Speakers(props){
     const [speakers,setSpeakers] = useState('');
@@ -22,11 +21,11 @@ function Speakers(props){
             fetch()
         }
         
-    },[])
+    },[props.speakers])
     const renderSpeakers = (speakers) => {
         return speakers.map(speaker => 
             <div className="speaker">
-                <img className="speaker-img" src={speaker.acf.image}></img>
+                <img alt="speaker" className="speaker-img" src={speaker.acf.image}></img>
                 <h5><u>{speaker.acf.name}</u></h5>
                 <p>{speaker.acf.job_title}</p>
                 <p>{speaker.acf.company}</p>

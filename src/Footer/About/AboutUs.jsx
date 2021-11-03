@@ -13,7 +13,7 @@ function AboutUs(props){
     return(
         <div>
             <div className="about-banner">
-                <img className="abt-banner-img" src="http://skytop-strategies.com/wp-content/uploads/2021/08/integrated-reporting-web.jpeg"></img>
+                <img alt="about" className="abt-banner-img" src="http://skytop-strategies.com/wp-content/uploads/2021/08/integrated-reporting-web.jpeg"></img>
             </div>
             <h2 className="about-heading">The Nexus for Exclusive Insight, Empowering Executives to Navigate Change</h2>
             <div className="about-grid">
@@ -34,7 +34,7 @@ function AboutUs(props){
                 </div>
             </div>
             <div className="about-grid-2">
-                <img className="abt-chris-img" src="https://skytop-strategies.com/wp-content/uploads/2021/08/chris_s.jpeg"></img>
+                <img alt="about" className="abt-chris-img" src="https://skytop-strategies.com/wp-content/uploads/2021/08/chris_s.jpeg"></img>
                 <div className="abt-chris-txt">
                     <p className="abt-msg">
                         "We push aside passive classroom style experiences and combine peer discovery with 

@@ -21,7 +21,7 @@ function Map(props) {
             }
           );
           setLoaded(true);
-    },[])
+    },[props.address])
 
   
     const mapStyles = {        

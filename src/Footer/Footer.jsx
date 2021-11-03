@@ -23,12 +23,12 @@ function Footer (props){
                     <p className="foot-grid-item" id="address">141 West 36th Street, 8th Floor New York, NY 10018</p>
                     <span className="twitter">
                         <a className="social-link" href="https://twitter.com/skytopstrat" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-twitter"></i>
+                            <i className="fab fa-twitter"></i>
                         </a>
                     </span>
                     <span className="linkedin">
                         <a className="social-link" href="https://www.linkedin.com/company/skytopstrategies/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin-in"></i>
+                            <i className="fab fa-linkedin-in"></i>
                         </a>
                     </span>
                 </div>

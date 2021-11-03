@@ -19,7 +19,7 @@ function Delegates(props){
             }
             fetch()
         }
-    },[])
+    },[props.delegates])
     const renderDelegates = (delegates) => {
         return delegates.map(del => 
             <div className="delegate">
