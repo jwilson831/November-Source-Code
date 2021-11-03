@@ -90,6 +90,7 @@ function App() {
       {loaded ? 
         <div className="main-container">
           <Nav changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/>
+          <Poll/>
           <div className="main-grid">
             <Switch>
               <div className="section">
@@ -230,6 +231,7 @@ function App() {
                 <Route exact path="/cancel"><Policy policy="Cancel"/></Route>
                 <Route exact path="/cart"><Cart/></Route>
                 <Route exact path="/invest-in-us"><Invest/></Route>
+                
               </div>
             </Switch>
 
@@ -240,7 +242,6 @@ function App() {
                 <Route path="/invest-in-us"><InvestMenu/></Route>
                 <Route path="/index/conferences">
                   <div className="pl-3">
-                    <Poll/>
                     <NewsFeed/>
                   </div>
                 </Route>

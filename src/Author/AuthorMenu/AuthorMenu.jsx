@@ -27,7 +27,6 @@ function AuthorMenu(props){
             {loaded ? 
             <>
                 {id && conferences.length > 0 ? <Attending conferences={conferences}/> : <SideContainer conferences={props.conferences}/>}
-                <Poll/>
                 <NewsFeed/>
             </>
             

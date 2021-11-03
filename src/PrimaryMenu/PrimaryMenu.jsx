@@ -46,7 +46,6 @@ function PrimaryMenu (props){
                 <a href={props.ad_link} target="_blank" rel="noreferrer">
                     <img className="menu-advert" alt="ad" src={props.ad}></img>
                 </a>
-                <Poll />
                 <NewsFeed />
             </div>
         </>

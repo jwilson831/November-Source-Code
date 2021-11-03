@@ -3,7 +3,7 @@ import './styles.css';
 
 function NewsFeed(){
     return(
-        <div className="news-container">
+        <div className="news-container mt-5">
             <p className='edit-title'>News Feed</p>
             <p className="nav-text">Join the Skytop News Mailing List!</p>
             <div>
