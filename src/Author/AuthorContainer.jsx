@@ -9,6 +9,7 @@ import PageLoader from '../util/Loader';
 function AuthorContainer(props){
     const [author, setAuthor] = useState(null);
     const [loaded, setLoaded] = useState(false);
+    const [articles,setArticles] = useState([]);
     const {id} = useParams();
 
     useEffect(() => {
@@ -22,6 +23,7 @@ function AuthorContainer(props){
             }
         }
         fetchAuthor();
+        setArticles(filterByAuthor(props.articles,id));
 
     }, [id]);
 
@@ -46,7 +48,9 @@ function AuthorContainer(props){
                         <PageLoader/>
                     </div>
             }
-                    <div className="recent"><Recents articles={filterByAuthor(props.articles, id)} comments={props.comments}/></div>
+                {articles.length > 0 &&
+                    <div className="recent"><Recents articles={articles} comments={props.comments}/></div>
+                }
                 </div>
         </>
     )
