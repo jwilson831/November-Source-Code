@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import SideContainer from './components/SideContainer';
 import NewsFeed from '../util/News/NewsFeed';
-import Poll from '../util/Poll/Poll';
 import Editorial from '../util/Editorial/Editorial';
 
 function PrimaryMenu (props){
@@ -46,7 +45,6 @@ function PrimaryMenu (props){
                 <a href={props.ad_link} target="_blank" rel="noreferrer">
                     <img className="menu-advert" alt="ad" src={props.ad}></img>
                 </a>
-                <Poll />
                 <NewsFeed />
             </div>
         </>

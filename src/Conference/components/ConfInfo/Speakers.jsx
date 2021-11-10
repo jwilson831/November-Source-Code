@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './styles.css'
-import PageLoader from '../../../util/Loader';
+import PageLoader from '../../../util/Loader/Loader';
 
 function Speakers(props){
     const [speakers,setSpeakers] = useState('');

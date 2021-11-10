@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import PageLoader from '../../../util/Loader';
+import PageLoader from '../../../util/Loader/Loader';
 
 function Delegates(props){
     const [delegates,setDelegates] = useState('');

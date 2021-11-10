@@ -17,3 +17,52 @@ select{
 .question-txt{
     font-size: 25px !important;
 }
+
+.reveal{
+    display: block;
+}
+.modal-content{
+    box-shadow: 0px 0px 2px 1px rgb(0,0,0,0.1);
+
+}
+.poll-dialog {
+    max-width: 70%;
+    margin: auto;
+    margin-top: 8%;
+    animation: popup 1.5s ease-out 10s;
+}
+.poll-header{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    align-items: center;
+}
+
+.poll-body{
+    padding: 1rem;
+    height: 500px;
+    overflow-y: scroll;
+    width: 90%;
+    margin: auto;
+}
+
+@keyframes popup {
+    0%{
+        margin-top: 100%;
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    100%{
+        margin-top: 5%;
+
+    }
+}

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Markup } from 'interweave';
 import React,{useState} from 'react';
-import PageLoader from '../util/Loader';
+import PageLoader from '../util/Loader/Loader';
 import './styles.css';
 
 function Search(props){

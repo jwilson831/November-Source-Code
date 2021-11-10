@@ -1,11 +1,12 @@
 import React from 'react';
 import Loader from 'react-loader-spinner';
+import './styles.css';
 
 
 function PageLoader(props){
 
     return(
-        <div className="w-100 text-center">
+        <div className="page-loader w-100 text-center">
             <Loader
                 type="Bars"
                 color="rgb(38,136,165)"

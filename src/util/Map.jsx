@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Geocode from "react-geocode";
-import PageLoader from './Loader';
+import PageLoader from './Loader/Loader';
 
 function Map(props) {
     const [latitude,setLatitude] = useState(null);
