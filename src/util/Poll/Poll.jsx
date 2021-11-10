@@ -38,7 +38,7 @@ function Poll(){
                     </button>
                 </div>
                 <div className="modal-body poll-body text-center">
-                    <iframe title="poll" id="totalpoll-iframe-1300" src="https://skytop-strategies.com/poll/1300/?embed=1" frameborder="0" allowtransparency="true" width="100%" height="600"></iframe>
+                <iframe title="poll" id="totalpoll-iframe-2271" src="https://skytop-strategies.com/poll/how-do-we-consider-a-woman-as-transformational/?embed=1" frameborder="0" allowtransparency="true" width="100%" height="600"></iframe>
                 </div>
                 <div className="modal-footer">
                     <button onClick={() => modalClickHandler()} type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

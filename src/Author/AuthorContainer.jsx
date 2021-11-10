@@ -25,7 +25,7 @@ function AuthorContainer(props){
         fetchAuthor();
         setArticles(filterByAuthor(props.articles,id));
 
-    }, [id]);
+    }, [id,props.articles]);
 
     const filterByAuthor = (articles, authorId) => {
         return articles.filter(art => art.acf.author.find(a => a["ID"] === parseInt(authorId) ))
