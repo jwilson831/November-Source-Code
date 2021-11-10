@@ -8,7 +8,7 @@ import About from './components/ConfInfo/About';
 import Agenda from './components/ConfInfo/Agenda';
 import Speakers from './components/ConfInfo/Speakers';
 import Delegates from './components/ConfInfo/Delegates';
-import PageLoader from '../util/Loader';
+import PageLoader from '../util/Loader/Loader';
 import { sendGAPageView } from '../util/GoogleAnalytics';
 import PastInfoMenu from './util/PastConferences/PastInfoMenu';
 import PastInfo from './util/PastConferences/PastInfo';

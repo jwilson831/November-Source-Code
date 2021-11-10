@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Markup } from 'interweave';
 import React, {useEffect,useState} from 'react';
-import PageLoader from '../Loader';
+import PageLoader from '../Loader/Loader';
 import './styles.css'
 
 function Policy(props){

@@ -40,7 +40,7 @@
     text-align: left;
     font-weight: 500;
     color: rgb(108,108,107);
-    font-size: 13px;
+    font-size: 15px;
 }
 .feature-container{
     grid-area: feature;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useState,useEffect} from 'react';
 import { sendGAPageView } from '../util/GoogleAnalytics';
-import PageLoader from '../util/Loader';
+import PageLoader from '../util/Loader/Loader';
 import './styles.css';
 
 function Cart(){

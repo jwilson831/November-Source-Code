@@ -3,7 +3,7 @@ import CommentsDisplay from './Display/CommentsDisplay';
 import CommentsForm from './CommentsForm';
 import './styles.css';
 import axios from 'axios';
-import PageLoader from '../util/Loader';
+import PageLoader from '../util/Loader/Loader';
 import LeaveAComment from './LeaveAComment';
 
 function CommentsContainer(props){

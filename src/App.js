@@ -15,7 +15,7 @@ import AuthorContainer from './Author/AuthorContainer';
 import AuthorMenu from './Author/AuthorMenu/AuthorMenu';
 import ViewAll from './ViewAll/ViewAll';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import PageLoader from './util/Loader';
+import PageLoader from './util/Loader/Loader';
 import ArticleMenu from './Article/ArticleMenu';
 import { orderByDate } from './util/orderByDate';
 import AboutUs from './Footer/About/AboutUs';
@@ -90,7 +90,7 @@ function App() {
       {loaded ? 
         <div className="main-container">
           <Nav changeActiveCategory={changeActiveCategory} activeCategory={activeCategory}/>
-          <Poll/>
+          <Poll />
           <div className="main-grid">
             <Switch>
               <div className="section">

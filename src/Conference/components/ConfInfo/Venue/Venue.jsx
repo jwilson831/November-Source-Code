@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, {useEffect,useState} from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import PageLoader from '../../../../util/Loader';
+import PageLoader from '../../../../util/Loader/Loader';
 import '../styles.css'
 import Amenities from './Amenities';
 import Carousel from './Carousel';

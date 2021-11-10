@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react';
 import Map from '../../util/Map';
 import {useParams} from 'react-router-dom';
 import './styles.css'
-import PageLoader from '../../util/Loader';
+import PageLoader from '../../util/Loader/Loader';
 import Register from '../util/Register';
 import VenueMenu from './VenueMenu';
 

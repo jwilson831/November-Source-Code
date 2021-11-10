@@ -3,7 +3,7 @@ import './styles.css'
 import {Markup} from "interweave";
 import { useParams } from 'react-router';
 import CommentsContainer from '../Comments/CommentsContainer';
-import PageLoader from '../util/Loader';
+import PageLoader from '../util/Loader/Loader';
 import { renderByLine } from '../util/renderByLine';
 import moment from 'moment';
 import { sendGAPageView } from '../util/GoogleAnalytics';

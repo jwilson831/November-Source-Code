@@ -1,11 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import './styles.css';
-import moment from 'moment';
-import {Link} from 'react-router-dom';
-import {Markup} from "interweave";
-import CommentsBox from '../../../util/CommentsBox/CommentsBox';
 import { findById } from '../../../util/findById';
-import { renderByLine } from '../../../util/renderByLine';
+import RecentArticle from './RecentArticle';
 
 function Recents (props){
     const [articles,setArticles] = useState([]);
@@ -28,32 +24,16 @@ function Recents (props){
 
     const renderArticles = (articles) => {    
         return articles.map( article => 
-            <div className="card mb-5">
-                <div className="row no-gutters">
-                    <div className="col-md-6 text-left">
-                        <img className="card-img-top recent-img" src={article.acf.image} alt="article"></img>
-                    </div>
-                    <div className="col-md-6 card-body-column">
-                        <div className="card-body">
-                            {window.location.pathname === "/" ? <div className="category"><p className="cat-text">{article.acf.category} </p></div> : ""}
-                            <Link to={`/articles/${article.id}`} >
-                                <h5 className="card-title"><Markup content={article.title.rendered}></Markup></h5>
-                            </Link>
-                            <div className="byline">
-                                {article.acf.custom_byline ? 
-                                    <p><Markup content={article.acf.custom_byline}/></p>
-                                    :
-                                    <p className="m-0">By <Markup content={renderByLine(article.acf.author)}/> / {moment(article.acf.date).format("MMMM Do, YYYY")} </p>
-                                }
-                            </div>
-                        </div>
-                        <div className="pl-3 recents-comments">
-                            <CommentsBox comments={props.comments} id={article.id}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                            
+            <RecentArticle
+                id={article.id}
+                image={article.acf.image}
+                category={article.acf.category}
+                title={article.title.rendered}
+                custom_byline={article.acf.custom_byline}
+                author={article.acf.author}
+                date={article.acf.date}
+                comments={props.comments}
+            />                
         ) 
     }
 

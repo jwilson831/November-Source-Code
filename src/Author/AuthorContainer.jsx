@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Author from './Author';
 import './styles.css';
-import PageLoader from '../util/Loader';
+import PageLoader from '../util/Loader/Loader';
 
 function AuthorContainer(props){
     const [author, setAuthor] = useState(null);

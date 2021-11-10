@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import SideContainer from './components/SideContainer';
 import NewsFeed from '../util/News/NewsFeed';
-import Poll from '../util/Poll/Poll';
 import Editorial from '../util/Editorial/Editorial';
 
 function PrimaryMenu (props){
