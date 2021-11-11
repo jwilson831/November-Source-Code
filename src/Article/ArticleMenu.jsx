@@ -37,6 +37,7 @@ function ArticleMenu(props){
                         title={currentArticle.acf.dlc.dlc_title}
                         image={currentArticle.acf.dlc.dlc_image}
                         file={currentArticle.acf.dlc.dlc_file}
+                        registration={currentArticle.acf.dlc.registration_required}
                     />
                 }
                     <div className="mt-5">
