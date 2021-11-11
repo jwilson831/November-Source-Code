@@ -28,7 +28,9 @@ function AuthorContainer(props){
     }, [id,props.articles]);
 
     const filterByAuthor = (articles, authorId) => {
-        return articles.filter(art => art.acf.author.find(a => a["ID"] === parseInt(authorId) ))
+        return articles.filter(art => 
+            art.acf.author && art.acf.author.find(a => a["ID"] === parseInt(authorId))
+        )
     }
     
     return(
