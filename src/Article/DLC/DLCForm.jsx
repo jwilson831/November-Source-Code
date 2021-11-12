@@ -40,7 +40,7 @@ function DLCForm(props){
                         {
                             title: name,
                             content: `${name} downloaded ${props.title}`,
-                            status: "publish"
+                            status: "private"
                         },
                         {
                             headers: {
