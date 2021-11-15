@@ -31,6 +31,7 @@
     height: auto;
     width: 85%;
     margin: 2rem;
+    border-radius: 5px;
 }
 hr.wp-block-separator {
     border-top: 1px solid rgba(0,0,0);
