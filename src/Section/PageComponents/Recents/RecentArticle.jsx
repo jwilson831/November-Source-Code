@@ -15,7 +15,19 @@ function RecentArticle(props){
                     </div>
                     <div className="col-md-6 card-body-column">
                         <div className="card-body">
-                            {window.location.pathname === "/" ? <div className="category"><p className="cat-text">{props.category} </p></div> : ""}
+                            {window.location.pathname === "/" && 
+                                <div className="category">
+                                    {props.category === "Skytop Survey" ? 
+                                        <div className="cat-text">
+                                            <p className="m-0">THE RESULTS ARE IN!</p>
+                                            <p className="m-0">SEE WHAT READERS AND EXPERTS SAY ABOUT...</p>
+                                        </div>
+                                        : <p className="cat-text">{props.category}</p>
+                                    }
+                                    
+                                    <p className="cat-text">{props.category === "Survey" ? props.category : ""}</p>
+                                </div>
+                            }
                             <Link to={`/articles/${props.id}`} >
                                 <h5 className="card-title"><Markup content={props.title}></Markup></h5>
                             </Link>
@@ -31,7 +43,7 @@ function RecentArticle(props){
                             </div>
                         </div>
                         <div className="pl-3 recents-comments">
-                            <CommentsBox comments={props.comments} id={props.id}/>
+                            <CommentsBox category={props.category} comments={props.comments} id={props.id}/>
                         </div>
                     </div>
                 </div>

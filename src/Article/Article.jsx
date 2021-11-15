@@ -70,7 +70,7 @@ function Article(props){
                     </div>
                 </div>
                 <div className="comments text-left">
-                    <CommentsContainer article={data}/>
+                    <CommentsContainer article={data} category={data.acf.category}/>
                 </div>
             </div>
         : <PageLoader/>}
