@@ -45,7 +45,7 @@ function CommentsContainer(props){
         <>
         {loaded ? 
             <div className="comments-container mt-5 pr-5">
-                    <h3>{props.category === "Skytop Survey" ? "Join the Discussion " : "Comments "}({num})</h3>
+                    <h3>{props.category === "Skytop Survey" ? "" : `Comments (${num})`}</h3>
                     <hr></hr>
                     {clicked ? 
                         <CommentsForm 
@@ -56,7 +56,7 @@ function CommentsContainer(props){
                             token={token}
                         />
                     :   
-                        <LeaveAComment clickHandler={clickHandler}/>
+                        <LeaveAComment category={props.category} clickHandler={clickHandler}/>
                     }
                     
                     <CommentsDisplay 
