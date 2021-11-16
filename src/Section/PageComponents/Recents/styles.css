@@ -42,6 +42,7 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 0px;
+    padding: 1rem;
 }
 .survey-cat{
     background-color: #151A40;

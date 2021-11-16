@@ -37,14 +37,14 @@ function Article(props){
                 <div className="article-container mt-3" >
                     <div>
                         {data.acf.category === "Skytop Survey" &&
-                            <>
-                                <div className="m-auto category edit-category">
-                                    <h4>Skytop Perspectives</h4>
+                            <div className="survey-article-header mb-4">
+                                <div className="m-auto ">
+                                    <h3>Skytop Perspectives</h3>
                                 </div>
-                                <div className="mr-auto ml-auto mt-3 mb-5 category edit-category category edit-category">
-                                    <p>Your Voice is Counted!</p>
+                                <div className="mr-auto ml-auto mt-3">
+                                    <h5 className="m-0">Your Voice is Counted!</h5>
                                 </div>
-                            </>
+                            </div>
                         }
                         {props.editorial_title && 
                             <div className="category edit-category">
@@ -52,7 +52,10 @@ function Article(props){
                             </div>
                         }
     
-                        {!id ? "": <h1><Markup content={data.title.rendered}></Markup></h1>
+                        {!id ? "": 
+                            <div>
+                                <h1><Markup content={data.title.rendered}></Markup></h1>
+                            </div>
                         }
                         
                         {props.editorial_title ?

@@ -42,3 +42,10 @@ hr.wp-block-separator {
     height: 30vw;
     width: auto;
 }
+
+.survey-article-header{
+    background-color: rgba(241, 200, 16, 0.884);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+}
