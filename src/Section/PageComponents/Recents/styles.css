@@ -12,9 +12,12 @@
 }
 
 .recent-img{
-    height: 17rem;
+    height: 18rem;
     object-fit: cover;
-    border-radius: 5px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: 0px;
+
 }
 @media screen and (min-width:2000px) {
     .recent-img{
@@ -23,4 +26,23 @@
 }
 .recent-container{
     padding-right:2rem ;
+}
+.recent-card{
+    height: 18rem;
+}
+.survey-row{
+    border-radius: 5px;
+    background: rgba(241, 200, 16, 0.884) !important;
+    max-width: 90%;
+    margin: auto;
+}
+.survey-img{
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+}
+.survey-cat{
+    background-color: #151A40;
 }

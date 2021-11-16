@@ -36,14 +36,23 @@ function Article(props){
             <div>
                 <div className="article-container mt-3" >
                     <div>
-                        {props.editorial_title? 
+                        {data.acf.category === "Skytop Survey" &&
+                            <>
+                                <div className="m-auto category edit-category">
+                                    <h4>Skytop Perspectives</h4>
+                                </div>
+                                <div className="mr-auto ml-auto mt-3 mb-5 category edit-category category edit-category">
+                                    <p>Your Voice is Counted!</p>
+                                </div>
+                            </>
+                        }
+                        {props.editorial_title && 
                             <div className="category edit-category">
                                 <p className="cat-text">{props.editorial_title}</p>
                             </div>
-                        : ""}
+                        }
     
-                        {!id ? "": 
-                            <h1><Markup content={data.title.rendered}></Markup></h1>
+                        {!id ? "": <h1><Markup content={data.title.rendered}></Markup></h1>
                         }
                         
                         {props.editorial_title ?

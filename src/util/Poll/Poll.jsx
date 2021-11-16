@@ -32,7 +32,11 @@ function Poll(){
             <div className="modal-dialog poll-dialog" role="document">
                 <div className="modal-content">
                 <div className="poll-header">
-                    <h5 className="modal-title" id="exampleModalLongTitle"><div className="category edit-category"><p className="m-0">Weigh In With Us</p></div></h5>
+                    <div className="text-center w-100">
+                        <div className="category edit-category m-auto"><h5 className="mb-3 p-1">Skytop Perspectives</h5></div>
+                        <div className="category edit-category m-auto"><h5 className="mb-3 p-1">Be Counted!</h5></div>
+                        <div className="category edit-category m-auto"><h6 className="mb-3 p-1">Weigh In with Us on This Week’s Topic</h6></div>
+                    </div>
                     <button type="button" className="m-0 p-0 close" data-dismiss="modal" aria-label="Close">
                         <span onClick={() => modalClickHandler()} aria-hidden="true">&times;</span>
                     </button>
