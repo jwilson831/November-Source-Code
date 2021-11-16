@@ -42,7 +42,7 @@ function Article(props){
                                     <h3>Skytop Perspectives</h3>
                                 </div>
                                 <div className="mr-auto ml-auto mt-3">
-                                    <h5 className="m-0">Your Voice is Counted!</h5>
+                                    <h5 className="m-0">Your Voice Has Been Counted!</h5>
                                 </div>
                             </div>
                         }

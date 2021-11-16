@@ -20,7 +20,7 @@ function RecentArticle(props){
                                     {props.category === "Skytop Survey" ? 
                                         <div className="cat-text">
                                             <p className="m-0">Skytop Perspectives</p>
-                                            <p >Your Voice is Counted!</p>
+                                            <p >Your Voice Has Been Counted!</p>
                                         </div>
                                         : <p className="cat-text">{props.category}</p>
                                     }
