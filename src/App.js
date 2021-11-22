@@ -52,8 +52,8 @@ function App() {
         setArticles(articles.data);
         setConferences(orderByDate(conferences))
         setComments(comments.data);
-        setPublisher(editorials.data[0])
-        setCal(editorials.data[1])
+        setPublisher(editorials.data[0]);
+        setCal(editorials.data[1]);
         setEditorial(editorials.data[2]);
       }catch (err){
         console.error(err);
